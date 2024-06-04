@@ -4,6 +4,7 @@ namespace AllegroApi\Authentication;
 
 use DateTimeImmutable;
 use DateTimeInterface;
+use InvalidArgumentException;
 
 
 final readonly class Token
@@ -77,6 +78,35 @@ final readonly class Token
             'allegro_api' => $this->allegroApi,
             'jti' => $this->jti,
         ];
+    }
+
+
+    /**
+     * @throws InvalidArgumentException
+     */
+    public static function fromArray(array $data): self
+    {
+        if (!isset(
+            $data['access_token'],
+            $data['token_type'],
+            $data['refresh_token'],
+            $data['expires_in'],
+            $data['scope'],
+            $data['allegro_api'],
+            $data['jti']
+        )) {
+            throw new InvalidArgumentException();
+        }
+
+        return new self(
+            $data['access_token'],
+            $data['token_type'],
+            $data['refresh_token'],
+            $data['expires_in'],
+            $data['scope'],
+            $data['allegro_api'],
+            $data['jti'],
+        );
     }
 
 }
