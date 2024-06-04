@@ -32,7 +32,7 @@ final readonly class Authenticator
             . '&redirect_uri=' . urlencode($this->redirectUrl);
     }
 
-    public function fetchToken(string $type, string $token): Token
+    public function fetchToken(string $type, string $code): Token
     {
         $response = $this->client->request(
             'GET',
@@ -40,7 +40,7 @@ final readonly class Authenticator
                 . '/auth/oauth/token?grant_type='
                 . $type
                 . ($type === self::TOKEN_TYPE_REFRESH_TOKEN ? '&refresh_token=' : '&code=')
-                . $token
+                . $code
                 . '&redirect_uri=' . urlencode($this->redirectUrl),
             [
                 'headers' => [
