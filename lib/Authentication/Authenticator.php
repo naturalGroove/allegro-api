@@ -29,7 +29,8 @@ final readonly class Authenticator
         return $this->url
             . '/auth/oauth/authorize?response_type=code&client_id='
             . $this->clientId
-            . '&redirect_uri=' . urlencode($this->redirectUrl);
+            . '&redirect_uri=' . urlencode($this->redirectUrl)
+            . '&prompt=confirm';
     }
 
     public function fetchToken(string $type, string $code): Token
