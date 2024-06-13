@@ -27,8 +27,8 @@ final readonly class Authenticator
     public function getAuthorizeUrl(): string
     {
         return $this->url
-            . '/auth/oauth/authorize?response_type=code&client_id='
-            . $this->clientId
+            . '/auth/oauth/authorize?response_type=code'
+            . '&client_id=' . $this->clientId
             . '&redirect_uri=' . urlencode($this->redirectUrl)
             . '&prompt=confirm';
     }
