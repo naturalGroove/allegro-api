@@ -396,7 +396,7 @@ class OfferManagementApi
 
         // for model (json/xml)
         if (isset($publication_change_command_dto)) {
-            if ($headers['Content-Type'] === 'application/json') {
+            if (in_array($headers['Content-Type'], ['application/json', 'application/vnd.allegro.public.v1+json'])) {
                 $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($publication_change_command_dto));
             } else {
                 $httpBody = $publication_change_command_dto;
@@ -710,7 +710,7 @@ class OfferManagementApi
 
         // for model (json/xml)
         if (isset($change_price_without_output)) {
-            if ($headers['Content-Type'] === 'application/json') {
+            if (in_array($headers['Content-Type'], ['application/json', 'application/vnd.allegro.public.v1+json'])) {
                 $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($change_price_without_output));
             } else {
                 $httpBody = $change_price_without_output;
@@ -1066,7 +1066,7 @@ class OfferManagementApi
 
         // for model (json/xml)
         if (isset($sale_product_offer_request_v1)) {
-            if ($headers['Content-Type'] === 'application/json') {
+            if (in_array($headers['Content-Type'], ['application/json', 'application/vnd.allegro.public.v1+json'])) {
                 $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($sale_product_offer_request_v1));
             } else {
                 $httpBody = $sale_product_offer_request_v1;
@@ -1694,7 +1694,7 @@ class OfferManagementApi
 
         // for model (json/xml)
         if (isset($sale_product_offer_patch_request_v1)) {
-            if ($headers['Content-Type'] === 'application/json') {
+            if (in_array($headers['Content-Type'], ['application/json', 'application/vnd.allegro.public.v1+json'])) {
                 $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($sale_product_offer_patch_request_v1));
             } else {
                 $httpBody = $sale_product_offer_patch_request_v1;
@@ -4744,7 +4744,7 @@ class OfferManagementApi
 
         // for model (json/xml)
         if (isset($promo_options_modifications)) {
-            if ($headers['Content-Type'] === 'application/json') {
+            if (in_array($headers['Content-Type'], ['application/json', 'application/vnd.allegro.public.v1+json'])) {
                 $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($promo_options_modifications));
             } else {
                 $httpBody = $promo_options_modifications;
@@ -5079,7 +5079,7 @@ class OfferManagementApi
 
         // for model (json/xml)
         if (isset($promo_options_command)) {
-            if ($headers['Content-Type'] === 'application/json') {
+            if (in_array($headers['Content-Type'], ['application/json', 'application/vnd.allegro.public.v1+json'])) {
                 $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($promo_options_command));
             } else {
                 $httpBody = $promo_options_command;
