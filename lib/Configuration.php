@@ -540,8 +540,10 @@ class Configuration
         return self::getHostString($this->getHostSettings(), $index, $variables);
     }
 
-    public function disableSerialization()
+    public function disableDeserialization(): Configuration
     {
         ObjectSerializer::disableDeserialization();
+
+        return $this;
     }
 }
