@@ -13,3 +13,5 @@ composer.lock
 
 # PHPUnit cache
 .phpunit.result.cache
+
+.timetracker
