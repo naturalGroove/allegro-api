@@ -1,0 +1,13 @@
+parameters:
+	paths:
+		- lib
+
+	excludePaths:
+		- ./vendor/
+
+	level: 1
+
+	parallel:
+		maximumNumberOfProcesses: 8
+
+	tmpDir: build/phpstan

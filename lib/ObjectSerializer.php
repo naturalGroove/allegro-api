@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ObjectSerializer
  *
@@ -41,6 +42,9 @@ use AllegroApi\Model\ModelInterface;
  */
 class ObjectSerializer
 {
+    /** @var bool */
+    private static bool $enableDeserialization = true;
+
     /** @var string */
     private static $dateTimeFormat = \DateTime::ATOM;
 
@@ -52,6 +56,15 @@ class ObjectSerializer
     public static function setDateTimeFormat($format)
     {
         self::$dateTimeFormat = $format;
+    }
+
+    /**
+     * Disable deserialization into PHP object - if set to false then return plain json string
+     * @return void 
+     */
+    public static function disableDeserialization()
+    {
+        self::$enableDeserialization = false;
     }
 
     /**
@@ -103,7 +116,7 @@ class ObjectSerializer
                     }
                 }
             } else {
-                foreach($data as $property => $value) {
+                foreach ($data as $property => $value) {
                     $values[$property] = self::sanitizeForSerialization($value);
                 }
             }
@@ -178,9 +191,9 @@ class ObjectSerializer
         }
 
         switch ($openApiType) {
-            # For numeric values, false and '' are considered empty.
-            # This comparison is safe for floating point values, since the previous call to empty() will
-            # filter out values that don't match 0.
+                # For numeric values, false and '' are considered empty.
+                # This comparison is safe for floating point values, since the previous call to empty() will
+                # filter out values that don't match 0.
             case 'int':
             case 'integer':
                 return $value !== 0;
@@ -189,12 +202,12 @@ class ObjectSerializer
             case 'float':
                 return $value !== 0 && $value !== 0.0;
 
-            # For boolean values, '' is considered empty
+                # For boolean values, '' is considered empty
             case 'bool':
             case 'boolean':
                 return !in_array($value, [false, 0], true);
 
-            # For all the other types, any value at this point can be considered empty.
+                # For all the other types, any value at this point can be considered empty.
             default:
                 return true;
         }
@@ -235,7 +248,7 @@ class ObjectSerializer
         }
 
         # Handle DateTime objects in query
-        if($openApiType === "\\DateTime" && $value instanceof \DateTime) {
+        if ($openApiType === "\\DateTime" && $value instanceof \DateTime) {
             return ["{$paramName}" => $value->format(self::$dateTimeFormat)];
         }
 
@@ -405,6 +418,11 @@ class ObjectSerializer
             return null;
         }
 
+        // return the data without deserialization
+        if (self::$enableDeserialization === false) {
+            return $data;
+        }
+
         if (strcasecmp(substr($class, -2), '[]') === 0) {
             $data = is_string($data) ? json_decode($data) : $data;
 
@@ -472,7 +490,7 @@ class ObjectSerializer
             // determine file name
             if (
                 is_array($httpHeaders)
-                && array_key_exists('Content-Disposition', $httpHeaders) 
+                && array_key_exists('Content-Disposition', $httpHeaders)
                 && preg_match('/inline; filename=[\'"]?([^\'"\s]+)[\'"]?$/i', $httpHeaders['Content-Disposition'], $match)
             ) {
                 $filename = Configuration::getDefaultConfiguration()->getTempFolderPath() . DIRECTORY_SEPARATOR . self::sanitizeFilename($match[1]);
@@ -545,20 +563,20 @@ class ObjectSerializer
     }
 
     /**
-    * Build a query string from an array of key value pairs.
-    *
-    * This function can use the return value of `parse()` to build a query
-    * string. This function does not modify the provided keys when an array is
-    * encountered (like `http_build_query()` would).
-    *
-    * The function is copied from https://github.com/guzzle/psr7/blob/a243f80a1ca7fe8ceed4deee17f12c1930efe662/src/Query.php#L59-L112
-    * with a modification which is described in https://github.com/guzzle/psr7/pull/603
-    *
-    * @param array     $params              Query string parameters.
-    * @param int|false $encoding            Set to false to not encode, PHP_QUERY_RFC3986
-    *                                       to encode using RFC3986, or PHP_QUERY_RFC1738
-    *                                       to encode using RFC1738.
-    */
+     * Build a query string from an array of key value pairs.
+     *
+     * This function can use the return value of `parse()` to build a query
+     * string. This function does not modify the provided keys when an array is
+     * encountered (like `http_build_query()` would).
+     *
+     * The function is copied from https://github.com/guzzle/psr7/blob/a243f80a1ca7fe8ceed4deee17f12c1930efe662/src/Query.php#L59-L112
+     * with a modification which is described in https://github.com/guzzle/psr7/pull/603
+     *
+     * @param array     $params              Query string parameters.
+     * @param int|false $encoding            Set to false to not encode, PHP_QUERY_RFC3986
+     *                                       to encode using RFC3986, or PHP_QUERY_RFC1738
+     *                                       to encode using RFC1738.
+     */
     public static function buildQuery(array $params, $encoding = PHP_QUERY_RFC3986): string
     {
         if (!$params) {
@@ -578,8 +596,12 @@ class ObjectSerializer
         }
 
         $castBool = Configuration::BOOLEAN_FORMAT_INT == Configuration::getDefaultConfiguration()->getBooleanFormatForQueryString()
-            ? function ($v) { return (int) $v; }
-            : function ($v) { return $v ? 'true' : 'false'; };
+            ? function ($v) {
+                return (int) $v;
+            }
+            : function ($v) {
+                return $v ? 'true' : 'false';
+            };
 
         $qs = '';
         foreach ($params as $k => $v) {
@@ -588,7 +610,7 @@ class ObjectSerializer
                 $qs .= $k;
                 $v = is_bool($v) ? $castBool($v) : $v;
                 if ($v !== null) {
-                    $qs .= '='.$encoder((string) $v);
+                    $qs .= '=' . $encoder((string) $v);
                 }
                 $qs .= '&';
             } else {
@@ -596,7 +618,7 @@ class ObjectSerializer
                     $qs .= $k;
                     $vv = is_bool($vv) ? $castBool($vv) : $vv;
                     if ($vv !== null) {
-                        $qs .= '='.$encoder((string) $vv);
+                        $qs .= '=' . $encoder((string) $vv);
                     }
                     $qs .= '&';
                 }

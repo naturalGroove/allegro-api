@@ -14,4 +14,7 @@ composer.lock
 # PHPUnit cache
 .phpunit.result.cache
 
+# custom
+/build/
 .timetracker
+.vscode
