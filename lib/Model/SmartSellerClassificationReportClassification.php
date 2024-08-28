@@ -235,7 +235,6 @@ class SmartSellerClassificationReportClassification implements ModelInterface, A
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -295,7 +294,6 @@ class SmartSellerClassificationReportClassification implements ModelInterface, A
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets fulfilled
@@ -414,7 +412,7 @@ class SmartSellerClassificationReportClassification implements ModelInterface, A
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -440,5 +438,4 @@ class SmartSellerClassificationReportClassification implements ModelInterface, A
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

@@ -334,7 +334,6 @@ class CashOnDeliveryLimitDto implements ModelInterface, ArrayAccess, \JsonSerial
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets limit
      *
@@ -516,7 +515,7 @@ class CashOnDeliveryLimitDto implements ModelInterface, ArrayAccess, \JsonSerial
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -542,5 +541,4 @@ class CashOnDeliveryLimitDto implements ModelInterface, ArrayAccess, \JsonSerial
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

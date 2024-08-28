@@ -319,7 +319,6 @@ class AllegroPricesAccountChangeRequest implements ModelInterface, ArrayAccess, 
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets status
      *
@@ -447,7 +446,7 @@ class AllegroPricesAccountChangeRequest implements ModelInterface, ArrayAccess, 
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -473,5 +472,4 @@ class AllegroPricesAccountChangeRequest implements ModelInterface, ArrayAccess, 
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

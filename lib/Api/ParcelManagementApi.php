@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * ParcelManagementApi Class Doc Comment
@@ -181,9 +181,9 @@ class ParcelManagementApi
      * @param  string $command_id Command UUID. (required)
      * @param  \AllegroApi\Model\CancelParcelParameters $cancel_parcel_parameters cancel_parcel_parameters (required)
      *
-     * @return \AllegroApi\Model\CancelParcel201Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CancelParcel201Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response
      */
     public function cancelParcel($command_id, $cancel_parcel_parameters)
     {
@@ -199,9 +199,9 @@ class ParcelManagementApi
      * @param  string $command_id Command UUID. (required)
      * @param  \AllegroApi\Model\CancelParcelParameters $cancel_parcel_parameters (required)
      *
-     * @return array of \AllegroApi\Model\CancelParcel201Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CancelParcel201Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelParcelWithHttpInfo($command_id, $cancel_parcel_parameters)
     {
@@ -436,8 +436,6 @@ class ParcelManagementApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($command_id !== null) {
             $resourcePath = str_replace(
@@ -446,7 +444,6 @@ class ParcelManagementApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -516,9 +513,9 @@ class ParcelManagementApi
      * @param  string $command_id Command UUID. (required)
      * @param  \AllegroApi\Model\ParcelCreationParameters $parcel_creation_parameters parcel_creation_parameters (required)
      *
-     * @return \AllegroApi\Model\CreateNewParcel201Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CreateNewParcel201Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response
      */
     public function createNewParcel($command_id, $parcel_creation_parameters)
     {
@@ -534,9 +531,9 @@ class ParcelManagementApi
      * @param  string $command_id Command UUID. (required)
      * @param  \AllegroApi\Model\ParcelCreationParameters $parcel_creation_parameters (required)
      *
-     * @return array of \AllegroApi\Model\CreateNewParcel201Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CreateNewParcel201Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function createNewParcelWithHttpInfo($command_id, $parcel_creation_parameters)
     {
@@ -771,8 +768,6 @@ class ParcelManagementApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($command_id !== null) {
             $resourcePath = str_replace(
@@ -781,7 +776,6 @@ class ParcelManagementApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -849,9 +843,9 @@ class ParcelManagementApi
      * Get available delivery services
      *
      *
-     * @return \AllegroApi\Model\DeliveryServices|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetDeliveryServices504Response
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\DeliveryServices|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetDeliveryServices504Response
      */
     public function getAvailableDeliveryServices()
     {
@@ -865,9 +859,9 @@ class ParcelManagementApi
      * Get available delivery services
      *
      *
-     * @return array of \AllegroApi\Model\DeliveryServices|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetDeliveryServices504Response, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\DeliveryServices|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetDeliveryServices504Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAvailableDeliveryServicesWithHttpInfo()
     {
@@ -1084,10 +1078,6 @@ class ParcelManagementApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             '',
@@ -1149,9 +1139,9 @@ class ParcelManagementApi
      *
      * @param  string $command_id Command UUID. (required)
      *
-     * @return \AllegroApi\Model\GetParcelCancellationStatus200Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetDeliveryServices504Response
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\GetParcelCancellationStatus200Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetDeliveryServices504Response
      */
     public function getParcelCancellationStatus($command_id)
     {
@@ -1166,9 +1156,9 @@ class ParcelManagementApi
      *
      * @param  string $command_id Command UUID. (required)
      *
-     * @return array of \AllegroApi\Model\GetParcelCancellationStatus200Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetDeliveryServices504Response, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\GetParcelCancellationStatus200Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetDeliveryServices504Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getParcelCancellationStatusWithHttpInfo($command_id)
     {
@@ -1414,8 +1404,6 @@ class ParcelManagementApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($command_id !== null) {
             $resourcePath = str_replace(
@@ -1424,7 +1412,6 @@ class ParcelManagementApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1487,9 +1474,9 @@ class ParcelManagementApi
      *
      * @param  string $command_id Command UUID. (required)
      *
-     * @return \AllegroApi\Model\GetParcelCreationStatus200Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetDeliveryServices504Response
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\GetParcelCreationStatus200Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetDeliveryServices504Response
      */
     public function getParcelCreationStatus($command_id)
     {
@@ -1504,9 +1491,9 @@ class ParcelManagementApi
      *
      * @param  string $command_id Command UUID. (required)
      *
-     * @return array of \AllegroApi\Model\GetParcelCreationStatus200Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetDeliveryServices504Response, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\GetParcelCreationStatus200Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetDeliveryServices504Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getParcelCreationStatusWithHttpInfo($command_id)
     {
@@ -1752,8 +1739,6 @@ class ParcelManagementApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($command_id !== null) {
             $resourcePath = str_replace(
@@ -1762,7 +1747,6 @@ class ParcelManagementApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1825,9 +1809,9 @@ class ParcelManagementApi
      *
      * @param  string $parcel_id Id of parcel. (required)
      *
-     * @return \AllegroApi\Model\ParcelDetails|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetShipmentDetails404Response|\AllegroApi\Model\GetDeliveryServices504Response
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ParcelDetails|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetShipmentDetails404Response|\AllegroApi\Model\GetDeliveryServices504Response
      */
     public function getParcelDetails($parcel_id)
     {
@@ -1842,9 +1826,9 @@ class ParcelManagementApi
      *
      * @param  string $parcel_id Id of parcel. (required)
      *
-     * @return array of \AllegroApi\Model\ParcelDetails|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetShipmentDetails404Response|\AllegroApi\Model\GetDeliveryServices504Response, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ParcelDetails|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetShipmentDetails404Response|\AllegroApi\Model\GetDeliveryServices504Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getParcelDetailsWithHttpInfo($parcel_id)
     {
@@ -2110,8 +2094,6 @@ class ParcelManagementApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($parcel_id !== null) {
             $resourcePath = str_replace(
@@ -2120,7 +2102,6 @@ class ParcelManagementApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -2184,9 +2165,9 @@ class ParcelManagementApi
      * @param  string $parcel_id Id of parcel. (required)
      * @param  string $page_format Label page format. Only for PDF file. (optional)
      *
-     * @return \SplFileObject|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetShipmentDetails404Response|\AllegroApi\Model\GetDeliveryServices504Response
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \SplFileObject|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetShipmentDetails404Response|\AllegroApi\Model\GetDeliveryServices504Response
      */
     public function getParcelLabel($parcel_id, $page_format = null)
     {
@@ -2202,9 +2183,9 @@ class ParcelManagementApi
      * @param  string $parcel_id Id of parcel. (required)
      * @param  string $page_format Label page format. Only for PDF file. (optional)
      *
-     * @return array of \SplFileObject|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetShipmentDetails404Response|\AllegroApi\Model\GetDeliveryServices504Response, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \SplFileObject|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetShipmentDetails404Response|\AllegroApi\Model\GetDeliveryServices504Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getParcelLabelWithHttpInfo($parcel_id, $page_format = null)
     {
@@ -2479,8 +2460,7 @@ class ParcelManagementApi
                 foreach($parcel_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['parcelId'] = $parcel_id;
             }
         }
@@ -2490,14 +2470,10 @@ class ParcelManagementApi
                 foreach($page_format as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['pageFormat'] = $page_format;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/pdf', 'text/plain', 'application/vnd.allegro.public.v1+json'],
@@ -2560,9 +2536,9 @@ class ParcelManagementApi
      *
      * @param  string $command_id Command UUID. (required)
      *
-     * @return \AllegroApi\Model\GetParcelPickupStatus200Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetDeliveryServices504Response
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\GetParcelPickupStatus200Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetDeliveryServices504Response
      */
     public function getParcelPickupStatus($command_id)
     {
@@ -2577,9 +2553,9 @@ class ParcelManagementApi
      *
      * @param  string $command_id Command UUID. (required)
      *
-     * @return array of \AllegroApi\Model\GetParcelPickupStatus200Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetDeliveryServices504Response, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\GetParcelPickupStatus200Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\GetDeliveryServices504Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getParcelPickupStatusWithHttpInfo($command_id)
     {
@@ -2825,8 +2801,6 @@ class ParcelManagementApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($command_id !== null) {
             $resourcePath = str_replace(
@@ -2835,7 +2809,6 @@ class ParcelManagementApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -3184,7 +3157,6 @@ class ParcelManagementApi
             throw new \InvalidArgumentException('invalid value for "$parcel_id" when calling ParcelManagementApi.getParcelsPickupDateProposals, number of items must be less than or equal to 100.');
         }
 
-
         $resourcePath = '/parcel-management/pickup-date-proposals';
         $formParams = [];
         $queryParams = [];
@@ -3198,8 +3170,7 @@ class ParcelManagementApi
                 foreach($parcel_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['parcelId'] = $parcel_id;
             }
         }
@@ -3209,14 +3180,10 @@ class ParcelManagementApi
                 foreach($ready_date as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['readyDate'] = $ready_date;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -3560,7 +3527,6 @@ class ParcelManagementApi
             throw new \InvalidArgumentException('invalid value for "$parcel_id" when calling ParcelManagementApi.getParcelsProtocol, number of items must be less than or equal to 100.');
         }
 
-
         $resourcePath = '/parcel-management/parcels/protocol';
         $formParams = [];
         $queryParams = [];
@@ -3574,14 +3540,10 @@ class ParcelManagementApi
                 foreach($parcel_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['parcelId'] = $parcel_id;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/pdf', 'application/vnd.allegro.public.v1+json'],
@@ -3645,9 +3607,9 @@ class ParcelManagementApi
      * @param  string $command_id Command UUID. (required)
      * @param  \AllegroApi\Model\PickupParcelParameters $pickup_parcel_parameters pickup_parcel_parameters (required)
      *
-     * @return \AllegroApi\Model\RequestParcelPickup201Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\RequestParcelPickup201Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response
      */
     public function requestParcelPickup($command_id, $pickup_parcel_parameters)
     {
@@ -3663,9 +3625,9 @@ class ParcelManagementApi
      * @param  string $command_id Command UUID. (required)
      * @param  \AllegroApi\Model\PickupParcelParameters $pickup_parcel_parameters (required)
      *
-     * @return array of \AllegroApi\Model\RequestParcelPickup201Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\RequestParcelPickup201Response|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function requestParcelPickupWithHttpInfo($command_id, $pickup_parcel_parameters)
     {
@@ -3900,8 +3862,6 @@ class ParcelManagementApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($command_id !== null) {
             $resourcePath = str_replace(
@@ -3910,7 +3870,6 @@ class ParcelManagementApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -3971,7 +3930,6 @@ class ParcelManagementApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

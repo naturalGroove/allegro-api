@@ -235,7 +235,6 @@ class SaleProductOfferStatusResponse implements ModelInterface, ArrayAccess, \Js
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -295,7 +294,6 @@ class SaleProductOfferStatusResponse implements ModelInterface, ArrayAccess, \Js
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets offer
@@ -414,7 +412,7 @@ class SaleProductOfferStatusResponse implements ModelInterface, ArrayAccess, \Js
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -440,5 +438,4 @@ class SaleProductOfferStatusResponse implements ModelInterface, ArrayAccess, \Js
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

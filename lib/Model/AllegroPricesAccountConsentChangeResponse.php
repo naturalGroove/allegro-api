@@ -312,7 +312,6 @@ class AllegroPricesAccountConsentChangeResponse implements ModelInterface, Array
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets status
      *
@@ -413,7 +412,7 @@ class AllegroPricesAccountConsentChangeResponse implements ModelInterface, Array
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -439,5 +438,4 @@ class AllegroPricesAccountConsentChangeResponse implements ModelInterface, Array
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

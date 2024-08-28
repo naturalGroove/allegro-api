@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * AfterSaleServicesApi Class Doc Comment
@@ -180,9 +180,9 @@ class AfterSaleServicesApi
      *
      * @param  \AllegroApi\Model\CreateAfterSalesServiceConditionsAttachmentUsingPOSTRequest $create_after_sales_service_conditions_attachment_using_post_request After sale services attachment (required)
      *
-     * @return \AllegroApi\Model\AfterSalesServicesAttachment
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AfterSalesServicesAttachment
      */
     public function createAfterSalesServiceConditionsAttachmentUsingPOST($create_after_sales_service_conditions_attachment_using_post_request)
     {
@@ -197,9 +197,9 @@ class AfterSaleServicesApi
      *
      * @param  \AllegroApi\Model\CreateAfterSalesServiceConditionsAttachmentUsingPOSTRequest $create_after_sales_service_conditions_attachment_using_post_request After sale services attachment (required)
      *
-     * @return array of \AllegroApi\Model\AfterSalesServicesAttachment, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AfterSalesServicesAttachment, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAfterSalesServiceConditionsAttachmentUsingPOSTWithHttpInfo($create_after_sales_service_conditions_attachment_using_post_request)
     {
@@ -365,10 +365,6 @@ class AfterSaleServicesApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -436,9 +432,9 @@ class AfterSaleServicesApi
      *
      * @param  \AllegroApi\Model\ImpliedWarrantyRequest $implied_warranty_request Implied warranty (required)
      *
-     * @return \AllegroApi\Model\ImpliedWarrantyResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ImpliedWarrantyResponse
      */
     public function createAfterSalesServiceImpliedWarrantyUsingPOST($implied_warranty_request)
     {
@@ -453,9 +449,9 @@ class AfterSaleServicesApi
      *
      * @param  \AllegroApi\Model\ImpliedWarrantyRequest $implied_warranty_request Implied warranty (required)
      *
-     * @return array of \AllegroApi\Model\ImpliedWarrantyResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ImpliedWarrantyResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAfterSalesServiceImpliedWarrantyUsingPOSTWithHttpInfo($implied_warranty_request)
     {
@@ -621,10 +617,6 @@ class AfterSaleServicesApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -692,9 +684,9 @@ class AfterSaleServicesApi
      *
      * @param  \AllegroApi\Model\ReturnPolicyRequest $return_policy_request Return Policy (required)
      *
-     * @return \AllegroApi\Model\ReturnPolicyResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ReturnPolicyResponse
      */
     public function createAfterSalesServiceReturnPolicyUsingPOST($return_policy_request)
     {
@@ -709,9 +701,9 @@ class AfterSaleServicesApi
      *
      * @param  \AllegroApi\Model\ReturnPolicyRequest $return_policy_request Return Policy (required)
      *
-     * @return array of \AllegroApi\Model\ReturnPolicyResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ReturnPolicyResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAfterSalesServiceReturnPolicyUsingPOSTWithHttpInfo($return_policy_request)
     {
@@ -877,10 +869,6 @@ class AfterSaleServicesApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -948,9 +936,9 @@ class AfterSaleServicesApi
      *
      * @param  \AllegroApi\Model\WarrantyRequest $warranty_request Warranty (required)
      *
-     * @return \AllegroApi\Model\WarrantyResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\WarrantyResponse
      */
     public function createAfterSalesServiceWarrantyUsingPOST($warranty_request)
     {
@@ -965,9 +953,9 @@ class AfterSaleServicesApi
      *
      * @param  \AllegroApi\Model\WarrantyRequest $warranty_request Warranty (required)
      *
-     * @return array of \AllegroApi\Model\WarrantyResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\WarrantyResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAfterSalesServiceWarrantyUsingPOSTWithHttpInfo($warranty_request)
     {
@@ -1133,10 +1121,6 @@ class AfterSaleServicesApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -1204,9 +1188,9 @@ class AfterSaleServicesApi
      *
      * @param  string $implied_warranty_id The ID of the implied warranty. (required)
      *
-     * @return \AllegroApi\Model\ImpliedWarrantyResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ImpliedWarrantyResponse
      */
     public function getAfterSalesServiceImpliedWarrantyUsingGET($implied_warranty_id)
     {
@@ -1221,9 +1205,9 @@ class AfterSaleServicesApi
      *
      * @param  string $implied_warranty_id The ID of the implied warranty. (required)
      *
-     * @return array of \AllegroApi\Model\ImpliedWarrantyResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ImpliedWarrantyResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAfterSalesServiceImpliedWarrantyUsingGETWithHttpInfo($implied_warranty_id)
     {
@@ -1389,8 +1373,6 @@ class AfterSaleServicesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($implied_warranty_id !== null) {
             $resourcePath = str_replace(
@@ -1399,7 +1381,6 @@ class AfterSaleServicesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1462,9 +1443,9 @@ class AfterSaleServicesApi
      *
      * @param  string $return_policy_id The ID of the return policy. (required)
      *
-     * @return \AllegroApi\Model\ReturnPolicyResponse
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ReturnPolicyResponse
      */
     public function getAfterSalesServiceReturnPolicyUsingGET($return_policy_id)
     {
@@ -1479,9 +1460,9 @@ class AfterSaleServicesApi
      *
      * @param  string $return_policy_id The ID of the return policy. (required)
      *
-     * @return array of \AllegroApi\Model\ReturnPolicyResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ReturnPolicyResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAfterSalesServiceReturnPolicyUsingGETWithHttpInfo($return_policy_id)
     {
@@ -1647,8 +1628,6 @@ class AfterSaleServicesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($return_policy_id !== null) {
             $resourcePath = str_replace(
@@ -1657,7 +1636,6 @@ class AfterSaleServicesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1720,9 +1698,9 @@ class AfterSaleServicesApi
      *
      * @param  string $warranty_id The ID of the warranty. (required)
      *
-     * @return \AllegroApi\Model\WarrantyResponse
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\WarrantyResponse
      */
     public function getAfterSalesServiceWarrantyUsingGET($warranty_id)
     {
@@ -1737,9 +1715,9 @@ class AfterSaleServicesApi
      *
      * @param  string $warranty_id The ID of the warranty. (required)
      *
-     * @return array of \AllegroApi\Model\WarrantyResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\WarrantyResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAfterSalesServiceWarrantyUsingGETWithHttpInfo($warranty_id)
     {
@@ -1905,8 +1883,6 @@ class AfterSaleServicesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($warranty_id !== null) {
             $resourcePath = str_replace(
@@ -1915,7 +1891,6 @@ class AfterSaleServicesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1979,9 +1954,9 @@ class AfterSaleServicesApi
      * @param  int $limit The limit of elements in the response. (optional, default to 60)
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      *
-     * @return \AllegroApi\Model\ImpliedWarrantiesListImpliedWarrantyBasic
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ImpliedWarrantiesListImpliedWarrantyBasic
      */
     public function getPublicSellerListingUsingGET($limit = 60, $offset = 0)
     {
@@ -1997,9 +1972,9 @@ class AfterSaleServicesApi
      * @param  int $limit The limit of elements in the response. (optional, default to 60)
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      *
-     * @return array of \AllegroApi\Model\ImpliedWarrantiesListImpliedWarrantyBasic, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ImpliedWarrantiesListImpliedWarrantyBasic, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPublicSellerListingUsingGETWithHttpInfo($limit = 60, $offset = 0)
     {
@@ -2168,7 +2143,6 @@ class AfterSaleServicesApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling AfterSaleServicesApi.getPublicSellerListingUsingGET, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/after-sales-service-conditions/implied-warranties';
         $formParams = [];
         $queryParams = [];
@@ -2182,8 +2156,7 @@ class AfterSaleServicesApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -2193,14 +2166,10 @@ class AfterSaleServicesApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -2264,9 +2233,9 @@ class AfterSaleServicesApi
      * @param  int $limit The limit of elements in the response. (optional, default to 60)
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      *
-     * @return \AllegroApi\Model\ReturnPoliciesListReturnPolicyBasic
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ReturnPoliciesListReturnPolicyBasic
      */
     public function getPublicSellerListingUsingGET1($limit = 60, $offset = 0)
     {
@@ -2282,9 +2251,9 @@ class AfterSaleServicesApi
      * @param  int $limit The limit of elements in the response. (optional, default to 60)
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      *
-     * @return array of \AllegroApi\Model\ReturnPoliciesListReturnPolicyBasic, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ReturnPoliciesListReturnPolicyBasic, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPublicSellerListingUsingGET1WithHttpInfo($limit = 60, $offset = 0)
     {
@@ -2453,7 +2422,6 @@ class AfterSaleServicesApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling AfterSaleServicesApi.getPublicSellerListingUsingGET1, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/after-sales-service-conditions/return-policies';
         $formParams = [];
         $queryParams = [];
@@ -2467,8 +2435,7 @@ class AfterSaleServicesApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -2478,14 +2445,10 @@ class AfterSaleServicesApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -2549,9 +2512,9 @@ class AfterSaleServicesApi
      * @param  int $limit The limit of elements in the response. (optional, default to 60)
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      *
-     * @return \AllegroApi\Model\WarrantiesListWarrantyBasic
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\WarrantiesListWarrantyBasic
      */
     public function getPublicSellerListingUsingGET2($limit = 60, $offset = 0)
     {
@@ -2567,9 +2530,9 @@ class AfterSaleServicesApi
      * @param  int $limit The limit of elements in the response. (optional, default to 60)
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      *
-     * @return array of \AllegroApi\Model\WarrantiesListWarrantyBasic, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\WarrantiesListWarrantyBasic, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPublicSellerListingUsingGET2WithHttpInfo($limit = 60, $offset = 0)
     {
@@ -2738,7 +2701,6 @@ class AfterSaleServicesApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling AfterSaleServicesApi.getPublicSellerListingUsingGET2, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/after-sales-service-conditions/warranties';
         $formParams = [];
         $queryParams = [];
@@ -2752,8 +2714,7 @@ class AfterSaleServicesApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -2763,14 +2724,10 @@ class AfterSaleServicesApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -2834,9 +2791,9 @@ class AfterSaleServicesApi
      * @param  string $implied_warranty_id The ID of the implied warranty. (required)
      * @param  \AllegroApi\Model\ImpliedWarrantyRequest $implied_warranty_request Implied warranty (required)
      *
-     * @return \AllegroApi\Model\ImpliedWarrantyResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ImpliedWarrantyResponse
      */
     public function updateAfterSalesServiceImpliedWarrantyUsingPUT($implied_warranty_id, $implied_warranty_request)
     {
@@ -2852,9 +2809,9 @@ class AfterSaleServicesApi
      * @param  string $implied_warranty_id The ID of the implied warranty. (required)
      * @param  \AllegroApi\Model\ImpliedWarrantyRequest $implied_warranty_request Implied warranty (required)
      *
-     * @return array of \AllegroApi\Model\ImpliedWarrantyResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ImpliedWarrantyResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAfterSalesServiceImpliedWarrantyUsingPUTWithHttpInfo($implied_warranty_id, $implied_warranty_request)
     {
@@ -3029,8 +2986,6 @@ class AfterSaleServicesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($implied_warranty_id !== null) {
             $resourcePath = str_replace(
@@ -3039,7 +2994,6 @@ class AfterSaleServicesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -3109,9 +3063,9 @@ class AfterSaleServicesApi
      * @param  string $return_policy_id The ID of the return policy. (required)
      * @param  \AllegroApi\Model\ReturnPolicyRequest $return_policy_request Return Policy (required)
      *
-     * @return \AllegroApi\Model\ReturnPolicyResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ReturnPolicyResponse
      */
     public function updateAfterSalesServiceReturnPolicyUsingPUT($return_policy_id, $return_policy_request)
     {
@@ -3127,9 +3081,9 @@ class AfterSaleServicesApi
      * @param  string $return_policy_id The ID of the return policy. (required)
      * @param  \AllegroApi\Model\ReturnPolicyRequest $return_policy_request Return Policy (required)
      *
-     * @return array of \AllegroApi\Model\ReturnPolicyResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ReturnPolicyResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAfterSalesServiceReturnPolicyUsingPUTWithHttpInfo($return_policy_id, $return_policy_request)
     {
@@ -3304,8 +3258,6 @@ class AfterSaleServicesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($return_policy_id !== null) {
             $resourcePath = str_replace(
@@ -3314,7 +3266,6 @@ class AfterSaleServicesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -3384,9 +3335,9 @@ class AfterSaleServicesApi
      * @param  string $warranty_id The ID of the warranty. (required)
      * @param  \AllegroApi\Model\WarrantyRequest $warranty_request Warranty (required)
      *
-     * @return \AllegroApi\Model\WarrantyResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\WarrantyResponse
      */
     public function updateAfterSalesServiceWarrantyUsingPUT($warranty_id, $warranty_request)
     {
@@ -3402,9 +3353,9 @@ class AfterSaleServicesApi
      * @param  string $warranty_id The ID of the warranty. (required)
      * @param  \AllegroApi\Model\WarrantyRequest $warranty_request Warranty (required)
      *
-     * @return array of \AllegroApi\Model\WarrantyResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\WarrantyResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAfterSalesServiceWarrantyUsingPUTWithHttpInfo($warranty_id, $warranty_request)
     {
@@ -3579,8 +3530,6 @@ class AfterSaleServicesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($warranty_id !== null) {
             $resourcePath = str_replace(
@@ -3589,7 +3538,6 @@ class AfterSaleServicesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -3662,9 +3610,9 @@ class AfterSaleServicesApi
      * @param  string $attachment_id The ID of the attachment. (required)
      * @param  \SplFileObject $body body (optional)
      *
-     * @return \AllegroApi\Model\AfterSalesServicesAttachment
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AfterSalesServicesAttachment
      */
     public function uploadAfterSalesServiceConditionsAttachmentUsingPUT($attachment_id, $body = null)
     {
@@ -3683,9 +3631,9 @@ class AfterSaleServicesApi
      * @param  string $attachment_id The ID of the attachment. (required)
      * @param  \SplFileObject $body (optional)
      *
-     * @return array of \AllegroApi\Model\AfterSalesServicesAttachment, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AfterSalesServicesAttachment, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadAfterSalesServiceConditionsAttachmentUsingPUTWithHttpInfo($attachment_id, $body = null)
     {
@@ -3863,8 +3811,6 @@ class AfterSaleServicesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($attachment_id !== null) {
             $resourcePath = str_replace(
@@ -3873,7 +3819,6 @@ class AfterSaleServicesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -3938,7 +3883,6 @@ class AfterSaleServicesApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

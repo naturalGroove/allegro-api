@@ -235,7 +235,6 @@ class DeliverySettingsResponseAbroadFreeDelivery implements ModelInterface, Arra
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -301,7 +300,6 @@ class DeliverySettingsResponseAbroadFreeDelivery implements ModelInterface, Arra
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets amount
@@ -420,7 +418,7 @@ class DeliverySettingsResponseAbroadFreeDelivery implements ModelInterface, Arra
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -446,5 +444,4 @@ class DeliverySettingsResponseAbroadFreeDelivery implements ModelInterface, Arra
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

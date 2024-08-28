@@ -228,7 +228,6 @@ class OfferPriceAutomationModificationSetSetInnerRule implements ModelInterface,
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -290,7 +289,6 @@ class OfferPriceAutomationModificationSetSetInnerRule implements ModelInterface,
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets id
@@ -382,7 +380,7 @@ class OfferPriceAutomationModificationSetSetInnerRule implements ModelInterface,
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -408,5 +406,4 @@ class OfferPriceAutomationModificationSetSetInnerRule implements ModelInterface,
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

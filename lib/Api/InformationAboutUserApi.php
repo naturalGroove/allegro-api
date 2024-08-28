@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * InformationAboutUserApi Class Doc Comment
@@ -180,9 +180,9 @@ class InformationAboutUserApi
      *
      * @param  \AllegroApi\Model\AdditionalEmailRequest $additional_email_request request (required)
      *
-     * @return \AllegroApi\Model\AdditionalEmail|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AdditionalEmail|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      */
     public function addAdditionalEmailUsingPOST($additional_email_request)
     {
@@ -197,9 +197,9 @@ class InformationAboutUserApi
      *
      * @param  \AllegroApi\Model\AdditionalEmailRequest $additional_email_request request (required)
      *
-     * @return array of \AllegroApi\Model\AdditionalEmail|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AdditionalEmail|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function addAdditionalEmailUsingPOSTWithHttpInfo($additional_email_request)
     {
@@ -425,10 +425,6 @@ class InformationAboutUserApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', '*/*'],
             'application/vnd.allegro.public.v1+json',
@@ -497,9 +493,9 @@ class InformationAboutUserApi
      * @param  string $rating_id ID of the rating. (required)
      * @param  \AllegroApi\Model\UserRatingAnswerRequest $user_rating_answer_request User rating answer request. (required)
      *
-     * @return \AllegroApi\Model\Answer|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\Answer|\AllegroApi\Model\ErrorsHolder
      */
     public function answerUserRatingUsingPUT($rating_id, $user_rating_answer_request)
     {
@@ -515,9 +511,9 @@ class InformationAboutUserApi
      * @param  string $rating_id ID of the rating. (required)
      * @param  \AllegroApi\Model\UserRatingAnswerRequest $user_rating_answer_request User rating answer request. (required)
      *
-     * @return array of \AllegroApi\Model\Answer|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\Answer|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function answerUserRatingUsingPUTWithHttpInfo($rating_id, $user_rating_answer_request)
     {
@@ -712,8 +708,6 @@ class InformationAboutUserApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($rating_id !== null) {
             $resourcePath = str_replace(
@@ -722,7 +716,6 @@ class InformationAboutUserApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -791,9 +784,9 @@ class InformationAboutUserApi
      *
      * @param  string $email_id Id of the additional email to be deleted. (required)
      *
-     * @return void
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return void
      */
     public function deleteAdditionalEmailUsingDELETE($email_id)
     {
@@ -807,9 +800,9 @@ class InformationAboutUserApi
      *
      * @param  string $email_id Id of the additional email to be deleted. (required)
      *
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteAdditionalEmailUsingDELETEWithHttpInfo($email_id)
     {
@@ -947,8 +940,6 @@ class InformationAboutUserApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($email_id !== null) {
             $resourcePath = str_replace(
@@ -957,7 +948,6 @@ class InformationAboutUserApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', '*/*'],
@@ -1020,9 +1010,9 @@ class InformationAboutUserApi
      *
      * @param  string $email_id Id of the additional email. (required)
      *
-     * @return \AllegroApi\Model\AdditionalEmail|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AdditionalEmail|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      */
     public function getAdditionalEmailUsingGET($email_id)
     {
@@ -1037,9 +1027,9 @@ class InformationAboutUserApi
      *
      * @param  string $email_id Id of the additional email. (required)
      *
-     * @return array of \AllegroApi\Model\AdditionalEmail|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AdditionalEmail|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAdditionalEmailUsingGETWithHttpInfo($email_id)
     {
@@ -1245,8 +1235,6 @@ class InformationAboutUserApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($email_id !== null) {
             $resourcePath = str_replace(
@@ -1255,7 +1243,6 @@ class InformationAboutUserApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', '*/*'],
@@ -1317,9 +1304,9 @@ class InformationAboutUserApi
      * Get user&#39;s additional emails
      *
      *
-     * @return \AllegroApi\Model\AdditionalEmailsResponse|\AllegroApi\Model\AuthError
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AdditionalEmailsResponse|\AllegroApi\Model\AuthError
      */
     public function getListOfAdditionalEmailsUsingGET()
     {
@@ -1333,9 +1320,9 @@ class InformationAboutUserApi
      * Get user&#39;s additional emails
      *
      *
-     * @return array of \AllegroApi\Model\AdditionalEmailsResponse|\AllegroApi\Model\AuthError, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AdditionalEmailsResponse|\AllegroApi\Model\AuthError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getListOfAdditionalEmailsUsingGETWithHttpInfo()
     {
@@ -1511,10 +1498,6 @@ class InformationAboutUserApi
         $headerParams = [];
         $httpBody = null;
         $multipart = false;
-
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', '*/*'],
@@ -1822,14 +1805,10 @@ class InformationAboutUserApi
                 foreach($marketplace_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['marketplaceId'] = $marketplace_id;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1892,9 +1871,9 @@ class InformationAboutUserApi
      *
      * @param  string $rating_id The ID of the rating. (required)
      *
-     * @return \AllegroApi\Model\UserRating
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\UserRating
      */
     public function getUserRatingUsingGET($rating_id)
     {
@@ -1909,9 +1888,9 @@ class InformationAboutUserApi
      *
      * @param  string $rating_id The ID of the rating. (required)
      *
-     * @return array of \AllegroApi\Model\UserRating, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\UserRating, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserRatingUsingGETWithHttpInfo($rating_id)
     {
@@ -2077,8 +2056,6 @@ class InformationAboutUserApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($rating_id !== null) {
             $resourcePath = str_replace(
@@ -2087,7 +2064,6 @@ class InformationAboutUserApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -2154,9 +2130,9 @@ class InformationAboutUserApi
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      * @param  int $limit The limit of elements in the response. (optional, default to 20)
      *
-     * @return \AllegroApi\Model\UserRatingListResponse
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\UserRatingListResponse
      */
     public function getUserRatingsUsingGET($recommended = null, $last_changed_at_gte = null, $last_changed_at_lte = null, $offset = 0, $limit = 20)
     {
@@ -2175,9 +2151,9 @@ class InformationAboutUserApi
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      * @param  int $limit The limit of elements in the response. (optional, default to 20)
      *
-     * @return array of \AllegroApi\Model\UserRatingListResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\UserRatingListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserRatingsUsingGETWithHttpInfo($recommended = null, $last_changed_at_gte = null, $last_changed_at_lte = null, $offset = 0, $limit = 20)
     {
@@ -2355,7 +2331,6 @@ class InformationAboutUserApi
             throw new \InvalidArgumentException('invalid value for "$limit" when calling InformationAboutUserApi.getUserRatingsUsingGET, must be bigger than or equal to 1.');
         }
 
-
         $resourcePath = '/sale/user-ratings';
         $formParams = [];
         $queryParams = [];
@@ -2369,8 +2344,7 @@ class InformationAboutUserApi
                 foreach($recommended as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['recommended'] = $recommended;
             }
         }
@@ -2380,8 +2354,7 @@ class InformationAboutUserApi
                 foreach($last_changed_at_gte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['lastChangedAt.gte'] = $last_changed_at_gte;
             }
         }
@@ -2391,8 +2364,7 @@ class InformationAboutUserApi
                 foreach($last_changed_at_lte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['lastChangedAt.lte'] = $last_changed_at_lte;
             }
         }
@@ -2402,8 +2374,7 @@ class InformationAboutUserApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
@@ -2413,14 +2384,10 @@ class InformationAboutUserApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -2482,9 +2449,9 @@ class InformationAboutUserApi
      * Get basic information about user
      *
      *
-     * @return \AllegroApi\Model\MeResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\MeResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      */
     public function meGET()
     {
@@ -2498,9 +2465,9 @@ class InformationAboutUserApi
      * Get basic information about user
      *
      *
-     * @return array of \AllegroApi\Model\MeResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\MeResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function meGETWithHttpInfo()
     {
@@ -2697,10 +2664,6 @@ class InformationAboutUserApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             '',
@@ -2763,9 +2726,9 @@ class InformationAboutUserApi
      * @param  string $rating_id ID of the rating. (required)
      * @param  \AllegroApi\Model\UserRatingRemovalRequest $user_rating_removal_request User rating removal request. (required)
      *
-     * @return \AllegroApi\Model\Removal|\AllegroApi\Model\ErrorsHolder
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\Removal|\AllegroApi\Model\ErrorsHolder
      */
     public function userRatingRemovalUsingPUT($rating_id, $user_rating_removal_request)
     {
@@ -2781,9 +2744,9 @@ class InformationAboutUserApi
      * @param  string $rating_id ID of the rating. (required)
      * @param  \AllegroApi\Model\UserRatingRemovalRequest $user_rating_removal_request User rating removal request. (required)
      *
-     * @return array of \AllegroApi\Model\Removal|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\Removal|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function userRatingRemovalUsingPUTWithHttpInfo($rating_id, $user_rating_removal_request)
     {
@@ -2978,8 +2941,6 @@ class InformationAboutUserApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($rating_id !== null) {
             $resourcePath = str_replace(
@@ -2988,7 +2949,6 @@ class InformationAboutUserApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -3049,7 +3009,6 @@ class InformationAboutUserApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

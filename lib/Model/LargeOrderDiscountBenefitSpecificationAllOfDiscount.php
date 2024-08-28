@@ -228,7 +228,6 @@ class LargeOrderDiscountBenefitSpecificationAllOfDiscount implements ModelInterf
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -290,7 +289,6 @@ class LargeOrderDiscountBenefitSpecificationAllOfDiscount implements ModelInterf
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets percentage
@@ -382,7 +380,7 @@ class LargeOrderDiscountBenefitSpecificationAllOfDiscount implements ModelInterf
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -408,5 +406,4 @@ class LargeOrderDiscountBenefitSpecificationAllOfDiscount implements ModelInterf
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

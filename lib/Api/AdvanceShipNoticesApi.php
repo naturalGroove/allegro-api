@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * AdvanceShipNoticesApi Class Doc Comment
@@ -180,9 +180,9 @@ class AdvanceShipNoticesApi
      *
      * @param  \AllegroApi\Model\CreateAdvanceShipNoticeRequest $create_advance_ship_notice_request create_advance_ship_notice_request (required)
      *
-     * @return \AllegroApi\Model\CreateAdvanceShipNoticeResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CreateAdvanceShipNoticeResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function createAdvanceShipNotice($create_advance_ship_notice_request)
     {
@@ -197,9 +197,9 @@ class AdvanceShipNoticesApi
      *
      * @param  \AllegroApi\Model\CreateAdvanceShipNoticeRequest $create_advance_ship_notice_request (required)
      *
-     * @return array of \AllegroApi\Model\CreateAdvanceShipNoticeResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CreateAdvanceShipNoticeResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAdvanceShipNoticeWithHttpInfo($create_advance_ship_notice_request)
     {
@@ -405,10 +405,6 @@ class AdvanceShipNoticesApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', 'application/json'],
             'application/vnd.allegro.public.v1+json',
@@ -477,9 +473,9 @@ class AdvanceShipNoticesApi
      * @param  string $command_id The identifier of the command. (required)
      * @param  \AllegroApi\Model\CreateLabelsCommandOnlyInput $create_labels_command_only_input create_labels_command_only_input (required)
      *
-     * @return \AllegroApi\Model\CreateLabelsCommand|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CreateLabelsCommand|\AllegroApi\Model\ErrorsHolder
      */
     public function createLabelsCommand($command_id, $create_labels_command_only_input)
     {
@@ -495,9 +491,9 @@ class AdvanceShipNoticesApi
      * @param  string $command_id The identifier of the command. (required)
      * @param  \AllegroApi\Model\CreateLabelsCommandOnlyInput $create_labels_command_only_input (required)
      *
-     * @return array of \AllegroApi\Model\CreateLabelsCommand|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CreateLabelsCommand|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function createLabelsCommandWithHttpInfo($command_id, $create_labels_command_only_input)
     {
@@ -692,8 +688,6 @@ class AdvanceShipNoticesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($command_id !== null) {
             $resourcePath = str_replace(
@@ -702,7 +696,6 @@ class AdvanceShipNoticesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', 'application/json'],
@@ -771,9 +764,9 @@ class AdvanceShipNoticesApi
      *
      * @param  string $id An identifier of the Advance Ship Notice to delete. (required)
      *
-     * @return void
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return void
      */
     public function deleteAdvanceShipNotice($id)
     {
@@ -787,9 +780,9 @@ class AdvanceShipNoticesApi
      *
      * @param  string $id An identifier of the Advance Ship Notice to delete. (required)
      *
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteAdvanceShipNoticeWithHttpInfo($id)
     {
@@ -911,8 +904,6 @@ class AdvanceShipNoticesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
@@ -921,7 +912,6 @@ class AdvanceShipNoticesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             [],
@@ -984,9 +974,9 @@ class AdvanceShipNoticesApi
      *
      * @param  string $id The identifier of returned Advance Ship Notice. (required)
      *
-     * @return \AllegroApi\Model\AdvanceShipNoticeResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AdvanceShipNoticeResponse
      */
     public function getAdvanceShipNotice($id)
     {
@@ -1001,9 +991,9 @@ class AdvanceShipNoticesApi
      *
      * @param  string $id The identifier of returned Advance Ship Notice. (required)
      *
-     * @return array of \AllegroApi\Model\AdvanceShipNoticeResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AdvanceShipNoticeResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAdvanceShipNoticeWithHttpInfo($id)
     {
@@ -1169,8 +1159,6 @@ class AdvanceShipNoticesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
@@ -1179,7 +1167,6 @@ class AdvanceShipNoticesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1243,9 +1230,9 @@ class AdvanceShipNoticesApi
      * @param  string $id An identifier of the Advance Ship Notice. (required)
      * @param  string $accept Content-type of generated labels. (required)
      *
-     * @return \SplFileObject
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \SplFileObject
      */
     public function getAdvanceShipNoticeLabels($id, $accept)
     {
@@ -1261,9 +1248,9 @@ class AdvanceShipNoticesApi
      * @param  string $id An identifier of the Advance Ship Notice. (required)
      * @param  string $accept Content-type of generated labels. (required)
      *
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAdvanceShipNoticeLabelsWithHttpInfo($id, $accept)
     {
@@ -1438,7 +1425,6 @@ class AdvanceShipNoticesApi
         $httpBody = null;
         $multipart = false;
 
-
         // header params
         if ($accept !== null) {
             $headerParams['accept'] = ObjectSerializer::toHeaderValue($accept);
@@ -1452,7 +1438,6 @@ class AdvanceShipNoticesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/pdf', 'x-application/zpl'],
@@ -1515,9 +1500,9 @@ class AdvanceShipNoticesApi
      *
      * @param  string $id An identifier of advance ship notice. (required)
      *
-     * @return \AllegroApi\Model\ReceivingState
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ReceivingState
      */
     public function getAdvanceShipNoticeReceivingState($id)
     {
@@ -1532,9 +1517,9 @@ class AdvanceShipNoticesApi
      *
      * @param  string $id An identifier of advance ship notice. (required)
      *
-     * @return array of \AllegroApi\Model\ReceivingState, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ReceivingState, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAdvanceShipNoticeReceivingStateWithHttpInfo($id)
     {
@@ -1700,8 +1685,6 @@ class AdvanceShipNoticesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
@@ -1710,7 +1693,6 @@ class AdvanceShipNoticesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1775,9 +1757,9 @@ class AdvanceShipNoticesApi
      * @param  int $limit Maximum number of elements in response. (optional, default to 50)
      * @param  \AllegroApi\Model\AdvanceShipNoticeStatus[] $status A status of the Advance Ship Notices in the response. (optional)
      *
-     * @return \AllegroApi\Model\AdvanceShipNoticeList|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AdvanceShipNoticeList|\AllegroApi\Model\ErrorsHolder
      */
     public function getAdvanceShipNotices($offset = 0, $limit = 50, $status = null)
     {
@@ -1794,9 +1776,9 @@ class AdvanceShipNoticesApi
      * @param  int $limit Maximum number of elements in response. (optional, default to 50)
      * @param  \AllegroApi\Model\AdvanceShipNoticeStatus[] $status A status of the Advance Ship Notices in the response. (optional)
      *
-     * @return array of \AllegroApi\Model\AdvanceShipNoticeList|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AdvanceShipNoticeList|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAdvanceShipNoticesWithHttpInfo($offset = 0, $limit = 50, $status = null)
     {
@@ -1985,7 +1967,6 @@ class AdvanceShipNoticesApi
             throw new \InvalidArgumentException('invalid value for "$limit" when calling AdvanceShipNoticesApi.getAdvanceShipNotices, must be bigger than or equal to 1.');
         }
 
-
         $resourcePath = '/fulfillment/advance-ship-notices';
         $formParams = [];
         $queryParams = [];
@@ -1999,8 +1980,7 @@ class AdvanceShipNoticesApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
@@ -2010,8 +1990,7 @@ class AdvanceShipNoticesApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -2021,14 +2000,10 @@ class AdvanceShipNoticesApi
                 foreach($status as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['status'] = $status;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', 'application/json'],
@@ -2091,9 +2066,9 @@ class AdvanceShipNoticesApi
      *
      * @param  string $command_id An identifier of the command. (required)
      *
-     * @return \AllegroApi\Model\CreateLabelsCommand|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CreateLabelsCommand|\AllegroApi\Model\ErrorsHolder
      */
     public function getLabelCommand($command_id)
     {
@@ -2108,9 +2083,9 @@ class AdvanceShipNoticesApi
      *
      * @param  string $command_id An identifier of the command. (required)
      *
-     * @return array of \AllegroApi\Model\CreateLabelsCommand|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CreateLabelsCommand|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getLabelCommandWithHttpInfo($command_id)
     {
@@ -2296,8 +2271,6 @@ class AdvanceShipNoticesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($command_id !== null) {
             $resourcePath = str_replace(
@@ -2306,7 +2279,6 @@ class AdvanceShipNoticesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', 'application/json'],
@@ -2369,9 +2341,9 @@ class AdvanceShipNoticesApi
      *
      * @param  string $command_id An identifier of the command. (required)
      *
-     * @return \AllegroApi\Model\SubmitCommand|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\SubmitCommand|\AllegroApi\Model\ErrorsHolder
      */
     public function getSubmitCommand($command_id)
     {
@@ -2386,9 +2358,9 @@ class AdvanceShipNoticesApi
      *
      * @param  string $command_id An identifier of the command. (required)
      *
-     * @return array of \AllegroApi\Model\SubmitCommand|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\SubmitCommand|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSubmitCommandWithHttpInfo($command_id)
     {
@@ -2574,8 +2546,6 @@ class AdvanceShipNoticesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($command_id !== null) {
             $resourcePath = str_replace(
@@ -2584,7 +2554,6 @@ class AdvanceShipNoticesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', 'application/json'],
@@ -2648,9 +2617,9 @@ class AdvanceShipNoticesApi
      * @param  string $command_id The identifier of the command. (required)
      * @param  \AllegroApi\Model\SubmitCommand $submit_command submit_command (required)
      *
-     * @return \AllegroApi\Model\SubmitCommand|\AllegroApi\Model\ErrorsHolder
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\SubmitCommand|\AllegroApi\Model\ErrorsHolder
      */
     public function submitCommand($command_id, $submit_command)
     {
@@ -2666,9 +2635,9 @@ class AdvanceShipNoticesApi
      * @param  string $command_id The identifier of the command. (required)
      * @param  \AllegroApi\Model\SubmitCommand $submit_command (required)
      *
-     * @return array of \AllegroApi\Model\SubmitCommand|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\SubmitCommand|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function submitCommandWithHttpInfo($command_id, $submit_command)
     {
@@ -2863,8 +2832,6 @@ class AdvanceShipNoticesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($command_id !== null) {
             $resourcePath = str_replace(
@@ -2873,7 +2840,6 @@ class AdvanceShipNoticesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', 'application/json'],
@@ -2944,9 +2910,9 @@ class AdvanceShipNoticesApi
      * @param  string $if_match A current version of Advance Ship Notice (e.g. from etag header obtained via get). (required)
      * @param  \AllegroApi\Model\AdvanceShipNotice $advance_ship_notice advance_ship_notice (required)
      *
-     * @return \AllegroApi\Model\AdvanceShipNoticeResponse|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AdvanceShipNoticeResponse|\AllegroApi\Model\ErrorsHolder
      */
     public function updateAdvanceShipNotice($id, $if_match, $advance_ship_notice)
     {
@@ -2963,9 +2929,9 @@ class AdvanceShipNoticesApi
      * @param  string $if_match A current version of Advance Ship Notice (e.g. from etag header obtained via get). (required)
      * @param  \AllegroApi\Model\AdvanceShipNotice $advance_ship_notice (required)
      *
-     * @return array of \AllegroApi\Model\AdvanceShipNoticeResponse|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AdvanceShipNoticeResponse|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAdvanceShipNoticeWithHttpInfo($id, $if_match, $advance_ship_notice)
     {
@@ -3169,7 +3135,6 @@ class AdvanceShipNoticesApi
         $httpBody = null;
         $multipart = false;
 
-
         // header params
         if ($if_match !== null) {
             $headerParams['if-match'] = ObjectSerializer::toHeaderValue($if_match);
@@ -3183,7 +3148,6 @@ class AdvanceShipNoticesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', 'application/json'],
@@ -3254,9 +3218,9 @@ class AdvanceShipNoticesApi
      * @param  string $if_match A current version of Advance Ship Notice (e.g. from etag header obtained via get). (required)
      * @param  \AllegroApi\Model\UpdateSubmittedAdvanceShipNoticeRequest $update_submitted_advance_ship_notice_request update_submitted_advance_ship_notice_request (required)
      *
-     * @return \AllegroApi\Model\AdvanceShipNoticeResponse|\AllegroApi\Model\ErrorsHolder
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AdvanceShipNoticeResponse|\AllegroApi\Model\ErrorsHolder
      */
     public function updateSubmittedAdvanceShipNotice($id, $if_match, $update_submitted_advance_ship_notice_request)
     {
@@ -3273,9 +3237,9 @@ class AdvanceShipNoticesApi
      * @param  string $if_match A current version of Advance Ship Notice (e.g. from etag header obtained via get). (required)
      * @param  \AllegroApi\Model\UpdateSubmittedAdvanceShipNoticeRequest $update_submitted_advance_ship_notice_request (required)
      *
-     * @return array of \AllegroApi\Model\AdvanceShipNoticeResponse|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AdvanceShipNoticeResponse|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateSubmittedAdvanceShipNoticeWithHttpInfo($id, $if_match, $update_submitted_advance_ship_notice_request)
     {
@@ -3479,7 +3443,6 @@ class AdvanceShipNoticesApi
         $httpBody = null;
         $multipart = false;
 
-
         // header params
         if ($if_match !== null) {
             $headerParams['if-match'] = ObjectSerializer::toHeaderValue($if_match);
@@ -3493,7 +3456,6 @@ class AdvanceShipNoticesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', 'application/json'],
@@ -3554,7 +3516,6 @@ class AdvanceShipNoticesApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

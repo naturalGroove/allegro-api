@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * BatchOfferModificationApi Class Doc Comment
@@ -180,9 +180,9 @@ class BatchOfferModificationApi
      *
      * @param  string $command_id Command identifier. (required)
      *
-     * @return \AllegroApi\Model\GeneralReport
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\GeneralReport
      */
     public function getGeneralReportUsingGET($command_id)
     {
@@ -197,9 +197,9 @@ class BatchOfferModificationApi
      *
      * @param  string $command_id Command identifier. (required)
      *
-     * @return array of \AllegroApi\Model\GeneralReport, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\GeneralReport, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGeneralReportUsingGETWithHttpInfo($command_id)
     {
@@ -365,8 +365,6 @@ class BatchOfferModificationApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($command_id !== null) {
             $resourcePath = str_replace(
@@ -375,7 +373,6 @@ class BatchOfferModificationApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -438,9 +435,9 @@ class BatchOfferModificationApi
      *
      * @param  string $command_id Command identifier. (required)
      *
-     * @return \AllegroApi\Model\GeneralReport
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\GeneralReport
      */
     public function getPriceModificationCommandStatusUsingGET($command_id)
     {
@@ -455,9 +452,9 @@ class BatchOfferModificationApi
      *
      * @param  string $command_id Command identifier. (required)
      *
-     * @return array of \AllegroApi\Model\GeneralReport, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\GeneralReport, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPriceModificationCommandStatusUsingGETWithHttpInfo($command_id)
     {
@@ -623,8 +620,6 @@ class BatchOfferModificationApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($command_id !== null) {
             $resourcePath = str_replace(
@@ -633,7 +628,6 @@ class BatchOfferModificationApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -698,9 +692,9 @@ class BatchOfferModificationApi
      * @param  int $limit The limit of elements in the response. (optional, default to 100)
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      *
-     * @return \AllegroApi\Model\TaskReport
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\TaskReport
      */
     public function getPriceModificationCommandTasksStatusesUsingGET($command_id, $limit = 100, $offset = 0)
     {
@@ -717,9 +711,9 @@ class BatchOfferModificationApi
      * @param  int $limit The limit of elements in the response. (optional, default to 100)
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      *
-     * @return array of \AllegroApi\Model\TaskReport, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\TaskReport, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPriceModificationCommandTasksStatusesUsingGETWithHttpInfo($command_id, $limit = 100, $offset = 0)
     {
@@ -897,7 +891,6 @@ class BatchOfferModificationApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling BatchOfferModificationApi.getPriceModificationCommandTasksStatusesUsingGET, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/sale/offer-price-change-commands/{commandId}/tasks';
         $formParams = [];
         $queryParams = [];
@@ -911,8 +904,7 @@ class BatchOfferModificationApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -922,12 +914,10 @@ class BatchOfferModificationApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
-
 
         // path params
         if ($command_id !== null) {
@@ -937,7 +927,6 @@ class BatchOfferModificationApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1000,9 +989,9 @@ class BatchOfferModificationApi
      *
      * @param  string $command_id Command identifier. (required)
      *
-     * @return \AllegroApi\Model\GeneralReport
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\GeneralReport
      */
     public function getQuantityModificationCommandStatusUsingGET($command_id)
     {
@@ -1017,9 +1006,9 @@ class BatchOfferModificationApi
      *
      * @param  string $command_id Command identifier. (required)
      *
-     * @return array of \AllegroApi\Model\GeneralReport, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\GeneralReport, HTTP status code, HTTP response headers (array of strings)
      */
     public function getQuantityModificationCommandStatusUsingGETWithHttpInfo($command_id)
     {
@@ -1185,8 +1174,6 @@ class BatchOfferModificationApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($command_id !== null) {
             $resourcePath = str_replace(
@@ -1195,7 +1182,6 @@ class BatchOfferModificationApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1260,9 +1246,9 @@ class BatchOfferModificationApi
      * @param  int $limit The limit of elements in the response. (optional, default to 100)
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      *
-     * @return \AllegroApi\Model\TaskReport
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\TaskReport
      */
     public function getQuantityModificationCommandTasksStatusesUsingGET($command_id, $limit = 100, $offset = 0)
     {
@@ -1279,9 +1265,9 @@ class BatchOfferModificationApi
      * @param  int $limit The limit of elements in the response. (optional, default to 100)
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      *
-     * @return array of \AllegroApi\Model\TaskReport, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\TaskReport, HTTP status code, HTTP response headers (array of strings)
      */
     public function getQuantityModificationCommandTasksStatusesUsingGETWithHttpInfo($command_id, $limit = 100, $offset = 0)
     {
@@ -1459,7 +1445,6 @@ class BatchOfferModificationApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling BatchOfferModificationApi.getQuantityModificationCommandTasksStatusesUsingGET, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/sale/offer-quantity-change-commands/{commandId}/tasks';
         $formParams = [];
         $queryParams = [];
@@ -1473,8 +1458,7 @@ class BatchOfferModificationApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -1484,12 +1468,10 @@ class BatchOfferModificationApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
-
 
         // path params
         if ($command_id !== null) {
@@ -1499,7 +1481,6 @@ class BatchOfferModificationApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1564,9 +1545,9 @@ class BatchOfferModificationApi
      * @param  int $limit The limit of elements in the response. (optional, default to 100)
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      *
-     * @return \AllegroApi\Model\TaskReport
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\TaskReport
      */
     public function getTasksUsingGET($command_id, $limit = 100, $offset = 0)
     {
@@ -1583,9 +1564,9 @@ class BatchOfferModificationApi
      * @param  int $limit The limit of elements in the response. (optional, default to 100)
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      *
-     * @return array of \AllegroApi\Model\TaskReport, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\TaskReport, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTasksUsingGETWithHttpInfo($command_id, $limit = 100, $offset = 0)
     {
@@ -1763,7 +1744,6 @@ class BatchOfferModificationApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling BatchOfferModificationApi.getTasksUsingGET, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/sale/offer-modification-commands/{commandId}/tasks';
         $formParams = [];
         $queryParams = [];
@@ -1777,8 +1757,7 @@ class BatchOfferModificationApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -1788,12 +1767,10 @@ class BatchOfferModificationApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
-
 
         // path params
         if ($command_id !== null) {
@@ -1803,7 +1780,6 @@ class BatchOfferModificationApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1866,9 +1842,9 @@ class BatchOfferModificationApi
      *
      * @param  string $command_id Command identifier. (required)
      *
-     * @return \AllegroApi\Model\GeneralReport
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\GeneralReport
      */
     public function getofferPriceAutomationModificationCommandStatusUsingGET($command_id)
     {
@@ -1883,9 +1859,9 @@ class BatchOfferModificationApi
      *
      * @param  string $command_id Command identifier. (required)
      *
-     * @return array of \AllegroApi\Model\GeneralReport, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\GeneralReport, HTTP status code, HTTP response headers (array of strings)
      */
     public function getofferPriceAutomationModificationCommandStatusUsingGETWithHttpInfo($command_id)
     {
@@ -2051,8 +2027,6 @@ class BatchOfferModificationApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($command_id !== null) {
             $resourcePath = str_replace(
@@ -2061,7 +2035,6 @@ class BatchOfferModificationApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -2126,9 +2099,9 @@ class BatchOfferModificationApi
      * @param  int $limit The limit of elements in the response. (optional, default to 100)
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      *
-     * @return \AllegroApi\Model\TaskReport
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\TaskReport
      */
     public function getofferPriceAutomationModificationCommandTasksStatusesUsingGET($command_id, $limit = 100, $offset = 0)
     {
@@ -2145,9 +2118,9 @@ class BatchOfferModificationApi
      * @param  int $limit The limit of elements in the response. (optional, default to 100)
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      *
-     * @return array of \AllegroApi\Model\TaskReport, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\TaskReport, HTTP status code, HTTP response headers (array of strings)
      */
     public function getofferPriceAutomationModificationCommandTasksStatusesUsingGETWithHttpInfo($command_id, $limit = 100, $offset = 0)
     {
@@ -2325,7 +2298,6 @@ class BatchOfferModificationApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling BatchOfferModificationApi.getofferPriceAutomationModificationCommandTasksStatusesUsingGET, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/sale/offer-price-automation-commands/{commandId}/tasks';
         $formParams = [];
         $queryParams = [];
@@ -2339,8 +2311,7 @@ class BatchOfferModificationApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -2350,12 +2321,10 @@ class BatchOfferModificationApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
-
 
         // path params
         if ($command_id !== null) {
@@ -2365,7 +2334,6 @@ class BatchOfferModificationApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -2429,9 +2397,9 @@ class BatchOfferModificationApi
      * @param  string $command_id Command identifier. (required)
      * @param  \AllegroApi\Model\OfferChangeCommand $offer_change_command offerChangeCommandDto (required)
      *
-     * @return \AllegroApi\Model\GeneralReport
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\GeneralReport
      */
     public function modificationCommandUsingPUT($command_id, $offer_change_command)
     {
@@ -2447,9 +2415,9 @@ class BatchOfferModificationApi
      * @param  string $command_id Command identifier. (required)
      * @param  \AllegroApi\Model\OfferChangeCommand $offer_change_command offerChangeCommandDto (required)
      *
-     * @return array of \AllegroApi\Model\GeneralReport, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\GeneralReport, HTTP status code, HTTP response headers (array of strings)
      */
     public function modificationCommandUsingPUTWithHttpInfo($command_id, $offer_change_command)
     {
@@ -2624,8 +2592,6 @@ class BatchOfferModificationApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($command_id !== null) {
             $resourcePath = str_replace(
@@ -2634,7 +2600,6 @@ class BatchOfferModificationApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -2703,9 +2668,9 @@ class BatchOfferModificationApi
      *
      * @param  \AllegroApi\Model\OfferPriceAutomationCommand $offer_price_automation_command OfferPriceAutomationCommand (required)
      *
-     * @return \AllegroApi\Model\GeneralReport
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\GeneralReport
      */
     public function offerPriceAutomationModificationCommandUsingPOST($offer_price_automation_command)
     {
@@ -2720,9 +2685,9 @@ class BatchOfferModificationApi
      *
      * @param  \AllegroApi\Model\OfferPriceAutomationCommand $offer_price_automation_command OfferPriceAutomationCommand (required)
      *
-     * @return array of \AllegroApi\Model\GeneralReport, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\GeneralReport, HTTP status code, HTTP response headers (array of strings)
      */
     public function offerPriceAutomationModificationCommandUsingPOSTWithHttpInfo($offer_price_automation_command)
     {
@@ -2888,10 +2853,6 @@ class BatchOfferModificationApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -2960,9 +2921,9 @@ class BatchOfferModificationApi
      * @param  string $command_id Command identifier. (required)
      * @param  \AllegroApi\Model\OfferPriceChangeCommand $offer_price_change_command offerPriceChangeCommandDto (required)
      *
-     * @return \AllegroApi\Model\GeneralReport
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\GeneralReport
      */
     public function priceModificationCommandUsingPUT($command_id, $offer_price_change_command)
     {
@@ -2978,9 +2939,9 @@ class BatchOfferModificationApi
      * @param  string $command_id Command identifier. (required)
      * @param  \AllegroApi\Model\OfferPriceChangeCommand $offer_price_change_command offerPriceChangeCommandDto (required)
      *
-     * @return array of \AllegroApi\Model\GeneralReport, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\GeneralReport, HTTP status code, HTTP response headers (array of strings)
      */
     public function priceModificationCommandUsingPUTWithHttpInfo($command_id, $offer_price_change_command)
     {
@@ -3155,8 +3116,6 @@ class BatchOfferModificationApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($command_id !== null) {
             $resourcePath = str_replace(
@@ -3165,7 +3124,6 @@ class BatchOfferModificationApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -3235,9 +3193,9 @@ class BatchOfferModificationApi
      * @param  string $command_id Command identifier. (required)
      * @param  \AllegroApi\Model\OfferQuantityChangeCommand $offer_quantity_change_command offerQuantityChangeCommandDto (required)
      *
-     * @return \AllegroApi\Model\GeneralReport
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\GeneralReport
      */
     public function quantityModificationCommandUsingPUT($command_id, $offer_quantity_change_command)
     {
@@ -3253,9 +3211,9 @@ class BatchOfferModificationApi
      * @param  string $command_id Command identifier. (required)
      * @param  \AllegroApi\Model\OfferQuantityChangeCommand $offer_quantity_change_command offerQuantityChangeCommandDto (required)
      *
-     * @return array of \AllegroApi\Model\GeneralReport, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\GeneralReport, HTTP status code, HTTP response headers (array of strings)
      */
     public function quantityModificationCommandUsingPUTWithHttpInfo($command_id, $offer_quantity_change_command)
     {
@@ -3430,8 +3388,6 @@ class BatchOfferModificationApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($command_id !== null) {
             $resourcePath = str_replace(
@@ -3440,7 +3396,6 @@ class BatchOfferModificationApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -3501,7 +3456,6 @@ class BatchOfferModificationApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

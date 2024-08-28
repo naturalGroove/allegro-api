@@ -241,7 +241,6 @@ class AllegroParcelTrackingHistoryTrackingDetails implements ModelInterface, Arr
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -311,7 +310,6 @@ class AllegroParcelTrackingHistoryTrackingDetails implements ModelInterface, Arr
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets statuses
@@ -457,7 +455,7 @@ class AllegroParcelTrackingHistoryTrackingDetails implements ModelInterface, Arr
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -483,5 +481,4 @@ class AllegroParcelTrackingHistoryTrackingDetails implements ModelInterface, Arr
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

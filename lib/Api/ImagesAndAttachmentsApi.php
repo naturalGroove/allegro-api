@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * ImagesAndAttachmentsApi Class Doc Comment
@@ -180,9 +180,9 @@ class ImagesAndAttachmentsApi
      *
      * @param  \AllegroApi\Model\OfferAttachmentRequest $offer_attachment_request offer attachment (required)
      *
-     * @return \AllegroApi\Model\OfferAttachment
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\OfferAttachment
      */
     public function createOfferAttachmentUsingPOST($offer_attachment_request)
     {
@@ -197,9 +197,9 @@ class ImagesAndAttachmentsApi
      *
      * @param  \AllegroApi\Model\OfferAttachmentRequest $offer_attachment_request offer attachment (required)
      *
-     * @return array of \AllegroApi\Model\OfferAttachment, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\OfferAttachment, HTTP status code, HTTP response headers (array of strings)
      */
     public function createOfferAttachmentUsingPOSTWithHttpInfo($offer_attachment_request)
     {
@@ -365,10 +365,6 @@ class ImagesAndAttachmentsApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -440,9 +436,9 @@ class ImagesAndAttachmentsApi
      * @param  string $attachment_id The ID of the attachment. (required)
      * @param  \SplFileObject $body body (optional)
      *
-     * @return \AllegroApi\Model\OfferAttachment
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\OfferAttachment
      */
     public function uploadOfferAttachmentUsingPUT($attachment_id, $body = null)
     {
@@ -461,9 +457,9 @@ class ImagesAndAttachmentsApi
      * @param  string $attachment_id The ID of the attachment. (required)
      * @param  \SplFileObject $body (optional)
      *
-     * @return array of \AllegroApi\Model\OfferAttachment, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\OfferAttachment, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadOfferAttachmentUsingPUTWithHttpInfo($attachment_id, $body = null)
     {
@@ -641,8 +637,6 @@ class ImagesAndAttachmentsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($attachment_id !== null) {
             $resourcePath = str_replace(
@@ -651,7 +645,6 @@ class ImagesAndAttachmentsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -727,9 +720,9 @@ class ImagesAndAttachmentsApi
      *
      * @param  \AllegroApi\Model\OfferImageLinkUploadRequest $offer_image_link_upload_request offer_image_link_upload_request (required)
      *
-     * @return \AllegroApi\Model\OfferImageUploadResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\OfferImageUploadResponse
      */
     public function uploadOfferImageUsingPOST($offer_image_link_upload_request)
     {
@@ -747,9 +740,9 @@ class ImagesAndAttachmentsApi
      *
      * @param  \AllegroApi\Model\OfferImageLinkUploadRequest $offer_image_link_upload_request (required)
      *
-     * @return array of \AllegroApi\Model\OfferImageUploadResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\OfferImageUploadResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadOfferImageUsingPOSTWithHttpInfo($offer_image_link_upload_request)
     {
@@ -924,10 +917,6 @@ class ImagesAndAttachmentsApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+jsonimage/jpegimage/pngimage/webp',
@@ -991,7 +980,6 @@ class ImagesAndAttachmentsApi
 
         return $this->createRequest('POST', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

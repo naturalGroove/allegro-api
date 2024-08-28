@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * AuctionsAndBiddingApi Class Doc Comment
@@ -180,9 +180,9 @@ class AuctionsAndBiddingApi
      *
      * @param  string $offer_id The offer ID. (required)
      *
-     * @return \AllegroApi\Model\MyBidResponse|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\MyBidResponse|\AllegroApi\Model\ErrorsHolder
      */
     public function getBid($offer_id)
     {
@@ -197,9 +197,9 @@ class AuctionsAndBiddingApi
      *
      * @param  string $offer_id The offer ID. (required)
      *
-     * @return array of \AllegroApi\Model\MyBidResponse|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\MyBidResponse|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBidWithHttpInfo($offer_id)
     {
@@ -385,8 +385,6 @@ class AuctionsAndBiddingApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($offer_id !== null) {
             $resourcePath = str_replace(
@@ -395,7 +393,6 @@ class AuctionsAndBiddingApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -459,9 +456,9 @@ class AuctionsAndBiddingApi
      * @param  string $offer_id The offer ID. (required)
      * @param  \AllegroApi\Model\BidRequest $bid_request bid_request (optional)
      *
-     * @return \AllegroApi\Model\MyBidResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\MyBidResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function placeBid($offer_id, $bid_request = null)
     {
@@ -477,9 +474,9 @@ class AuctionsAndBiddingApi
      * @param  string $offer_id The offer ID. (required)
      * @param  \AllegroApi\Model\BidRequest $bid_request (optional)
      *
-     * @return array of \AllegroApi\Model\MyBidResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\MyBidResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function placeBidWithHttpInfo($offer_id, $bid_request = null)
     {
@@ -728,8 +725,6 @@ class AuctionsAndBiddingApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($offer_id !== null) {
             $resourcePath = str_replace(
@@ -738,7 +733,6 @@ class AuctionsAndBiddingApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -799,7 +793,6 @@ class AuctionsAndBiddingApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

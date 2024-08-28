@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * BadgeCampaignsApi Class Doc Comment
@@ -183,9 +183,9 @@ class BadgeCampaignsApi
      * @param  int $offset Offset. (optional)
      * @param  int $limit The maximum number of applications returned in the response. (optional, default to 50)
      *
-     * @return \AllegroApi\Model\BadgeApplications|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\BadgeApplications|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      */
     public function badgeApplicationsGetAll($campaign_id = null, $offer_id = null, $offset = null, $limit = 50)
     {
@@ -203,9 +203,9 @@ class BadgeCampaignsApi
      * @param  int $offset Offset. (optional)
      * @param  int $limit The maximum number of applications returned in the response. (optional, default to 50)
      *
-     * @return array of \AllegroApi\Model\BadgeApplications|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\BadgeApplications|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function badgeApplicationsGetAllWithHttpInfo($campaign_id = null, $offer_id = null, $offset = null, $limit = 50)
     {
@@ -437,7 +437,6 @@ class BadgeCampaignsApi
             throw new \InvalidArgumentException('invalid value for "$limit" when calling BadgeCampaignsApi.badgeApplicationsGetAll, must be bigger than or equal to 1.');
         }
 
-
         $resourcePath = '/sale/badge-applications';
         $formParams = [];
         $queryParams = [];
@@ -451,8 +450,7 @@ class BadgeCampaignsApi
                 foreach($campaign_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['campaign.id'] = $campaign_id;
             }
         }
@@ -462,8 +460,7 @@ class BadgeCampaignsApi
                 foreach($offer_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offer.id'] = $offer_id;
             }
         }
@@ -473,8 +470,7 @@ class BadgeCampaignsApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
@@ -484,14 +480,10 @@ class BadgeCampaignsApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -554,9 +546,9 @@ class BadgeCampaignsApi
      *
      * @param  string $application_id Badge application ID. (required)
      *
-     * @return \AllegroApi\Model\BadgeApplication|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\BadgeApplication|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function badgeApplicationsGetOne($application_id)
     {
@@ -571,9 +563,9 @@ class BadgeCampaignsApi
      *
      * @param  string $application_id Badge application ID. (required)
      *
-     * @return array of \AllegroApi\Model\BadgeApplication|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\BadgeApplication|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function badgeApplicationsGetOneWithHttpInfo($application_id)
     {
@@ -799,8 +791,6 @@ class BadgeCampaignsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($application_id !== null) {
             $resourcePath = str_replace(
@@ -809,7 +799,6 @@ class BadgeCampaignsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -871,9 +860,9 @@ class BadgeCampaignsApi
      * Get a list of available badge campaigns
      *
      *
-     * @return \AllegroApi\Model\GetBadgeCampaignsList|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\GetBadgeCampaignsList|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      */
     public function badgeCampaignsGetAll()
     {
@@ -887,9 +876,9 @@ class BadgeCampaignsApi
      * Get a list of available badge campaigns
      *
      *
-     * @return array of \AllegroApi\Model\GetBadgeCampaignsList|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\GetBadgeCampaignsList|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function badgeCampaignsGetAllWithHttpInfo()
     {
@@ -1086,10 +1075,6 @@ class BadgeCampaignsApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             '',
@@ -1151,9 +1136,9 @@ class BadgeCampaignsApi
      *
      * @param  string $operation_id Badge operation ID. (required)
      *
-     * @return \AllegroApi\Model\BadgeOperation|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\BadgeOperation|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function badgeOperationsGetOne($operation_id)
     {
@@ -1168,9 +1153,9 @@ class BadgeCampaignsApi
      *
      * @param  string $operation_id Badge operation ID. (required)
      *
-     * @return array of \AllegroApi\Model\BadgeOperation|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\BadgeOperation|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function badgeOperationsGetOneWithHttpInfo($operation_id)
     {
@@ -1396,8 +1381,6 @@ class BadgeCampaignsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($operation_id !== null) {
             $resourcePath = str_replace(
@@ -1406,7 +1389,6 @@ class BadgeCampaignsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1471,9 +1453,9 @@ class BadgeCampaignsApi
      * @param  int $offset Offset. (optional)
      * @param  int $limit The maximum number of badges returned in the response. (optional, default to 50)
      *
-     * @return \AllegroApi\Model\BadgesList|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\BadgesList|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      */
     public function getBadges($offer_id = null, $offset = null, $limit = 50)
     {
@@ -1490,9 +1472,9 @@ class BadgeCampaignsApi
      * @param  int $offset Offset. (optional)
      * @param  int $limit The maximum number of badges returned in the response. (optional, default to 50)
      *
-     * @return array of \AllegroApi\Model\BadgesList|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\BadgesList|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBadgesWithHttpInfo($offer_id = null, $offset = null, $limit = 50)
     {
@@ -1721,7 +1703,6 @@ class BadgeCampaignsApi
             throw new \InvalidArgumentException('invalid value for "$limit" when calling BadgeCampaignsApi.getBadges, must be bigger than or equal to 1.');
         }
 
-
         $resourcePath = '/sale/badges';
         $formParams = [];
         $queryParams = [];
@@ -1735,8 +1716,7 @@ class BadgeCampaignsApi
                 foreach($offer_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offer.id'] = $offer_id;
             }
         }
@@ -1746,8 +1726,7 @@ class BadgeCampaignsApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
@@ -1757,14 +1736,10 @@ class BadgeCampaignsApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1829,9 +1804,9 @@ class BadgeCampaignsApi
      * @param  string $campaign_id Campaign ID. (required)
      * @param  \AllegroApi\Model\BadgePatchRequest $badge_patch_request badge_patch_request (optional)
      *
-     * @return \AllegroApi\Model\PatchBadge202Response|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\PatchBadge202Response|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function patchBadge($offer_id, $campaign_id, $badge_patch_request = null)
     {
@@ -1848,9 +1823,9 @@ class BadgeCampaignsApi
      * @param  string $campaign_id Campaign ID. (required)
      * @param  \AllegroApi\Model\BadgePatchRequest $badge_patch_request (optional)
      *
-     * @return array of \AllegroApi\Model\PatchBadge202Response|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\PatchBadge202Response|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchBadgeWithHttpInfo($offer_id, $campaign_id, $badge_patch_request = null)
     {
@@ -2148,8 +2123,6 @@ class BadgeCampaignsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($offer_id !== null) {
             $resourcePath = str_replace(
@@ -2166,7 +2139,6 @@ class BadgeCampaignsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -2235,9 +2207,9 @@ class BadgeCampaignsApi
      *
      * @param  \AllegroApi\Model\BadgeApplicationRequest $badge_application_request badge_application_request (optional)
      *
-     * @return \AllegroApi\Model\BadgeApplication|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\BadgeApplication|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function postBadges($badge_application_request = null)
     {
@@ -2252,9 +2224,9 @@ class BadgeCampaignsApi
      *
      * @param  \AllegroApi\Model\BadgeApplicationRequest $badge_application_request (optional)
      *
-     * @return array of \AllegroApi\Model\BadgeApplication|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\BadgeApplication|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function postBadgesWithHttpInfo($badge_application_request = null)
     {
@@ -2494,10 +2466,6 @@ class BadgeCampaignsApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -2557,7 +2525,6 @@ class BadgeCampaignsApi
 
         return $this->createRequest('POST', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

@@ -226,8 +226,6 @@ class CompatibilityListManual extends CompatibilityList
         return self::$openAPIModelName;
     }
 
-
-
     /**
      * Constructor
      *
@@ -284,7 +282,6 @@ class CompatibilityListManual extends CompatibilityList
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets items
@@ -376,7 +373,7 @@ class CompatibilityListManual extends CompatibilityList
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -402,5 +399,4 @@ class CompatibilityListManual extends CompatibilityList
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

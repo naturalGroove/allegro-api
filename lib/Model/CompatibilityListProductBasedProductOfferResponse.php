@@ -226,8 +226,6 @@ class CompatibilityListProductBasedProductOfferResponse extends CompatibilityLis
         return self::$openAPIModelName;
     }
 
-
-
     /**
      * Constructor
      *
@@ -281,7 +279,6 @@ class CompatibilityListProductBasedProductOfferResponse extends CompatibilityLis
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets items
@@ -373,7 +370,7 @@ class CompatibilityListProductBasedProductOfferResponse extends CompatibilityLis
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -399,5 +396,4 @@ class CompatibilityListProductBasedProductOfferResponse extends CompatibilityLis
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

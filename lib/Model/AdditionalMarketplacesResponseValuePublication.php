@@ -326,7 +326,6 @@ class AdditionalMarketplacesResponseValuePublication implements ModelInterface, 
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets state
      *
@@ -454,7 +453,7 @@ class AdditionalMarketplacesResponseValuePublication implements ModelInterface, 
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -480,5 +479,4 @@ class AdditionalMarketplacesResponseValuePublication implements ModelInterface, 
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

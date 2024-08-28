@@ -228,7 +228,6 @@ class UserRatingRemovalRequestRequest implements ModelInterface, ArrayAccess, \J
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -294,7 +293,6 @@ class UserRatingRemovalRequestRequest implements ModelInterface, ArrayAccess, \J
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets message
@@ -390,7 +388,7 @@ class UserRatingRemovalRequestRequest implements ModelInterface, ArrayAccess, \J
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -416,5 +414,4 @@ class UserRatingRemovalRequestRequest implements ModelInterface, ArrayAccess, \J
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

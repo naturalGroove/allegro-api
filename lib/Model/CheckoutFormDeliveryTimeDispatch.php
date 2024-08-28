@@ -235,7 +235,6 @@ class CheckoutFormDeliveryTimeDispatch implements ModelInterface, ArrayAccess, \
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -295,7 +294,6 @@ class CheckoutFormDeliveryTimeDispatch implements ModelInterface, ArrayAccess, \
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets from
@@ -414,7 +412,7 @@ class CheckoutFormDeliveryTimeDispatch implements ModelInterface, ArrayAccess, \
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -440,5 +438,4 @@ class CheckoutFormDeliveryTimeDispatch implements ModelInterface, ArrayAccess, \
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

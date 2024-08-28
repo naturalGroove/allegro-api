@@ -228,7 +228,6 @@ class CustomerReturnRefundRejectionRequest implements ModelInterface, ArrayAcces
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -290,7 +289,6 @@ class CustomerReturnRefundRejectionRequest implements ModelInterface, ArrayAcces
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets rejection
@@ -382,7 +380,7 @@ class CustomerReturnRefundRejectionRequest implements ModelInterface, ArrayAcces
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -408,5 +406,4 @@ class CustomerReturnRefundRejectionRequest implements ModelInterface, ArrayAcces
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

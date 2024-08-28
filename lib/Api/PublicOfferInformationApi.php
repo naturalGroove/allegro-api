@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * PublicOfferInformationApi Class Doc Comment
@@ -194,9 +194,9 @@ class PublicOfferInformationApi
      * @param  bool $fallback Defines the behaviour of the search engine when no results with exact phrase match are found:    - *true* - related (not exact) results are returned,   - *false* - empty results are returned. (optional, default to true)
      * @param  array<string,string> $dynamic_filters You can filter and customize your search results to find exactly what you need by applying filters ids and their dictionary values to query according to the flowing pattern: id&#x3D;value. When the filter definition looks like:   &#x60;&#x60;&#x60;&#x60;     {       \&quot;id\&quot;: \&quot;parameter.11323\&quot;,       \&quot;type\&quot;: \&quot;MULTI\&quot;,       \&quot;name\&quot;: \&quot;Stan\&quot;,       \&quot;values\&quot;: [{           \&quot;value\&quot;: \&quot;11323_1\&quot;,           \&quot;name\&quot;: \&quot;nowe\&quot;,           \&quot;count\&quot;: 21,           \&quot;selected\&quot;: false         },         {           \&quot;value\&quot;: \&quot;11323_2\&quot;,           \&quot;name\&quot;: \&quot;używane\&quot;,           \&quot;count\&quot;: 157,           \&quot;selected\&quot;: false         },         {           \&quot;value\&quot;: \&quot;11323_238066\&quot;,           \&quot;name\&quot;: \&quot;po zwrocie\&quot;,           \&quot;count\&quot;: 1,           \&quot;selected\&quot;: false         }       ]     }   &#x60;&#x60;&#x60;&#x60; You can use &#39;Stan&#39; filter to query results, i.e.:   * &#x60;parameter.11323&#x3D;11323_1&#x60; for \&quot;nowe\&quot;   * &#x60;parameter.11323&#x3D;11323_2&#x60; for \&quot;używane\&quot;   * &#x60;parameter.11323&#x3D;11323_238066&#x60; for \&quot;po zwrocie\&quot;. (optional)
      *
-     * @return \AllegroApi\Model\ListingResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \AllegroApi\Exception\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @return \AllegroApi\Model\ListingResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function getListing($category_id = null, $phrase = null, $seller_id = null, $seller_login = null, $marketplace_id = 'allegro-pl', $shipping_country = null, $currency = null, $accept_language = null, $search_mode = 'REGULAR', $offset = 0, $limit = 60, $sort = 'relevance', $include = null, $fallback = true, $dynamic_filters = null)
     {
@@ -225,9 +225,9 @@ class PublicOfferInformationApi
      * @param  bool $fallback Defines the behaviour of the search engine when no results with exact phrase match are found:    - *true* - related (not exact) results are returned,   - *false* - empty results are returned. (optional, default to true)
      * @param  array<string,string> $dynamic_filters You can filter and customize your search results to find exactly what you need by applying filters ids and their dictionary values to query according to the flowing pattern: id&#x3D;value. When the filter definition looks like:   &#x60;&#x60;&#x60;&#x60;     {       \&quot;id\&quot;: \&quot;parameter.11323\&quot;,       \&quot;type\&quot;: \&quot;MULTI\&quot;,       \&quot;name\&quot;: \&quot;Stan\&quot;,       \&quot;values\&quot;: [{           \&quot;value\&quot;: \&quot;11323_1\&quot;,           \&quot;name\&quot;: \&quot;nowe\&quot;,           \&quot;count\&quot;: 21,           \&quot;selected\&quot;: false         },         {           \&quot;value\&quot;: \&quot;11323_2\&quot;,           \&quot;name\&quot;: \&quot;używane\&quot;,           \&quot;count\&quot;: 157,           \&quot;selected\&quot;: false         },         {           \&quot;value\&quot;: \&quot;11323_238066\&quot;,           \&quot;name\&quot;: \&quot;po zwrocie\&quot;,           \&quot;count\&quot;: 1,           \&quot;selected\&quot;: false         }       ]     }   &#x60;&#x60;&#x60;&#x60; You can use &#39;Stan&#39; filter to query results, i.e.:   * &#x60;parameter.11323&#x3D;11323_1&#x60; for \&quot;nowe\&quot;   * &#x60;parameter.11323&#x3D;11323_2&#x60; for \&quot;używane\&quot;   * &#x60;parameter.11323&#x3D;11323_238066&#x60; for \&quot;po zwrocie\&quot;. (optional)
      *
-     * @return array of \AllegroApi\Model\ListingResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \AllegroApi\Exception\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @return array of \AllegroApi\Model\ListingResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getListingWithHttpInfo($category_id = null, $phrase = null, $seller_id = null, $seller_login = null, $marketplace_id = 'allegro-pl', $shipping_country = null, $currency = null, $accept_language = null, $search_mode = 'REGULAR', $offset = 0, $limit = 60, $sort = 'relevance', $include = null, $fallback = true, $dynamic_filters = null)
     {
@@ -575,7 +575,6 @@ class PublicOfferInformationApi
             throw new \InvalidArgumentException('invalid value for "$limit" when calling PublicOfferInformationApi.getListing, must be bigger than or equal to 1.');
         }
 
-
         $resourcePath = '/offers/listing';
         $formParams = [];
         $queryParams = [];
@@ -589,8 +588,7 @@ class PublicOfferInformationApi
                 foreach($category_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['category.id'] = $category_id;
             }
         }
@@ -600,8 +598,7 @@ class PublicOfferInformationApi
                 foreach($phrase as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['phrase'] = $phrase;
             }
         }
@@ -611,8 +608,7 @@ class PublicOfferInformationApi
                 foreach($seller_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['seller.id'] = $seller_id;
             }
         }
@@ -622,8 +618,7 @@ class PublicOfferInformationApi
                 foreach($seller_login as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['seller.login'] = $seller_login;
             }
         }
@@ -633,8 +628,7 @@ class PublicOfferInformationApi
                 foreach($marketplace_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['marketplaceId'] = $marketplace_id;
             }
         }
@@ -644,8 +638,7 @@ class PublicOfferInformationApi
                 foreach($shipping_country as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['shipping.country'] = $shipping_country;
             }
         }
@@ -655,8 +648,7 @@ class PublicOfferInformationApi
                 foreach($currency as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['currency'] = $currency;
             }
         }
@@ -666,8 +658,7 @@ class PublicOfferInformationApi
                 foreach($search_mode as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['searchMode'] = $search_mode;
             }
         }
@@ -677,8 +668,7 @@ class PublicOfferInformationApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
@@ -688,8 +678,7 @@ class PublicOfferInformationApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -699,8 +688,7 @@ class PublicOfferInformationApi
                 foreach($sort as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['sort'] = $sort;
             }
         }
@@ -710,8 +698,7 @@ class PublicOfferInformationApi
                 foreach($include as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['include'] = $include;
             }
         }
@@ -721,8 +708,7 @@ class PublicOfferInformationApi
                 foreach($fallback as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['fallback'] = $fallback;
             }
         }
@@ -732,8 +718,7 @@ class PublicOfferInformationApi
                 foreach($dynamic_filters as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['Dynamic filters'] = $dynamic_filters;
             }
         }
@@ -742,8 +727,6 @@ class PublicOfferInformationApi
         if ($accept_language !== null) {
             $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
         }
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -802,7 +785,6 @@ class PublicOfferInformationApi
 
         return $this->createRequest('GET', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

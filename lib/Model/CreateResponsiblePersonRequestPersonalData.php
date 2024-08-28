@@ -241,7 +241,6 @@ class CreateResponsiblePersonRequestPersonalData implements ModelInterface, Arra
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -306,7 +305,6 @@ class CreateResponsiblePersonRequestPersonalData implements ModelInterface, Arra
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets name
@@ -456,7 +454,7 @@ class CreateResponsiblePersonRequestPersonalData implements ModelInterface, Arra
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -482,5 +480,4 @@ class CreateResponsiblePersonRequestPersonalData implements ModelInterface, Arra
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

@@ -234,7 +234,6 @@ class NewMessageInThread implements ModelInterface, ArrayAccess, \JsonSerializab
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -302,7 +301,6 @@ class NewMessageInThread implements ModelInterface, ArrayAccess, \JsonSerializab
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets text
      *
@@ -357,8 +355,8 @@ class NewMessageInThread implements ModelInterface, ArrayAccess, \JsonSerializab
             array_push($this->openAPINullablesSetToNull, 'attachments');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('attachments', $nullablesSetToNull);
-            if ($index !== FALSE) {
+            $index = array_search('attachments', $nullablesSetToNull, true);
+            if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
@@ -431,7 +429,7 @@ class NewMessageInThread implements ModelInterface, ArrayAccess, \JsonSerializab
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -457,5 +455,4 @@ class NewMessageInThread implements ModelInterface, ArrayAccess, \JsonSerializab
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

@@ -335,7 +335,6 @@ class CancelShipmentCommandStatusDto implements ModelInterface, ArrayAccess, \Js
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets command_id
      *
@@ -517,7 +516,7 @@ class CancelShipmentCommandStatusDto implements ModelInterface, ArrayAccess, \Js
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -543,5 +542,4 @@ class CancelShipmentCommandStatusDto implements ModelInterface, ArrayAccess, \Js
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

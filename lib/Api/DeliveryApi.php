@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * DeliveryApi Class Doc Comment
@@ -180,9 +180,9 @@ class DeliveryApi
      *
      * @param  \AllegroApi\Model\ShippingRatesSet $shipping_rates_set Shipping rates set (required)
      *
-     * @return \AllegroApi\Model\ShippingRatesSet|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ShippingRatesSet|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      */
     public function createShippingRatesSetUsingPOST($shipping_rates_set)
     {
@@ -197,9 +197,9 @@ class DeliveryApi
      *
      * @param  \AllegroApi\Model\ShippingRatesSet $shipping_rates_set Shipping rates set (required)
      *
-     * @return array of \AllegroApi\Model\ShippingRatesSet|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ShippingRatesSet|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function createShippingRatesSetUsingPOSTWithHttpInfo($shipping_rates_set)
     {
@@ -425,10 +425,6 @@ class DeliveryApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -496,9 +492,9 @@ class DeliveryApi
      *
      * @param  string $marketplace Allows to filter delivery methods by marketplace id. (optional)
      *
-     * @return \AllegroApi\Model\GetListOfDeliveryMethodsUsingGET200Response|\AllegroApi\Model\AuthError
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\GetListOfDeliveryMethodsUsingGET200Response|\AllegroApi\Model\AuthError
      */
     public function getListOfDeliveryMethodsUsingGET($marketplace = null)
     {
@@ -513,9 +509,9 @@ class DeliveryApi
      *
      * @param  string $marketplace Allows to filter delivery methods by marketplace id. (optional)
      *
-     * @return array of \AllegroApi\Model\GetListOfDeliveryMethodsUsingGET200Response|\AllegroApi\Model\AuthError, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\GetListOfDeliveryMethodsUsingGET200Response|\AllegroApi\Model\AuthError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getListOfDeliveryMethodsUsingGETWithHttpInfo($marketplace = null)
     {
@@ -701,14 +697,10 @@ class DeliveryApi
                 foreach($marketplace as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['marketplace'] = $marketplace;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -774,9 +766,9 @@ class DeliveryApi
      * Get the user&#39;s shipping rates
      *
      *
-     * @return \AllegroApi\Model\GetListOfShippingRatestUsingGET200Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\GetListOfShippingRatestUsingGET200Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      */
     public function getListOfShippingRatestUsingGET()
     {
@@ -790,9 +782,9 @@ class DeliveryApi
      * Get the user&#39;s shipping rates
      *
      *
-     * @return array of \AllegroApi\Model\GetListOfShippingRatestUsingGET200Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\GetListOfShippingRatestUsingGET200Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getListOfShippingRatestUsingGETWithHttpInfo()
     {
@@ -989,10 +981,6 @@ class DeliveryApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             '',
@@ -1054,9 +1042,9 @@ class DeliveryApi
      *
      * @param  string $marketplace_id Marketplace for which delivery settings will be returned. By default (if the marketplace parameter is not set) the marketplace on which the seller has registered is used. However, we recommend that the marketplace.id query parameter should always be explicitly set. (optional)
      *
-     * @return \AllegroApi\Model\DeliverySettingsResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\DeliverySettingsResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function getSaleDeliverySettings($marketplace_id = null)
     {
@@ -1071,9 +1059,9 @@ class DeliveryApi
      *
      * @param  string $marketplace_id Marketplace for which delivery settings will be returned. By default (if the marketplace parameter is not set) the marketplace on which the seller has registered is used. However, we recommend that the marketplace.id query parameter should always be explicitly set. (optional)
      *
-     * @return array of \AllegroApi\Model\DeliverySettingsResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\DeliverySettingsResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSaleDeliverySettingsWithHttpInfo($marketplace_id = null)
     {
@@ -1299,14 +1287,10 @@ class DeliveryApi
                 foreach($marketplace_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['marketplace.id'] = $marketplace_id;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1369,9 +1353,9 @@ class DeliveryApi
      *
      * @param  string $id Shipping rates set identifier. (required)
      *
-     * @return \AllegroApi\Model\ShippingRatesSet|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ShippingRatesSet|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function getShippingRatesSetUsingGET($id)
     {
@@ -1386,9 +1370,9 @@ class DeliveryApi
      *
      * @param  string $id Shipping rates set identifier. (required)
      *
-     * @return array of \AllegroApi\Model\ShippingRatesSet|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ShippingRatesSet|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getShippingRatesSetUsingGETWithHttpInfo($id)
     {
@@ -1614,8 +1598,6 @@ class DeliveryApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
@@ -1624,7 +1606,6 @@ class DeliveryApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1688,9 +1669,9 @@ class DeliveryApi
      * @param  string $id Shipping rates set identifier. (required)
      * @param  \AllegroApi\Model\ShippingRatesSet $shipping_rates_set Shipping rates set (required)
      *
-     * @return \AllegroApi\Model\ShippingRatesSet|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ShippingRatesSet|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function modifyShippingRatesSetUsingPUT($id, $shipping_rates_set)
     {
@@ -1706,9 +1687,9 @@ class DeliveryApi
      * @param  string $id Shipping rates set identifier. (required)
      * @param  \AllegroApi\Model\ShippingRatesSet $shipping_rates_set Shipping rates set (required)
      *
-     * @return array of \AllegroApi\Model\ShippingRatesSet|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ShippingRatesSet|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function modifyShippingRatesSetUsingPUTWithHttpInfo($id, $shipping_rates_set)
     {
@@ -1983,8 +1964,6 @@ class DeliveryApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
@@ -1993,7 +1972,6 @@ class DeliveryApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -2062,9 +2040,9 @@ class DeliveryApi
      *
      * @param  \AllegroApi\Model\DeliverySettingsRequest $delivery_settings_request Delivery settings set (required)
      *
-     * @return \AllegroApi\Model\DeliverySettingsResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\DeliverySettingsResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function putSaleDeliverySettings($delivery_settings_request)
     {
@@ -2079,9 +2057,9 @@ class DeliveryApi
      *
      * @param  \AllegroApi\Model\DeliverySettingsRequest $delivery_settings_request Delivery settings set (required)
      *
-     * @return array of \AllegroApi\Model\DeliverySettingsResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\DeliverySettingsResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function putSaleDeliverySettingsWithHttpInfo($delivery_settings_request)
     {
@@ -2307,10 +2285,6 @@ class DeliveryApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -2370,7 +2344,6 @@ class DeliveryApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

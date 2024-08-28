@@ -234,7 +234,6 @@ class ImpliedWarrantiesListImpliedWarrantyBasic implements ModelInterface, Array
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -298,7 +297,6 @@ class ImpliedWarrantiesListImpliedWarrantyBasic implements ModelInterface, Array
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets count
@@ -422,7 +420,7 @@ class ImpliedWarrantiesListImpliedWarrantyBasic implements ModelInterface, Array
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -448,5 +446,4 @@ class ImpliedWarrantiesListImpliedWarrantyBasic implements ModelInterface, Array
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

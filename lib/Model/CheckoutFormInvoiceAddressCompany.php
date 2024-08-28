@@ -234,7 +234,6 @@ class CheckoutFormInvoiceAddressCompany implements ModelInterface, ArrayAccess, 
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -297,7 +296,6 @@ class CheckoutFormInvoiceAddressCompany implements ModelInterface, ArrayAccess, 
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets name
@@ -416,7 +414,7 @@ class CheckoutFormInvoiceAddressCompany implements ModelInterface, ArrayAccess, 
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -442,5 +440,4 @@ class CheckoutFormInvoiceAddressCompany implements ModelInterface, ArrayAccess, 
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

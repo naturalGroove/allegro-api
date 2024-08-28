@@ -232,8 +232,6 @@ class IntegerCategoryProductParameter extends CategoryProductParameter
         return self::$openAPIModelName;
     }
 
-
-
     /**
      * Constructor
      *
@@ -288,7 +286,6 @@ class IntegerCategoryProductParameter extends CategoryProductParameter
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets type
@@ -407,7 +404,7 @@ class IntegerCategoryProductParameter extends CategoryProductParameter
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -433,5 +430,4 @@ class IntegerCategoryProductParameter extends CategoryProductParameter
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

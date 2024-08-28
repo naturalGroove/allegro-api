@@ -319,7 +319,6 @@ class AdditionalServicesGroupTranslationWrapperWithType implements ModelInterfac
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets translation
      *
@@ -447,7 +446,7 @@ class AdditionalServicesGroupTranslationWrapperWithType implements ModelInterfac
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -473,5 +472,4 @@ class AdditionalServicesGroupTranslationWrapperWithType implements ModelInterfac
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

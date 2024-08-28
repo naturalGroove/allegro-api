@@ -232,8 +232,6 @@ class CreateLabelsSuccessfulCommandOutput extends CreateLabelsCommandOutput
         return self::$openAPIModelName;
     }
 
-
-
     /**
      * Constructor
      *
@@ -291,7 +289,6 @@ class CreateLabelsSuccessfulCommandOutput extends CreateLabelsCommandOutput
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets status
@@ -410,7 +407,7 @@ class CreateLabelsSuccessfulCommandOutput extends CreateLabelsCommandOutput
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -436,5 +433,4 @@ class CreateLabelsSuccessfulCommandOutput extends CreateLabelsCommandOutput
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

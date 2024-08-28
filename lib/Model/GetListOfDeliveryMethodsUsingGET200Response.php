@@ -228,7 +228,6 @@ class GetListOfDeliveryMethodsUsingGET200Response implements ModelInterface, Arr
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -287,7 +286,6 @@ class GetListOfDeliveryMethodsUsingGET200Response implements ModelInterface, Arr
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets delivery_methods
@@ -379,7 +377,7 @@ class GetListOfDeliveryMethodsUsingGET200Response implements ModelInterface, Arr
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -405,5 +403,4 @@ class GetListOfDeliveryMethodsUsingGET200Response implements ModelInterface, Arr
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

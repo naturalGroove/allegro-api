@@ -321,7 +321,6 @@ class CheckoutFormsOrderInvoiceFileSecurityVerification implements ModelInterfac
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets status
      *
@@ -449,7 +448,7 @@ class CheckoutFormsOrderInvoiceFileSecurityVerification implements ModelInterfac
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -475,5 +474,4 @@ class CheckoutFormsOrderInvoiceFileSecurityVerification implements ModelInterfac
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

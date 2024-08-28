@@ -228,7 +228,6 @@ class ProductOfferAdditionalServicesResponse implements ModelInterface, ArrayAcc
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -287,7 +286,6 @@ class ProductOfferAdditionalServicesResponse implements ModelInterface, ArrayAcc
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets id
@@ -379,7 +377,7 @@ class ProductOfferAdditionalServicesResponse implements ModelInterface, ArrayAcc
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -405,5 +403,4 @@ class ProductOfferAdditionalServicesResponse implements ModelInterface, ArrayAcc
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

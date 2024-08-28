@@ -241,7 +241,6 @@ class ParcelTrackingHistoryTrackingDetails implements ModelInterface, ArrayAcces
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -311,7 +310,6 @@ class ParcelTrackingHistoryTrackingDetails implements ModelInterface, ArrayAcces
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets statuses
@@ -457,7 +455,7 @@ class ParcelTrackingHistoryTrackingDetails implements ModelInterface, ArrayAcces
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -483,5 +481,4 @@ class ParcelTrackingHistoryTrackingDetails implements ModelInterface, ArrayAcces
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

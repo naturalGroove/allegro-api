@@ -326,7 +326,6 @@ class AllegroPricesEligibilityResponse implements ModelInterface, ArrayAccess, \
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets consent
      *
@@ -481,7 +480,7 @@ class AllegroPricesEligibilityResponse implements ModelInterface, ArrayAccess, \
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -507,5 +506,4 @@ class AllegroPricesEligibilityResponse implements ModelInterface, ArrayAccess, \
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

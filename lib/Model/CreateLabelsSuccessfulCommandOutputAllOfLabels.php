@@ -229,7 +229,6 @@ class CreateLabelsSuccessfulCommandOutputAllOfLabels implements ModelInterface, 
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -291,7 +290,6 @@ class CreateLabelsSuccessfulCommandOutputAllOfLabels implements ModelInterface, 
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets file_url
@@ -383,7 +381,7 @@ class CreateLabelsSuccessfulCommandOutputAllOfLabels implements ModelInterface, 
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -409,5 +407,4 @@ class CreateLabelsSuccessfulCommandOutputAllOfLabels implements ModelInterface, 
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

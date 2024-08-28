@@ -232,8 +232,6 @@ class CompatibilityListProductBased extends CompatibilityList
         return self::$openAPIModelName;
     }
 
-
-
     /**
      * Constructor
      *
@@ -291,7 +289,6 @@ class CompatibilityListProductBased extends CompatibilityList
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets id
@@ -410,7 +407,7 @@ class CompatibilityListProductBased extends CompatibilityList
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -436,5 +433,4 @@ class CompatibilityListProductBased extends CompatibilityList
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

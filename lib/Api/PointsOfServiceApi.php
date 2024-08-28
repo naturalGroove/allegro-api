@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * PointsOfServiceApi Class Doc Comment
@@ -180,9 +180,9 @@ class PointsOfServiceApi
      *
      * @param  \AllegroApi\Model\Pos $pos Point of service (required)
      *
-     * @return \AllegroApi\Model\Pos|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\Pos|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function createPOSUsingPOST($pos)
     {
@@ -197,9 +197,9 @@ class PointsOfServiceApi
      *
      * @param  \AllegroApi\Model\Pos $pos Point of service (required)
      *
-     * @return array of \AllegroApi\Model\Pos|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\Pos|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPOSUsingPOSTWithHttpInfo($pos)
     {
@@ -445,10 +445,6 @@ class PointsOfServiceApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -516,9 +512,9 @@ class PointsOfServiceApi
      *
      * @param  string $id Point of service ID. (required)
      *
-     * @return void
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return void
      */
     public function deletePOSUsingDELETE($id)
     {
@@ -532,9 +528,9 @@ class PointsOfServiceApi
      *
      * @param  string $id Point of service ID. (required)
      *
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deletePOSUsingDELETEWithHttpInfo($id)
     {
@@ -664,8 +660,6 @@ class PointsOfServiceApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
@@ -674,7 +668,6 @@ class PointsOfServiceApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -737,9 +730,9 @@ class PointsOfServiceApi
      *
      * @param  string $id Point of service ID. (required)
      *
-     * @return \AllegroApi\Model\Pos|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\Pos|\AllegroApi\Model\ErrorsHolder
      */
     public function getPOSDataUsingGET($id)
     {
@@ -754,9 +747,9 @@ class PointsOfServiceApi
      *
      * @param  string $id Point of service ID. (required)
      *
-     * @return array of \AllegroApi\Model\Pos|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\Pos|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPOSDataUsingGETWithHttpInfo($id)
     {
@@ -942,8 +935,6 @@ class PointsOfServiceApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
@@ -952,7 +943,6 @@ class PointsOfServiceApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1015,9 +1005,9 @@ class PointsOfServiceApi
      *
      * @param  string $seller_id User identifier. (required)
      *
-     * @return \AllegroApi\Model\SearchResult|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\SearchResult|\AllegroApi\Model\ErrorsHolder
      */
     public function getPOSListUsingGET($seller_id)
     {
@@ -1032,9 +1022,9 @@ class PointsOfServiceApi
      *
      * @param  string $seller_id User identifier. (required)
      *
-     * @return array of \AllegroApi\Model\SearchResult|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\SearchResult|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPOSListUsingGETWithHttpInfo($seller_id)
     {
@@ -1226,14 +1216,10 @@ class PointsOfServiceApi
                 foreach($seller_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['seller.id'] = $seller_id;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1572,8 +1558,6 @@ class PointsOfServiceApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
@@ -1582,7 +1566,6 @@ class PointsOfServiceApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1643,7 +1626,6 @@ class PointsOfServiceApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

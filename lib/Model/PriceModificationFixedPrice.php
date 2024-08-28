@@ -232,8 +232,6 @@ class PriceModificationFixedPrice extends PriceModification
         return self::$openAPIModelName;
     }
 
-
-
     /**
      * Constructor
      *
@@ -288,7 +286,6 @@ class PriceModificationFixedPrice extends PriceModification
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets type
@@ -407,7 +404,7 @@ class PriceModificationFixedPrice extends PriceModification
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -433,5 +430,4 @@ class PriceModificationFixedPrice extends PriceModification
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

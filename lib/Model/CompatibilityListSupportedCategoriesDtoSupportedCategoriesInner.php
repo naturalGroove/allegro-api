@@ -340,7 +340,6 @@ class CompatibilityListSupportedCategoriesDtoSupportedCategoriesInner implements
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets category_id
      *
@@ -549,7 +548,7 @@ class CompatibilityListSupportedCategoriesDtoSupportedCategoriesInner implements
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -575,5 +574,4 @@ class CompatibilityListSupportedCategoriesDtoSupportedCategoriesInner implements
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

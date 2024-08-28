@@ -240,7 +240,6 @@ class SaleProductOfferResponseV1AllOfProductSetAllOfProduct implements ModelInte
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -301,7 +300,6 @@ class SaleProductOfferResponseV1AllOfProductSetAllOfProduct implements ModelInte
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets id
@@ -447,7 +445,7 @@ class SaleProductOfferResponseV1AllOfProductSetAllOfProduct implements ModelInte
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -473,5 +471,4 @@ class SaleProductOfferResponseV1AllOfProductSetAllOfProduct implements ModelInte
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

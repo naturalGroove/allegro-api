@@ -241,7 +241,6 @@ class AfterSalesServicesProductOfferRequest implements ModelInterface, ArrayAcce
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -302,7 +301,6 @@ class AfterSalesServicesProductOfferRequest implements ModelInterface, ArrayAcce
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets implied_warranty
@@ -448,7 +446,7 @@ class AfterSalesServicesProductOfferRequest implements ModelInterface, ArrayAcce
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -474,5 +472,4 @@ class AfterSalesServicesProductOfferRequest implements ModelInterface, ArrayAcce
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

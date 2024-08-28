@@ -235,7 +235,6 @@ class CompatibilityListSupportedCategoriesDtoSupportedCategoriesInnerValidationR
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -303,7 +302,6 @@ class CompatibilityListSupportedCategoriesDtoSupportedCategoriesInnerValidationR
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets max_rows
@@ -432,7 +430,7 @@ class CompatibilityListSupportedCategoriesDtoSupportedCategoriesInnerValidationR
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -458,5 +456,4 @@ class CompatibilityListSupportedCategoriesDtoSupportedCategoriesInnerValidationR
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

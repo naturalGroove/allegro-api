@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * PaymentsApi Class Doc Comment
@@ -190,9 +190,9 @@ class PaymentsApi
      * @param  int $limit Number of returned operations. (optional, default to 50)
      * @param  int $offset Index of the first returned payment operation from all search results. (optional, default to 0)
      *
-     * @return |\AllegroApi\Model\PaymentOperations|\AllegroApi\Model\ErrorsHolder
      *@throws \AllegroApi\Exception\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @return |\AllegroApi\Model\PaymentOperations|\AllegroApi\Model\ErrorsHolder
      */
     public function getPaymentsOperationHistory($wallet_type = 'AVAILABLE', $wallet_payment_operator = null, $payment_id = null, $participant_login = null, $occurred_at_gte = null, $occurred_at_lte = null, $group = null, $marketplace_id = null, $currency = null, $limit = 50, $offset = 0)
     {
@@ -217,9 +217,9 @@ class PaymentsApi
      * @param  int $limit Number of returned operations. (optional, default to 50)
      * @param  int $offset Index of the first returned payment operation from all search results. (optional, default to 0)
      *
-     * @return array of |\AllegroApi\Model\PaymentOperations|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \AllegroApi\Exception\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @return array of |\AllegroApi\Model\PaymentOperations|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPaymentsOperationHistoryWithHttpInfo($wallet_type = 'AVAILABLE', $wallet_payment_operator = null, $payment_id = null, $participant_login = null, $occurred_at_gte = null, $occurred_at_lte = null, $group = null, $marketplace_id = null, $currency = null, $limit = 50, $offset = 0)
     {
@@ -435,7 +435,6 @@ class PaymentsApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling PaymentsApi.getPaymentsOperationHistory, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/payments/payment-operations';
         $formParams = [];
         $queryParams = [];
@@ -449,8 +448,7 @@ class PaymentsApi
                 foreach($wallet_type as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['wallet.type'] = $wallet_type;
             }
         }
@@ -460,8 +458,7 @@ class PaymentsApi
                 foreach($wallet_payment_operator as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['wallet.paymentOperator'] = $wallet_payment_operator;
             }
         }
@@ -471,8 +468,7 @@ class PaymentsApi
                 foreach($payment_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['payment.id'] = $payment_id;
             }
         }
@@ -482,8 +478,7 @@ class PaymentsApi
                 foreach($participant_login as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['participant.login'] = $participant_login;
             }
         }
@@ -493,8 +488,7 @@ class PaymentsApi
                 foreach($occurred_at_gte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['occurredAt.gte'] = $occurred_at_gte;
             }
         }
@@ -504,8 +498,7 @@ class PaymentsApi
                 foreach($occurred_at_lte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['occurredAt.lte'] = $occurred_at_lte;
             }
         }
@@ -515,8 +508,7 @@ class PaymentsApi
                 foreach($group as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['group'] = $group;
             }
         }
@@ -526,8 +518,7 @@ class PaymentsApi
                 foreach($marketplace_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['marketplaceId'] = $marketplace_id;
             }
         }
@@ -537,8 +528,7 @@ class PaymentsApi
                 foreach($currency as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['currency'] = $currency;
             }
         }
@@ -548,8 +538,7 @@ class PaymentsApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -559,14 +548,10 @@ class PaymentsApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -635,9 +620,9 @@ class PaymentsApi
      * @param  \DateTime $occurred_at_lte Maximum date and time when the refund occurred provided in ISO 8601 format. (optional)
      * @param  string[] $status Current status of payment refund. (optional)
      *
-     * @return \AllegroApi\Model\GetRefundedPayments200Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\ErrorsHolder
      *@throws \AllegroApi\Exception\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @return \AllegroApi\Model\GetRefundedPayments200Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\ErrorsHolder
      */
     public function getRefundedPayments($limit = 50, $offset = 0, $id = null, $payment_id = null, $occurred_at_gte = null, $occurred_at_lte = null, $status = null)
     {
@@ -658,9 +643,9 @@ class PaymentsApi
      * @param  \DateTime $occurred_at_lte Maximum date and time when the refund occurred provided in ISO 8601 format. (optional)
      * @param  string[] $status Current status of payment refund. (optional)
      *
-     * @return array of \AllegroApi\Model\GetRefundedPayments200Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \AllegroApi\Exception\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @return array of \AllegroApi\Model\GetRefundedPayments200Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRefundedPaymentsWithHttpInfo($limit = 50, $offset = 0, $id = null, $payment_id = null, $occurred_at_gte = null, $occurred_at_lte = null, $status = null)
     {
@@ -901,7 +886,6 @@ class PaymentsApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling PaymentsApi.getRefundedPayments, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/payments/refunds';
         $formParams = [];
         $queryParams = [];
@@ -915,8 +899,7 @@ class PaymentsApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -926,8 +909,7 @@ class PaymentsApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
@@ -937,8 +919,7 @@ class PaymentsApi
                 foreach($id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['id'] = $id;
             }
         }
@@ -948,8 +929,7 @@ class PaymentsApi
                 foreach($payment_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['payment.id'] = $payment_id;
             }
         }
@@ -959,8 +939,7 @@ class PaymentsApi
                 foreach($occurred_at_gte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['occurredAt.gte'] = $occurred_at_gte;
             }
         }
@@ -970,8 +949,7 @@ class PaymentsApi
                 foreach($occurred_at_lte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['occurredAt.lte'] = $occurred_at_lte;
             }
         }
@@ -981,14 +959,10 @@ class PaymentsApi
                 foreach($status as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['status'] = $status;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1051,9 +1025,9 @@ class PaymentsApi
      *
      * @param  \AllegroApi\Model\InitializeRefund $initialize_refund initialize_refund (optional)
      *
-     * @return \AllegroApi\Model\RefundDetails|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\RefundDetails|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\ErrorsHolder
      */
     public function initiateRefund($initialize_refund = null)
     {
@@ -1068,9 +1042,9 @@ class PaymentsApi
      *
      * @param  \AllegroApi\Model\InitializeRefund $initialize_refund (optional)
      *
-     * @return array of \AllegroApi\Model\RefundDetails|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\RefundDetails|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function initiateRefundWithHttpInfo($initialize_refund = null)
     {
@@ -1330,10 +1304,6 @@ class PaymentsApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -1393,7 +1363,6 @@ class PaymentsApi
 
         return $this->createRequest('POST', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

@@ -228,7 +228,6 @@ class GetListOfShippingRatestUsingGET200Response implements ModelInterface, Arra
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -287,7 +286,6 @@ class GetListOfShippingRatestUsingGET200Response implements ModelInterface, Arra
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets shipping_rates
@@ -379,7 +377,7 @@ class GetListOfShippingRatestUsingGET200Response implements ModelInterface, Arra
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -405,5 +403,4 @@ class GetListOfShippingRatestUsingGET200Response implements ModelInterface, Arra
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

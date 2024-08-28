@@ -228,7 +228,6 @@ class AdditionalServicesGroupTranslationWrapper implements ModelInterface, Array
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -287,7 +286,6 @@ class AdditionalServicesGroupTranslationWrapper implements ModelInterface, Array
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets translation
@@ -379,7 +377,7 @@ class AdditionalServicesGroupTranslationWrapper implements ModelInterface, Array
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -405,5 +403,4 @@ class AdditionalServicesGroupTranslationWrapper implements ModelInterface, Array
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

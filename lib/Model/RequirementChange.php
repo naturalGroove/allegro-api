@@ -238,8 +238,6 @@ class RequirementChange extends CategoryParametersScheduledBaseChange
         return self::$openAPIModelName;
     }
 
-
-
     /**
      * Constructor
      *
@@ -301,7 +299,6 @@ class RequirementChange extends CategoryParametersScheduledBaseChange
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets type
@@ -447,7 +444,7 @@ class RequirementChange extends CategoryParametersScheduledBaseChange
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -473,5 +470,4 @@ class RequirementChange extends CategoryParametersScheduledBaseChange
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

@@ -240,7 +240,6 @@ class SaleProductOfferRequestBaseAllOfDelivery implements ModelInterface, ArrayA
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -306,7 +305,6 @@ class SaleProductOfferRequestBaseAllOfDelivery implements ModelInterface, ArrayA
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets handling_time
      *
@@ -357,8 +355,8 @@ class SaleProductOfferRequestBaseAllOfDelivery implements ModelInterface, ArrayA
             array_push($this->openAPINullablesSetToNull, 'shipping_rates');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('shipping_rates', $nullablesSetToNull);
-            if ($index !== FALSE) {
+            $index = array_search('shipping_rates', $nullablesSetToNull, true);
+            if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
@@ -464,7 +462,7 @@ class SaleProductOfferRequestBaseAllOfDelivery implements ModelInterface, ArrayA
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -490,5 +488,4 @@ class SaleProductOfferRequestBaseAllOfDelivery implements ModelInterface, ArrayA
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

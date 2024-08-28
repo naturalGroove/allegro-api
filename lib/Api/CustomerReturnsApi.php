@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * CustomerReturnsApi Class Doc Comment
@@ -180,9 +180,9 @@ class CustomerReturnsApi
      *
      * @param  string $customer_return_id Id of the customer return. (required)
      *
-     * @return \AllegroApi\Model\CustomerReturn|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CustomerReturn|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function getCustomerReturnById($customer_return_id)
     {
@@ -197,9 +197,9 @@ class CustomerReturnsApi
      *
      * @param  string $customer_return_id Id of the customer return. (required)
      *
-     * @return array of \AllegroApi\Model\CustomerReturn|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CustomerReturn|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCustomerReturnByIdWithHttpInfo($customer_return_id)
     {
@@ -445,8 +445,6 @@ class CustomerReturnsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($customer_return_id !== null) {
             $resourcePath = str_replace(
@@ -455,7 +453,6 @@ class CustomerReturnsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.beta.v1+json'],
@@ -840,7 +837,6 @@ class CustomerReturnsApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling CustomerReturnsApi.getCustomerReturns, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/order/customer-returns';
         $formParams = [];
         $queryParams = [];
@@ -854,8 +850,7 @@ class CustomerReturnsApi
                 foreach($customer_return_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['customerReturnId'] = $customer_return_id;
             }
         }
@@ -865,8 +860,7 @@ class CustomerReturnsApi
                 foreach($order_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['orderId'] = $order_id;
             }
         }
@@ -876,8 +870,7 @@ class CustomerReturnsApi
                 foreach($buyer_email as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['buyer.email'] = $buyer_email;
             }
         }
@@ -887,8 +880,7 @@ class CustomerReturnsApi
                 foreach($buyer_login as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['buyer.login'] = $buyer_login;
             }
         }
@@ -898,8 +890,7 @@ class CustomerReturnsApi
                 foreach($items_offer_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['items.offerId'] = $items_offer_id;
             }
         }
@@ -909,8 +900,7 @@ class CustomerReturnsApi
                 foreach($items_name as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['items.name'] = $items_name;
             }
         }
@@ -920,8 +910,7 @@ class CustomerReturnsApi
                 foreach($parcels_waybill as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['parcels.waybill'] = $parcels_waybill;
             }
         }
@@ -931,8 +920,7 @@ class CustomerReturnsApi
                 foreach($parcels_carrier_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['parcels.carrierId'] = $parcels_carrier_id;
             }
         }
@@ -942,8 +930,7 @@ class CustomerReturnsApi
                 foreach($parcels_sender_phone_number as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['parcels.sender.phoneNumber'] = $parcels_sender_phone_number;
             }
         }
@@ -953,8 +940,7 @@ class CustomerReturnsApi
                 foreach($reference_number as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['referenceNumber'] = $reference_number;
             }
         }
@@ -964,8 +950,7 @@ class CustomerReturnsApi
                 foreach($from as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['from'] = $from;
             }
         }
@@ -975,8 +960,7 @@ class CustomerReturnsApi
                 foreach($created_at_gte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['createdAt.gte'] = $created_at_gte;
             }
         }
@@ -986,8 +970,7 @@ class CustomerReturnsApi
                 foreach($created_at_lte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['createdAt.lte'] = $created_at_lte;
             }
         }
@@ -997,8 +980,7 @@ class CustomerReturnsApi
                 foreach($marketplace_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['marketplaceId'] = $marketplace_id;
             }
         }
@@ -1008,8 +990,7 @@ class CustomerReturnsApi
                 foreach($status as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['status'] = $status;
             }
         }
@@ -1019,8 +1000,7 @@ class CustomerReturnsApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -1030,14 +1010,10 @@ class CustomerReturnsApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.beta.v1+json'],
@@ -1101,9 +1077,9 @@ class CustomerReturnsApi
      * @param  string $customer_return_id Id of the customer return. (required)
      * @param  \AllegroApi\Model\CustomerReturnRefundRejectionRequest $customer_return_refund_rejection_request customer_return_refund_rejection_request (required)
      *
-     * @return \AllegroApi\Model\CustomerReturn|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CustomerReturn|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function rejectCustomerReturnRefund($customer_return_id, $customer_return_refund_rejection_request)
     {
@@ -1119,9 +1095,9 @@ class CustomerReturnsApi
      * @param  string $customer_return_id Id of the customer return. (required)
      * @param  \AllegroApi\Model\CustomerReturnRefundRejectionRequest $customer_return_refund_rejection_request (required)
      *
-     * @return array of \AllegroApi\Model\CustomerReturn|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CustomerReturn|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function rejectCustomerReturnRefundWithHttpInfo($customer_return_id, $customer_return_refund_rejection_request)
     {
@@ -1376,8 +1352,6 @@ class CustomerReturnsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($customer_return_id !== null) {
             $resourcePath = str_replace(
@@ -1386,7 +1360,6 @@ class CustomerReturnsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.beta.v1+json'],
@@ -1447,7 +1420,6 @@ class CustomerReturnsApi
 
         return $this->createRequest('POST', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

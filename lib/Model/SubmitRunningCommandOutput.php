@@ -226,8 +226,6 @@ class SubmitRunningCommandOutput extends SubmitCommandOutput
         return self::$openAPIModelName;
     }
 
-
-
     /**
      * Constructor
      *
@@ -281,7 +279,6 @@ class SubmitRunningCommandOutput extends SubmitCommandOutput
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets status
@@ -373,7 +370,7 @@ class SubmitRunningCommandOutput extends SubmitCommandOutput
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -399,5 +396,4 @@ class SubmitRunningCommandOutput extends SubmitCommandOutput
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

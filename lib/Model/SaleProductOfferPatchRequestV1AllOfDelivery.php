@@ -246,7 +246,6 @@ class SaleProductOfferPatchRequestV1AllOfDelivery implements ModelInterface, Arr
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -313,7 +312,6 @@ class SaleProductOfferPatchRequestV1AllOfDelivery implements ModelInterface, Arr
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets handling_time
      *
@@ -364,8 +362,8 @@ class SaleProductOfferPatchRequestV1AllOfDelivery implements ModelInterface, Arr
             array_push($this->openAPINullablesSetToNull, 'shipping_rates');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('shipping_rates', $nullablesSetToNull);
-            if ($index !== FALSE) {
+            $index = array_search('shipping_rates', $nullablesSetToNull, true);
+            if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
@@ -498,7 +496,7 @@ class SaleProductOfferPatchRequestV1AllOfDelivery implements ModelInterface, Arr
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -524,5 +522,4 @@ class SaleProductOfferPatchRequestV1AllOfDelivery implements ModelInterface, Arr
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

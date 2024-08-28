@@ -319,7 +319,6 @@ class AllegroPricesEligibilityResponseAdditionalMarketplacesValue implements Mod
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets consent
      *
@@ -447,7 +446,7 @@ class AllegroPricesEligibilityResponseAdditionalMarketplacesValue implements Mod
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -473,5 +472,4 @@ class AllegroPricesEligibilityResponseAdditionalMarketplacesValue implements Mod
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

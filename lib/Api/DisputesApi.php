@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * DisputesApi Class Doc Comment
@@ -181,9 +181,9 @@ class DisputesApi
      * @param  string $dispute_id Dispute identifier. (required)
      * @param  \AllegroApi\Model\MessageRequest $message_request Message request (required)
      *
-     * @return \AllegroApi\Model\DisputeMessage
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\DisputeMessage
      */
     public function addMessageToDisputeUsingPOST($dispute_id, $message_request)
     {
@@ -199,9 +199,9 @@ class DisputesApi
      * @param  string $dispute_id Dispute identifier. (required)
      * @param  \AllegroApi\Model\MessageRequest $message_request Message request (required)
      *
-     * @return array of \AllegroApi\Model\DisputeMessage, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\DisputeMessage, HTTP status code, HTTP response headers (array of strings)
      */
     public function addMessageToDisputeUsingPOSTWithHttpInfo($dispute_id, $message_request)
     {
@@ -376,8 +376,6 @@ class DisputesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($dispute_id !== null) {
             $resourcePath = str_replace(
@@ -386,7 +384,6 @@ class DisputesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -455,9 +452,9 @@ class DisputesApi
      *
      * @param  \AllegroApi\Model\AttachmentDeclaration $attachment_declaration A detailed declaration of a file to be uploaded (required)
      *
-     * @return \AllegroApi\Model\DisputeAttachmentId
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\DisputeAttachmentId
      */
     public function createAnAttachmentUsingPOST($attachment_declaration)
     {
@@ -472,9 +469,9 @@ class DisputesApi
      *
      * @param  \AllegroApi\Model\AttachmentDeclaration $attachment_declaration A detailed declaration of a file to be uploaded (required)
      *
-     * @return array of \AllegroApi\Model\DisputeAttachmentId, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\DisputeAttachmentId, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAnAttachmentUsingPOSTWithHttpInfo($attachment_declaration)
     {
@@ -640,10 +637,6 @@ class DisputesApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -711,9 +704,9 @@ class DisputesApi
      *
      * @param  string $attachment_id Attachment identifier. (required)
      *
-     * @return \SplFileObject
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \SplFileObject
      */
     public function getAttachmentUsingGET($attachment_id)
     {
@@ -728,9 +721,9 @@ class DisputesApi
      *
      * @param  string $attachment_id Attachment identifier. (required)
      *
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAttachmentUsingGETWithHttpInfo($attachment_id)
     {
@@ -896,8 +889,6 @@ class DisputesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($attachment_id !== null) {
             $resourcePath = str_replace(
@@ -906,7 +897,6 @@ class DisputesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['*/*'],
@@ -969,9 +959,9 @@ class DisputesApi
      *
      * @param  string $dispute_id Dispute identifier. (required)
      *
-     * @return \AllegroApi\Model\Dispute
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\Dispute
      */
     public function getDisputeUsingGET($dispute_id)
     {
@@ -986,9 +976,9 @@ class DisputesApi
      *
      * @param  string $dispute_id Dispute identifier. (required)
      *
-     * @return array of \AllegroApi\Model\Dispute, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\Dispute, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDisputeUsingGETWithHttpInfo($dispute_id)
     {
@@ -1154,8 +1144,6 @@ class DisputesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($dispute_id !== null) {
             $resourcePath = str_replace(
@@ -1164,7 +1152,6 @@ class DisputesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1230,9 +1217,9 @@ class DisputesApi
      * @param  int $offset Index of first returned dispute. (optional, default to 0)
      * @param  string[] $status Filter disputes with given set of statuses. (optional)
      *
-     * @return \AllegroApi\Model\DisputeListResponse
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\DisputeListResponse
      */
     public function getListOfDisputesUsingGET($checkout_form_id = null, $limit = 10, $offset = 0, $status = null)
     {
@@ -1250,9 +1237,9 @@ class DisputesApi
      * @param  int $offset Index of first returned dispute. (optional, default to 0)
      * @param  string[] $status Filter disputes with given set of statuses. (optional)
      *
-     * @return array of \AllegroApi\Model\DisputeListResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\DisputeListResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getListOfDisputesUsingGETWithHttpInfo($checkout_form_id = null, $limit = 10, $offset = 0, $status = null)
     {
@@ -1424,7 +1411,6 @@ class DisputesApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling DisputesApi.getListOfDisputesUsingGET, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/sale/disputes';
         $formParams = [];
         $queryParams = [];
@@ -1438,8 +1424,7 @@ class DisputesApi
                 foreach($checkout_form_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['checkoutForm.id'] = $checkout_form_id;
             }
         }
@@ -1449,8 +1434,7 @@ class DisputesApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -1460,8 +1444,7 @@ class DisputesApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
@@ -1471,14 +1454,10 @@ class DisputesApi
                 foreach($status as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['status'] = $status;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1543,9 +1522,9 @@ class DisputesApi
      * @param  int $limit The maximum number of messages within dispute returned in a response. (optional, default to 10)
      * @param  int $offset Index of first returned message within dispute. (optional, default to 0)
      *
-     * @return \AllegroApi\Model\DisputeMessageList
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\DisputeMessageList
      */
     public function getMessagesFromDisputeUsingGET($dispute_id, $limit = 10, $offset = 0)
     {
@@ -1562,9 +1541,9 @@ class DisputesApi
      * @param  int $limit The maximum number of messages within dispute returned in a response. (optional, default to 10)
      * @param  int $offset Index of first returned message within dispute. (optional, default to 0)
      *
-     * @return array of \AllegroApi\Model\DisputeMessageList, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\DisputeMessageList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMessagesFromDisputeUsingGETWithHttpInfo($dispute_id, $limit = 10, $offset = 0)
     {
@@ -1739,7 +1718,6 @@ class DisputesApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling DisputesApi.getMessagesFromDisputeUsingGET, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/sale/disputes/{disputeId}/messages';
         $formParams = [];
         $queryParams = [];
@@ -1753,8 +1731,7 @@ class DisputesApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -1764,12 +1741,10 @@ class DisputesApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
-
 
         // path params
         if ($dispute_id !== null) {
@@ -1779,7 +1754,6 @@ class DisputesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1846,9 +1820,9 @@ class DisputesApi
      * @param  string $attachment_id Attachment identifier. (required)
      * @param  \SplFileObject $body body (required)
      *
-     * @return void
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return void
      */
     public function uploadDisputeAttachmentUsingPUT($attachment_id, $body)
     {
@@ -1866,9 +1840,9 @@ class DisputesApi
      * @param  string $attachment_id Attachment identifier. (required)
      * @param  \SplFileObject $body (required)
      *
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadDisputeAttachmentUsingPUTWithHttpInfo($attachment_id, $body)
     {
@@ -2008,8 +1982,6 @@ class DisputesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($attachment_id !== null) {
             $resourcePath = str_replace(
@@ -2018,7 +1990,6 @@ class DisputesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             [],
@@ -2083,7 +2054,6 @@ class DisputesApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

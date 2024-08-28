@@ -247,7 +247,6 @@ class OfferListingDtoV1AdditionalMarketplace implements ModelInterface, ArrayAcc
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -310,7 +309,6 @@ class OfferListingDtoV1AdditionalMarketplace implements ModelInterface, ArrayAcc
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets publication
      *
@@ -334,8 +332,8 @@ class OfferListingDtoV1AdditionalMarketplace implements ModelInterface, ArrayAcc
             array_push($this->openAPINullablesSetToNull, 'publication');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('publication', $nullablesSetToNull);
-            if ($index !== FALSE) {
+            $index = array_search('publication', $nullablesSetToNull, true);
+            if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
@@ -368,8 +366,8 @@ class OfferListingDtoV1AdditionalMarketplace implements ModelInterface, ArrayAcc
             array_push($this->openAPINullablesSetToNull, 'selling_mode');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('selling_mode', $nullablesSetToNull);
-            if ($index !== FALSE) {
+            $index = array_search('selling_mode', $nullablesSetToNull, true);
+            if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
@@ -402,8 +400,8 @@ class OfferListingDtoV1AdditionalMarketplace implements ModelInterface, ArrayAcc
             array_push($this->openAPINullablesSetToNull, 'stats');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('stats', $nullablesSetToNull);
-            if ($index !== FALSE) {
+            $index = array_search('stats', $nullablesSetToNull, true);
+            if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
@@ -436,8 +434,8 @@ class OfferListingDtoV1AdditionalMarketplace implements ModelInterface, ArrayAcc
             array_push($this->openAPINullablesSetToNull, 'stock');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('stock', $nullablesSetToNull);
-            if ($index !== FALSE) {
+            $index = array_search('stock', $nullablesSetToNull, true);
+            if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
@@ -510,7 +508,7 @@ class OfferListingDtoV1AdditionalMarketplace implements ModelInterface, ArrayAcc
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -536,5 +534,4 @@ class OfferListingDtoV1AdditionalMarketplace implements ModelInterface, ArrayAcc
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

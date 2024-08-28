@@ -235,7 +235,6 @@ class MultiPackBenefitSpecificationAllOfTrigger implements ModelInterface, Array
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -309,7 +308,6 @@ class MultiPackBenefitSpecificationAllOfTrigger implements ModelInterface, Array
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets for_each_quantity
@@ -438,7 +436,7 @@ class MultiPackBenefitSpecificationAllOfTrigger implements ModelInterface, Array
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -464,5 +462,4 @@ class MultiPackBenefitSpecificationAllOfTrigger implements ModelInterface, Array
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

@@ -240,7 +240,6 @@ class DescribesSuccessCommissionFee implements ModelInterface, ArrayAccess, \Jso
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -310,7 +309,6 @@ class DescribesSuccessCommissionFee implements ModelInterface, ArrayAccess, \Jso
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets fee
@@ -456,7 +454,7 @@ class DescribesSuccessCommissionFee implements ModelInterface, ArrayAccess, \Jso
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -482,5 +480,4 @@ class DescribesSuccessCommissionFee implements ModelInterface, ArrayAccess, \Jso
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

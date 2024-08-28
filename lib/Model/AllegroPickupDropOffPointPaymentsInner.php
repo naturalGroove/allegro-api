@@ -315,7 +315,6 @@ class AllegroPickupDropOffPointPaymentsInner implements ModelInterface, ArrayAcc
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets method
      *
@@ -416,7 +415,7 @@ class AllegroPickupDropOffPointPaymentsInner implements ModelInterface, ArrayAcc
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -442,5 +441,4 @@ class AllegroPickupDropOffPointPaymentsInner implements ModelInterface, ArrayAcc
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

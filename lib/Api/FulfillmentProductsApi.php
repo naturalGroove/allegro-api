@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * FulfillmentProductsApi Class Doc Comment
@@ -182,9 +182,9 @@ class FulfillmentProductsApi
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      * @param  int $limit Maximum number of elements in response. (optional, default to 50)
      *
-     * @return \AllegroApi\Model\AvailableProductsList|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AvailableProductsList|\AllegroApi\Model\ErrorsHolder
      */
     public function getAvailableProducts($accept_language = 'en-US', $offset = 0, $limit = 50)
     {
@@ -201,9 +201,9 @@ class FulfillmentProductsApi
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      * @param  int $limit Maximum number of elements in response. (optional, default to 50)
      *
-     * @return array of \AllegroApi\Model\AvailableProductsList|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AvailableProductsList|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAvailableProductsWithHttpInfo($accept_language = 'en-US', $offset = 0, $limit = 50)
     {
@@ -392,7 +392,6 @@ class FulfillmentProductsApi
             throw new \InvalidArgumentException('invalid value for "$limit" when calling FulfillmentProductsApi.getAvailableProducts, must be bigger than or equal to 1.');
         }
 
-
         $resourcePath = '/fulfillment/available-products';
         $formParams = [];
         $queryParams = [];
@@ -406,8 +405,7 @@ class FulfillmentProductsApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
@@ -417,8 +415,7 @@ class FulfillmentProductsApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -427,8 +424,6 @@ class FulfillmentProductsApi
         if ($accept_language !== null) {
             $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
         }
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', 'application/json'],
@@ -483,7 +478,6 @@ class FulfillmentProductsApi
 
         return $this->createRequest('GET', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

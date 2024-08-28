@@ -232,8 +232,6 @@ class PriceModificationValueChangeIncrease extends PriceModification
         return self::$openAPIModelName;
     }
 
-
-
     /**
      * Constructor
      *
@@ -288,7 +286,6 @@ class PriceModificationValueChangeIncrease extends PriceModification
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets type
@@ -407,7 +404,7 @@ class PriceModificationValueChangeIncrease extends PriceModification
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -433,5 +430,4 @@ class PriceModificationValueChangeIncrease extends PriceModification
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

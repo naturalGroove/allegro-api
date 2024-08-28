@@ -235,7 +235,6 @@ class ProductSetElementResponsiblePersonRequestResponsiblePerson implements Mode
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -295,7 +294,6 @@ class ProductSetElementResponsiblePersonRequestResponsiblePerson implements Mode
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets id
@@ -414,7 +412,7 @@ class ProductSetElementResponsiblePersonRequestResponsiblePerson implements Mode
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -440,5 +438,4 @@ class ProductSetElementResponsiblePersonRequestResponsiblePerson implements Mode
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

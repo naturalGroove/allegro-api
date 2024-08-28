@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * CategoriesAndParametersApi Class Doc Comment
@@ -180,9 +180,9 @@ class CategoriesAndParametersApi
      *
      * @param  string $name Product name for which you want to get suggested categories. (required)
      *
-     * @return \AllegroApi\Model\CategorySuggestionResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CategorySuggestionResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function categorySuggestionUsingGET($name)
     {
@@ -197,9 +197,9 @@ class CategoriesAndParametersApi
      *
      * @param  string $name Product name for which you want to get suggested categories. (required)
      *
-     * @return array of \AllegroApi\Model\CategorySuggestionResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CategorySuggestionResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function categorySuggestionUsingGETWithHttpInfo($name)
     {
@@ -451,14 +451,10 @@ class CategoriesAndParametersApi
                 foreach($name as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['name'] = $name;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -521,9 +517,9 @@ class CategoriesAndParametersApi
      *
      * @param  string $parent_id The ID of the category which children should be returned. If omitted, the list of main Allegro categories will be returned. (optional, default to '954b95b6-43cf-4104-8354-dea4d9b10ddf')
      *
-     * @return \AllegroApi\Model\CategoriesDto|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CategoriesDto|\AllegroApi\Model\ErrorsHolder
      */
     public function getCategoriesUsingGET($parent_id = '954b95b6-43cf-4104-8354-dea4d9b10ddf')
     {
@@ -538,9 +534,9 @@ class CategoriesAndParametersApi
      *
      * @param  string $parent_id The ID of the category which children should be returned. If omitted, the list of main Allegro categories will be returned. (optional, default to '954b95b6-43cf-4104-8354-dea4d9b10ddf')
      *
-     * @return array of \AllegroApi\Model\CategoriesDto|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CategoriesDto|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCategoriesUsingGETWithHttpInfo($parent_id = '954b95b6-43cf-4104-8354-dea4d9b10ddf')
     {
@@ -726,14 +722,10 @@ class CategoriesAndParametersApi
                 foreach($parent_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['parent.id'] = $parent_id;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -802,9 +794,9 @@ class CategoriesAndParametersApi
      * @param  int $limit The number of events that will be returned in the response. (optional, default to 100)
      * @param  string[] $type The types of events that will be returned in the response. All types of events are returned by default. (optional)
      *
-     * @return \AllegroApi\Model\CategoryEventsResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CategoryEventsResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError
      */
     public function getCategoryEventsUsingGET1($from = null, $limit = 100, $type = null)
     {
@@ -821,9 +813,9 @@ class CategoriesAndParametersApi
      * @param  int $limit The number of events that will be returned in the response. (optional, default to 100)
      * @param  string[] $type The types of events that will be returned in the response. All types of events are returned by default. (optional)
      *
-     * @return array of \AllegroApi\Model\CategoryEventsResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CategoryEventsResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCategoryEventsUsingGET1WithHttpInfo($from = null, $limit = 100, $type = null)
     {
@@ -1032,7 +1024,6 @@ class CategoriesAndParametersApi
             throw new \InvalidArgumentException('invalid value for "$limit" when calling CategoriesAndParametersApi.getCategoryEventsUsingGET1, must be bigger than or equal to 1.');
         }
 
-
         $resourcePath = '/sale/category-events';
         $formParams = [];
         $queryParams = [];
@@ -1046,8 +1037,7 @@ class CategoriesAndParametersApi
                 foreach($from as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['from'] = $from;
             }
         }
@@ -1057,8 +1047,7 @@ class CategoriesAndParametersApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -1068,14 +1057,10 @@ class CategoriesAndParametersApi
                 foreach($type as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['type'] = $type;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', 'application/json'],
@@ -1148,9 +1133,9 @@ class CategoriesAndParametersApi
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      * @param  int $limit The limit of elements in the response. (optional, default to 100)
      *
-     * @return \AllegroApi\Model\CategoryParametersScheduledChangesResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError
      *@throws \AllegroApi\Exception\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @return \AllegroApi\Model\CategoryParametersScheduledChangesResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError
      */
     public function getCategoryParametersScheduledChangesUsingGET1($scheduled_for_gte = null, $scheduled_for_lte = null, $scheduled_at_gte = null, $scheduled_at_lte = null, $type = null, $offset = 0, $limit = 100)
     {
@@ -1171,9 +1156,9 @@ class CategoriesAndParametersApi
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      * @param  int $limit The limit of elements in the response. (optional, default to 100)
      *
-     * @return array of \AllegroApi\Model\CategoryParametersScheduledChangesResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError, HTTP status code, HTTP response headers (array of strings)
      *@throws \AllegroApi\Exception\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @return array of \AllegroApi\Model\CategoryParametersScheduledChangesResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCategoryParametersScheduledChangesUsingGET1WithHttpInfo($scheduled_for_gte = null, $scheduled_for_lte = null, $scheduled_at_gte = null, $scheduled_at_lte = null, $type = null, $offset = 0, $limit = 100)
     {
@@ -1394,7 +1379,6 @@ class CategoriesAndParametersApi
             throw new \InvalidArgumentException('invalid value for "$limit" when calling CategoriesAndParametersApi.getCategoryParametersScheduledChangesUsingGET1, must be bigger than or equal to 1.');
         }
 
-
         $resourcePath = '/sale/category-parameters-scheduled-changes';
         $formParams = [];
         $queryParams = [];
@@ -1408,8 +1392,7 @@ class CategoriesAndParametersApi
                 foreach($scheduled_for_gte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['scheduledFor.gte'] = $scheduled_for_gte;
             }
         }
@@ -1419,8 +1402,7 @@ class CategoriesAndParametersApi
                 foreach($scheduled_for_lte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['scheduledFor.lte'] = $scheduled_for_lte;
             }
         }
@@ -1430,8 +1412,7 @@ class CategoriesAndParametersApi
                 foreach($scheduled_at_gte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['scheduledAt.gte'] = $scheduled_at_gte;
             }
         }
@@ -1441,8 +1422,7 @@ class CategoriesAndParametersApi
                 foreach($scheduled_at_lte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['scheduledAt.lte'] = $scheduled_at_lte;
             }
         }
@@ -1452,8 +1432,7 @@ class CategoriesAndParametersApi
                 foreach($type as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['type'] = $type;
             }
         }
@@ -1463,8 +1442,7 @@ class CategoriesAndParametersApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
@@ -1474,14 +1452,10 @@ class CategoriesAndParametersApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', 'application/json'],
@@ -1548,9 +1522,9 @@ class CategoriesAndParametersApi
      *
      * @param  string $category_id The category ID. (required)
      *
-     * @return \AllegroApi\Model\CategoryDto|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CategoryDto|\AllegroApi\Model\ErrorsHolder
      */
     public function getCategoryUsingGET1($category_id)
     {
@@ -1565,9 +1539,9 @@ class CategoriesAndParametersApi
      *
      * @param  string $category_id The category ID. (required)
      *
-     * @return array of \AllegroApi\Model\CategoryDto|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CategoryDto|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCategoryUsingGET1WithHttpInfo($category_id)
     {
@@ -1753,8 +1727,6 @@ class CategoriesAndParametersApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($category_id !== null) {
             $resourcePath = str_replace(
@@ -1763,7 +1735,6 @@ class CategoriesAndParametersApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1830,9 +1801,9 @@ class CategoriesAndParametersApi
      *
      * @param  string $category_id The category ID. (required)
      *
-     * @return \AllegroApi\Model\CategoryParameterList|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CategoryParameterList|\AllegroApi\Model\ErrorsHolder
      */
     public function getFlatParametersUsingGET2($category_id)
     {
@@ -1847,9 +1818,9 @@ class CategoriesAndParametersApi
      *
      * @param  string $category_id The category ID. (required)
      *
-     * @return array of \AllegroApi\Model\CategoryParameterList|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CategoryParameterList|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getFlatParametersUsingGET2WithHttpInfo($category_id)
     {
@@ -2035,8 +2006,6 @@ class CategoriesAndParametersApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($category_id !== null) {
             $resourcePath = str_replace(
@@ -2045,7 +2014,6 @@ class CategoriesAndParametersApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -2104,7 +2072,6 @@ class CategoriesAndParametersApi
 
         return $this->createRequest('GET', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

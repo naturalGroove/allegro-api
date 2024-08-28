@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * PriceAutomationApi Class Doc Comment
@@ -180,9 +180,9 @@ class PriceAutomationApi
      *
      * @param  string $offer_id The offer identifier. (required)
      *
-     * @return \AllegroApi\Model\OfferRules
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\OfferRules
      */
     public function getPriceAutomationRulesForOfferUsingGET($offer_id)
     {
@@ -197,9 +197,9 @@ class PriceAutomationApi
      *
      * @param  string $offer_id The offer identifier. (required)
      *
-     * @return array of \AllegroApi\Model\OfferRules, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\OfferRules, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPriceAutomationRulesForOfferUsingGETWithHttpInfo($offer_id)
     {
@@ -365,8 +365,6 @@ class PriceAutomationApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($offer_id !== null) {
             $resourcePath = str_replace(
@@ -375,7 +373,6 @@ class PriceAutomationApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -437,9 +434,9 @@ class PriceAutomationApi
      * Get price automation rules
      *
      *
-     * @return \AllegroApi\Model\Rules
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\Rules
      */
     public function getPriceAutomationRulesUsingGET()
     {
@@ -453,9 +450,9 @@ class PriceAutomationApi
      * Get price automation rules
      *
      *
-     * @return array of \AllegroApi\Model\Rules, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\Rules, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPriceAutomationRulesUsingGETWithHttpInfo()
     {
@@ -612,10 +609,6 @@ class PriceAutomationApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             '',
@@ -669,7 +662,6 @@ class PriceAutomationApi
 
         return $this->createRequest('GET', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

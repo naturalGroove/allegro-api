@@ -6,8 +6,6 @@ namespace AllegroApi\Exception;
 
 use RuntimeException;
 
-
 class AuthorizationTokenException extends RuntimeException
 {
-
 }

@@ -229,7 +229,6 @@ class CategoryParameterDisplayConditions implements ModelInterface, ArrayAccess,
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -291,7 +290,6 @@ class CategoryParameterDisplayConditions implements ModelInterface, ArrayAccess,
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets parameters_with_value
@@ -383,7 +381,7 @@ class CategoryParameterDisplayConditions implements ModelInterface, ArrayAccess,
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -409,5 +407,4 @@ class CategoryParameterDisplayConditions implements ModelInterface, ArrayAccess,
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

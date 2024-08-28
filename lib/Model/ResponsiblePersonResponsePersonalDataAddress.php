@@ -247,7 +247,6 @@ class ResponsiblePersonResponsePersonalDataAddress implements ModelInterface, Ar
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -309,7 +308,6 @@ class ResponsiblePersonResponsePersonalDataAddress implements ModelInterface, Ar
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets country_code
@@ -482,7 +480,7 @@ class ResponsiblePersonResponsePersonalDataAddress implements ModelInterface, Ar
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -508,5 +506,4 @@ class ResponsiblePersonResponsePersonalDataAddress implements ModelInterface, Ar
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

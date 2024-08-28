@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * MessageCenterApi Class Doc Comment
@@ -181,9 +181,9 @@ class MessageCenterApi
      * @param  string $thread_id Identifier of thread to be marked. (required)
      * @param  \AllegroApi\Model\ThreadReadFlag $thread_read_flag Updated read flag (required)
      *
-     * @return \AllegroApi\Model\Thread
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\Thread
      */
     public function changeReadFlagOnThreadPUT($thread_id, $thread_read_flag)
     {
@@ -199,9 +199,9 @@ class MessageCenterApi
      * @param  string $thread_id Identifier of thread to be marked. (required)
      * @param  \AllegroApi\Model\ThreadReadFlag $thread_read_flag Updated read flag (required)
      *
-     * @return array of \AllegroApi\Model\Thread, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\Thread, HTTP status code, HTTP response headers (array of strings)
      */
     public function changeReadFlagOnThreadPUTWithHttpInfo($thread_id, $thread_read_flag)
     {
@@ -376,8 +376,6 @@ class MessageCenterApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($thread_id !== null) {
             $resourcePath = str_replace(
@@ -386,7 +384,6 @@ class MessageCenterApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -455,9 +452,9 @@ class MessageCenterApi
      *
      * @param  string $message_id Identifier of the message to delete. (required)
      *
-     * @return void
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return void
      */
     public function deleteMessageDELETE($message_id)
     {
@@ -471,9 +468,9 @@ class MessageCenterApi
      *
      * @param  string $message_id Identifier of the message to delete. (required)
      *
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteMessageDELETEWithHttpInfo($message_id)
     {
@@ -595,8 +592,6 @@ class MessageCenterApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($message_id !== null) {
             $resourcePath = str_replace(
@@ -605,7 +600,6 @@ class MessageCenterApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             [],
@@ -668,9 +662,9 @@ class MessageCenterApi
      *
      * @param  string $attachment_id Identifier of the attachment that will be downloaded. (required)
      *
-     * @return \SplFileObject
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \SplFileObject
      */
     public function downloadAttachmentGET($attachment_id)
     {
@@ -685,9 +679,9 @@ class MessageCenterApi
      *
      * @param  string $attachment_id Identifier of the attachment that will be downloaded. (required)
      *
-     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \SplFileObject, HTTP status code, HTTP response headers (array of strings)
      */
     public function downloadAttachmentGETWithHttpInfo($attachment_id)
     {
@@ -853,8 +847,6 @@ class MessageCenterApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($attachment_id !== null) {
             $resourcePath = str_replace(
@@ -863,7 +855,6 @@ class MessageCenterApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['*/*'],
@@ -926,9 +917,9 @@ class MessageCenterApi
      *
      * @param  string $message_id Identifier of message to be returned. (required)
      *
-     * @return \AllegroApi\Model\Message
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\Message
      */
     public function getMessageGET($message_id)
     {
@@ -943,9 +934,9 @@ class MessageCenterApi
      *
      * @param  string $message_id Identifier of message to be returned. (required)
      *
-     * @return array of \AllegroApi\Model\Message, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\Message, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMessageGETWithHttpInfo($message_id)
     {
@@ -1111,8 +1102,6 @@ class MessageCenterApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($message_id !== null) {
             $resourcePath = str_replace(
@@ -1121,7 +1110,6 @@ class MessageCenterApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1184,9 +1172,9 @@ class MessageCenterApi
      *
      * @param  string $thread_id Identifier of thread to get. (required)
      *
-     * @return \AllegroApi\Model\Thread
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\Thread
      */
     public function getThreadGET($thread_id)
     {
@@ -1201,9 +1189,9 @@ class MessageCenterApi
      *
      * @param  string $thread_id Identifier of thread to get. (required)
      *
-     * @return array of \AllegroApi\Model\Thread, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\Thread, HTTP status code, HTTP response headers (array of strings)
      */
     public function getThreadGETWithHttpInfo($thread_id)
     {
@@ -1369,8 +1357,6 @@ class MessageCenterApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($thread_id !== null) {
             $resourcePath = str_replace(
@@ -1379,7 +1365,6 @@ class MessageCenterApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1446,9 +1431,9 @@ class MessageCenterApi
      * @param  \DateTime $before Message creation date before filter parameter (exclusive) - cannot be used with offset. (optional)
      * @param  \DateTime $after Message creation date after filter parameter (exclusive). (optional)
      *
-     * @return \AllegroApi\Model\MessagesList
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\MessagesList
      */
     public function listMessagesGET($thread_id, $limit = 20, $offset = 0, $before = null, $after = null)
     {
@@ -1467,9 +1452,9 @@ class MessageCenterApi
      * @param  \DateTime $before Message creation date before filter parameter (exclusive) - cannot be used with offset. (optional)
      * @param  \DateTime $after Message creation date after filter parameter (exclusive). (optional)
      *
-     * @return array of \AllegroApi\Model\MessagesList, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\MessagesList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listMessagesGETWithHttpInfo($thread_id, $limit = 20, $offset = 0, $before = null, $after = null)
     {
@@ -1653,7 +1638,6 @@ class MessageCenterApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling MessageCenterApi.listMessagesGET, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/messaging/threads/{threadId}/messages';
         $formParams = [];
         $queryParams = [];
@@ -1667,8 +1651,7 @@ class MessageCenterApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -1678,8 +1661,7 @@ class MessageCenterApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
@@ -1689,8 +1671,7 @@ class MessageCenterApi
                 foreach($before as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['before'] = $before;
             }
         }
@@ -1700,12 +1681,10 @@ class MessageCenterApi
                 foreach($after as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['after'] = $after;
             }
         }
-
 
         // path params
         if ($thread_id !== null) {
@@ -1715,7 +1694,6 @@ class MessageCenterApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1779,9 +1757,9 @@ class MessageCenterApi
      * @param  int $limit The maximum number of threads returned in the response. (optional, default to 20)
      * @param  int $offset Index of the first returned thread from all results. (optional, default to 0)
      *
-     * @return \AllegroApi\Model\ThreadsList
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ThreadsList
      */
     public function listThreadsGET($limit = 20, $offset = 0)
     {
@@ -1797,9 +1775,9 @@ class MessageCenterApi
      * @param  int $limit The maximum number of threads returned in the response. (optional, default to 20)
      * @param  int $offset Index of the first returned thread from all results. (optional, default to 0)
      *
-     * @return array of \AllegroApi\Model\ThreadsList, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ThreadsList, HTTP status code, HTTP response headers (array of strings)
      */
     public function listThreadsGETWithHttpInfo($limit = 20, $offset = 0)
     {
@@ -1968,7 +1946,6 @@ class MessageCenterApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling MessageCenterApi.listThreadsGET, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/messaging/threads';
         $formParams = [];
         $queryParams = [];
@@ -1982,8 +1959,7 @@ class MessageCenterApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -1993,14 +1969,10 @@ class MessageCenterApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -2063,9 +2035,9 @@ class MessageCenterApi
      *
      * @param  \AllegroApi\Model\NewAttachmentDeclaration $new_attachment_declaration new_attachment_declaration (required)
      *
-     * @return \AllegroApi\Model\MessageAttachmentId
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\MessageAttachmentId
      */
     public function newAttachmentDeclarationPOST($new_attachment_declaration)
     {
@@ -2080,9 +2052,9 @@ class MessageCenterApi
      *
      * @param  \AllegroApi\Model\NewAttachmentDeclaration $new_attachment_declaration (required)
      *
-     * @return array of \AllegroApi\Model\MessageAttachmentId, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\MessageAttachmentId, HTTP status code, HTTP response headers (array of strings)
      */
     public function newAttachmentDeclarationPOSTWithHttpInfo($new_attachment_declaration)
     {
@@ -2248,10 +2220,6 @@ class MessageCenterApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -2320,9 +2288,9 @@ class MessageCenterApi
      * @param  string $thread_id Identifier of thread to write message to. (required)
      * @param  \AllegroApi\Model\NewMessageInThread $new_message_in_thread new_message_in_thread (required)
      *
-     * @return \AllegroApi\Model\Message
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\Message
      */
     public function newMessageInThreadPOST($thread_id, $new_message_in_thread)
     {
@@ -2338,9 +2306,9 @@ class MessageCenterApi
      * @param  string $thread_id Identifier of thread to write message to. (required)
      * @param  \AllegroApi\Model\NewMessageInThread $new_message_in_thread (required)
      *
-     * @return array of \AllegroApi\Model\Message, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\Message, HTTP status code, HTTP response headers (array of strings)
      */
     public function newMessageInThreadPOSTWithHttpInfo($thread_id, $new_message_in_thread)
     {
@@ -2515,8 +2483,6 @@ class MessageCenterApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($thread_id !== null) {
             $resourcePath = str_replace(
@@ -2525,7 +2491,6 @@ class MessageCenterApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -2594,9 +2559,9 @@ class MessageCenterApi
      *
      * @param  \AllegroApi\Model\NewMessage $new_message Object representing new message. (required)
      *
-     * @return \AllegroApi\Model\Message
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\Message
      */
     public function newMessagePOST($new_message)
     {
@@ -2611,9 +2576,9 @@ class MessageCenterApi
      *
      * @param  \AllegroApi\Model\NewMessage $new_message Object representing new message. (required)
      *
-     * @return array of \AllegroApi\Model\Message, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\Message, HTTP status code, HTTP response headers (array of strings)
      */
     public function newMessagePOSTWithHttpInfo($new_message)
     {
@@ -2779,10 +2744,6 @@ class MessageCenterApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -2851,9 +2812,9 @@ class MessageCenterApi
      * @param  string $attachment_id The identifier of attachment that will be uploaded. (required)
      * @param  \SplFileObject $body body (required)
      *
-     * @return \AllegroApi\Model\MessageAttachmentId
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\MessageAttachmentId
      */
     public function uploadAttachmentPUT($attachment_id, $body)
     {
@@ -2869,9 +2830,9 @@ class MessageCenterApi
      * @param  string $attachment_id The identifier of attachment that will be uploaded. (required)
      * @param  \SplFileObject $body (required)
      *
-     * @return array of \AllegroApi\Model\MessageAttachmentId, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\MessageAttachmentId, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadAttachmentPUTWithHttpInfo($attachment_id, $body)
     {
@@ -3046,8 +3007,6 @@ class MessageCenterApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($attachment_id !== null) {
             $resourcePath = str_replace(
@@ -3056,7 +3015,6 @@ class MessageCenterApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -3117,7 +3075,6 @@ class MessageCenterApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

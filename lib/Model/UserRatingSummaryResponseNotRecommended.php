@@ -235,7 +235,6 @@ class UserRatingSummaryResponseNotRecommended implements ModelInterface, ArrayAc
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -309,7 +308,6 @@ class UserRatingSummaryResponseNotRecommended implements ModelInterface, ArrayAc
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets total
@@ -438,7 +436,7 @@ class UserRatingSummaryResponseNotRecommended implements ModelInterface, ArrayAc
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -464,5 +462,4 @@ class UserRatingSummaryResponseNotRecommended implements ModelInterface, ArrayAc
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

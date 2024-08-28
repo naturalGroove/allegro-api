@@ -347,7 +347,6 @@ class GetListOfDeliveryMethodsUsingGET200ResponseDeliveryMethodsInner implements
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets id
      *
@@ -583,7 +582,7 @@ class GetListOfDeliveryMethodsUsingGET200ResponseDeliveryMethodsInner implements
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -609,5 +608,4 @@ class GetListOfDeliveryMethodsUsingGET200ResponseDeliveryMethodsInner implements
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

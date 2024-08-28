@@ -240,7 +240,6 @@ class UpdateSubmittedAdvanceShipNoticeRequest implements ModelInterface, ArrayAc
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -301,7 +300,6 @@ class UpdateSubmittedAdvanceShipNoticeRequest implements ModelInterface, ArrayAc
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets items
@@ -447,7 +445,7 @@ class UpdateSubmittedAdvanceShipNoticeRequest implements ModelInterface, ArrayAc
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -473,5 +471,4 @@ class UpdateSubmittedAdvanceShipNoticeRequest implements ModelInterface, ArrayAc
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

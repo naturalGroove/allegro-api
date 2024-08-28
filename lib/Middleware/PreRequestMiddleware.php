@@ -11,7 +11,6 @@ use Psr\Http\Message\RequestInterface;
 
 final readonly class PreRequestMiddleware
 {
-
     public function __construct(
         private TokenRepositoryInterface $tokenRepository,
         private Authenticator $authenticator
@@ -33,7 +32,6 @@ final readonly class PreRequestMiddleware
             return $handler($request, $options);
         };
     }
-
 
     private function handleExpired(Token $token): Token
     {

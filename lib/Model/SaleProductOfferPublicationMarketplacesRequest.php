@@ -235,7 +235,6 @@ class SaleProductOfferPublicationMarketplacesRequest implements ModelInterface, 
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -295,7 +294,6 @@ class SaleProductOfferPublicationMarketplacesRequest implements ModelInterface, 
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets base
@@ -416,7 +414,7 @@ class SaleProductOfferPublicationMarketplacesRequest implements ModelInterface, 
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -442,5 +440,4 @@ class SaleProductOfferPublicationMarketplacesRequest implements ModelInterface, 
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

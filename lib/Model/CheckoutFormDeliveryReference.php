@@ -264,7 +264,6 @@ class CheckoutFormDeliveryReference implements ModelInterface, ArrayAccess, \Jso
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -333,7 +332,6 @@ class CheckoutFormDeliveryReference implements ModelInterface, ArrayAccess, \Jso
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets address
@@ -592,7 +590,7 @@ class CheckoutFormDeliveryReference implements ModelInterface, ArrayAccess, \Jso
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -618,5 +616,4 @@ class CheckoutFormDeliveryReference implements ModelInterface, ArrayAccess, \Jso
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

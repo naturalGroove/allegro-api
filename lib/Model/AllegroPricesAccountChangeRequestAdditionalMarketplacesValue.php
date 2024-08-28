@@ -312,7 +312,6 @@ class AllegroPricesAccountChangeRequestAdditionalMarketplacesValue implements Mo
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets status
      *
@@ -413,7 +412,7 @@ class AllegroPricesAccountChangeRequestAdditionalMarketplacesValue implements Mo
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -439,5 +438,4 @@ class AllegroPricesAccountChangeRequestAdditionalMarketplacesValue implements Mo
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

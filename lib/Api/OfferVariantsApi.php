@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * OfferVariantsApi Class Doc Comment
@@ -180,9 +180,9 @@ class OfferVariantsApi
      *
      * @param  \AllegroApi\Model\VariantSet $variant_set variant_set (required)
      *
-     * @return \AllegroApi\Model\VariantSetResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\VariantSetResponse
      */
     public function createVariantSet($variant_set)
     {
@@ -197,9 +197,9 @@ class OfferVariantsApi
      *
      * @param  \AllegroApi\Model\VariantSet $variant_set (required)
      *
-     * @return array of \AllegroApi\Model\VariantSetResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\VariantSetResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createVariantSetWithHttpInfo($variant_set)
     {
@@ -365,10 +365,6 @@ class OfferVariantsApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -436,9 +432,9 @@ class OfferVariantsApi
      *
      * @param  string $set_id Variant set identifier. (required)
      *
-     * @return void
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return void
      */
     public function deleteVariantSet($set_id)
     {
@@ -452,9 +448,9 @@ class OfferVariantsApi
      *
      * @param  string $set_id Variant set identifier. (required)
      *
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteVariantSetWithHttpInfo($set_id)
     {
@@ -576,8 +572,6 @@ class OfferVariantsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($set_id !== null) {
             $resourcePath = str_replace(
@@ -586,7 +580,6 @@ class OfferVariantsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             [],
@@ -649,9 +642,9 @@ class OfferVariantsApi
      *
      * @param  string $set_id Variant set identifier. (required)
      *
-     * @return \AllegroApi\Model\VariantSetResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\VariantSetResponse
      */
     public function getVariantSet($set_id)
     {
@@ -666,9 +659,9 @@ class OfferVariantsApi
      *
      * @param  string $set_id Variant set identifier. (required)
      *
-     * @return array of \AllegroApi\Model\VariantSetResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\VariantSetResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getVariantSetWithHttpInfo($set_id)
     {
@@ -834,8 +827,6 @@ class OfferVariantsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($set_id !== null) {
             $resourcePath = str_replace(
@@ -844,7 +835,6 @@ class OfferVariantsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -909,9 +899,9 @@ class OfferVariantsApi
      * @param  int $limit Maximum number of returned variant sets. (optional, default to 10)
      * @param  string $query Filter variant sets by name or offer id. (optional)
      *
-     * @return \AllegroApi\Model\VariantSets
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\VariantSets
      */
     public function getVariantSets($offset = 0, $limit = 10, $query = null)
     {
@@ -928,9 +918,9 @@ class OfferVariantsApi
      * @param  int $limit Maximum number of returned variant sets. (optional, default to 10)
      * @param  string $query Filter variant sets by name or offer id. (optional)
      *
-     * @return array of \AllegroApi\Model\VariantSets, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\VariantSets, HTTP status code, HTTP response headers (array of strings)
      */
     public function getVariantSetsWithHttpInfo($offset = 0, $limit = 10, $query = null)
     {
@@ -1106,7 +1096,6 @@ class OfferVariantsApi
             throw new \InvalidArgumentException('invalid length for "$query" when calling OfferVariantsApi.getVariantSets, must be smaller than or equal to 50.');
         }
 
-
         $resourcePath = '/sale/offer-variants';
         $formParams = [];
         $queryParams = [];
@@ -1120,8 +1109,7 @@ class OfferVariantsApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
@@ -1131,8 +1119,7 @@ class OfferVariantsApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -1142,14 +1129,10 @@ class OfferVariantsApi
                 foreach($query as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['query'] = $query;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1213,9 +1196,9 @@ class OfferVariantsApi
      * @param  string $set_id Variant set identifier. (required)
      * @param  \AllegroApi\Model\VariantSet $variant_set variant_set (required)
      *
-     * @return \AllegroApi\Model\VariantSetResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\VariantSetResponse
      */
     public function updateVariantSet($set_id, $variant_set)
     {
@@ -1231,9 +1214,9 @@ class OfferVariantsApi
      * @param  string $set_id Variant set identifier. (required)
      * @param  \AllegroApi\Model\VariantSet $variant_set (required)
      *
-     * @return array of \AllegroApi\Model\VariantSetResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\VariantSetResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateVariantSetWithHttpInfo($set_id, $variant_set)
     {
@@ -1408,8 +1391,6 @@ class OfferVariantsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($set_id !== null) {
             $resourcePath = str_replace(
@@ -1418,7 +1399,6 @@ class OfferVariantsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1479,7 +1459,6 @@ class OfferVariantsApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

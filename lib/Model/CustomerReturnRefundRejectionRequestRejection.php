@@ -335,7 +335,6 @@ class CustomerReturnRefundRejectionRequestRejection implements ModelInterface, A
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets code
      *
@@ -470,7 +469,7 @@ class CustomerReturnRefundRejectionRequestRejection implements ModelInterface, A
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -496,5 +495,4 @@ class CustomerReturnRefundRejectionRequestRejection implements ModelInterface, A
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

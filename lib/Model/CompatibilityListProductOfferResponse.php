@@ -228,7 +228,6 @@ class CompatibilityListProductOfferResponse implements ModelInterface, ArrayAcce
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -293,7 +292,6 @@ class CompatibilityListProductOfferResponse implements ModelInterface, ArrayAcce
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets type
@@ -385,7 +383,7 @@ class CompatibilityListProductOfferResponse implements ModelInterface, ArrayAcce
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -411,5 +409,4 @@ class CompatibilityListProductOfferResponse implements ModelInterface, ArrayAcce
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

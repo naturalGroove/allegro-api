@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * FulfillmentStockApi Class Doc Comment
@@ -191,9 +191,9 @@ class FulfillmentStockApi
      * @param  int $out_of_stock_in_from Filter by products with outOfStockIn greater than or equal. (optional)
      * @param  int $out_of_stock_in_to Filter by products with outOfStockIn less than or equal. (optional)
      *
-     * @return \AllegroApi\Model\StockProductList|\AllegroApi\Model\ErrorsHolder
      *@throws \AllegroApi\Exception\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @return \AllegroApi\Model\StockProductList|\AllegroApi\Model\ErrorsHolder
      */
     public function getFulfillmentStock($accept_language = 'en-US', $offset = 0, $limit = 50, $phrase = null, $sort = 'name', $product_id = null, $product_availability = null, $product_status = null, $storage_fee = null, $asn_status = null, $out_of_stock_in_from = null, $out_of_stock_in_to = null)
     {
@@ -219,9 +219,9 @@ class FulfillmentStockApi
      * @param  int $out_of_stock_in_from Filter by products with outOfStockIn greater than or equal. (optional)
      * @param  int $out_of_stock_in_to Filter by products with outOfStockIn less than or equal. (optional)
      *
-     * @return array of \AllegroApi\Model\StockProductList|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \AllegroApi\Exception\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @return array of \AllegroApi\Model\StockProductList|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getFulfillmentStockWithHttpInfo($accept_language = 'en-US', $offset = 0, $limit = 50, $phrase = null, $sort = 'name', $product_id = null, $product_availability = null, $product_status = null, $storage_fee = null, $asn_status = null, $out_of_stock_in_from = null, $out_of_stock_in_to = null)
     {
@@ -441,7 +441,6 @@ class FulfillmentStockApi
             throw new \InvalidArgumentException('invalid length for "$phrase" when calling FulfillmentStockApi.getFulfillmentStock, must be bigger than or equal to 3.');
         }
 
-
         $resourcePath = '/fulfillment/stock';
         $formParams = [];
         $queryParams = [];
@@ -455,8 +454,7 @@ class FulfillmentStockApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
@@ -466,8 +464,7 @@ class FulfillmentStockApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -477,8 +474,7 @@ class FulfillmentStockApi
                 foreach($phrase as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['phrase'] = $phrase;
             }
         }
@@ -488,8 +484,7 @@ class FulfillmentStockApi
                 foreach($sort as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['sort'] = $sort;
             }
         }
@@ -499,8 +494,7 @@ class FulfillmentStockApi
                 foreach($product_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['productId'] = $product_id;
             }
         }
@@ -510,8 +504,7 @@ class FulfillmentStockApi
                 foreach($product_availability as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['productAvailability'] = $product_availability;
             }
         }
@@ -521,8 +514,7 @@ class FulfillmentStockApi
                 foreach($product_status as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['productStatus'] = $product_status;
             }
         }
@@ -532,8 +524,7 @@ class FulfillmentStockApi
                 foreach($storage_fee as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['storageFee'] = $storage_fee;
             }
         }
@@ -543,8 +534,7 @@ class FulfillmentStockApi
                 foreach($asn_status as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['asnStatus'] = $asn_status;
             }
         }
@@ -554,8 +544,7 @@ class FulfillmentStockApi
                 foreach($out_of_stock_in_from as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['outOfStockInFrom'] = $out_of_stock_in_from;
             }
         }
@@ -565,8 +554,7 @@ class FulfillmentStockApi
                 foreach($out_of_stock_in_to as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['outOfStockInTo'] = $out_of_stock_in_to;
             }
         }
@@ -575,8 +563,6 @@ class FulfillmentStockApi
         if ($accept_language !== null) {
             $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
         }
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', 'text/csv', 'application/json'],
@@ -631,7 +617,6 @@ class FulfillmentStockApi
 
         return $this->createRequest('GET', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

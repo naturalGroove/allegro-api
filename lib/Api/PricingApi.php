@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * PricingApi Class Doc Comment
@@ -180,9 +180,9 @@ class PricingApi
      *
      * @param  \AllegroApi\Model\PublicOfferPreviewRequest $public_offer_preview_request public_offer_preview_request (required)
      *
-     * @return \AllegroApi\Model\FeePreviewResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\FeePreviewResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      */
     public function calculateFeePreviewUsingPOST($public_offer_preview_request)
     {
@@ -197,9 +197,9 @@ class PricingApi
      *
      * @param  \AllegroApi\Model\PublicOfferPreviewRequest $public_offer_preview_request (required)
      *
-     * @return array of \AllegroApi\Model\FeePreviewResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\FeePreviewResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function calculateFeePreviewUsingPOSTWithHttpInfo($public_offer_preview_request)
     {
@@ -425,10 +425,6 @@ class PricingApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -496,9 +492,9 @@ class PricingApi
      *
      * @param  string[] $offer_id List of offer Ids, maximum 20 values. (required)
      *
-     * @return \AllegroApi\Model\OfferQuotesDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\OfferQuotesDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function offerQuotesPublicUsingGET($offer_id)
     {
@@ -513,9 +509,9 @@ class PricingApi
      *
      * @param  string[] $offer_id List of offer Ids, maximum 20 values. (required)
      *
-     * @return array of \AllegroApi\Model\OfferQuotesDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\OfferQuotesDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function offerQuotesPublicUsingGETWithHttpInfo($offer_id)
     {
@@ -727,14 +723,10 @@ class PricingApi
                 foreach($offer_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offer.id'] = $offer_id;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -789,7 +781,6 @@ class PricingApi
 
         return $this->createRequest('GET', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

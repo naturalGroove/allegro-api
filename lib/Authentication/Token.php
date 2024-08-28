@@ -6,10 +6,8 @@ use DateTimeImmutable;
 use DateTimeInterface;
 use InvalidArgumentException;
 
-
 final readonly class Token
 {
-
     public function __construct(
         private string $accessToken,
         private string $tokenType,
@@ -18,8 +16,7 @@ final readonly class Token
         private string $scope,
         private bool $allegroApi,
         private string $jti
-    )
-    {
+    ) {
     }
 
     public function getAccessToken(): string
@@ -62,10 +59,9 @@ final readonly class Token
         if (!$now) {
             $now = new DateTimeImmutable();
         }
-        
+
         return $now->getTimestamp() > $this->getExpiresIn();
     }
-
 
     public function toArray(): array
     {
@@ -79,7 +75,6 @@ final readonly class Token
             'jti' => $this->jti,
         ];
     }
-
 
     /**
      * @throws InvalidArgumentException

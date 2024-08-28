@@ -228,7 +228,6 @@ class WholesalePriceListBenefitSpecificationAllOfQuantity implements ModelInterf
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -298,7 +297,6 @@ class WholesalePriceListBenefitSpecificationAllOfQuantity implements ModelInterf
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets lower_bound
@@ -398,7 +396,7 @@ class WholesalePriceListBenefitSpecificationAllOfQuantity implements ModelInterf
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -424,5 +422,4 @@ class WholesalePriceListBenefitSpecificationAllOfQuantity implements ModelInterf
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

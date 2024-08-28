@@ -313,7 +313,6 @@ class AllegroPickupDropOffPointRestrictionsInner implements ModelInterface, Arra
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets type
      *
@@ -414,7 +413,7 @@ class AllegroPickupDropOffPointRestrictionsInner implements ModelInterface, Arra
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -440,5 +439,4 @@ class AllegroPickupDropOffPointRestrictionsInner implements ModelInterface, Arra
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

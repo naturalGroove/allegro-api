@@ -232,8 +232,6 @@ class DescriptionSectionItemText extends DescriptionSectionItem
         return self::$openAPIModelName;
     }
 
-
-
     /**
      * Constructor
      *
@@ -288,7 +286,6 @@ class DescriptionSectionItemText extends DescriptionSectionItem
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets type
@@ -407,7 +404,7 @@ class DescriptionSectionItemText extends DescriptionSectionItem
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -433,5 +430,4 @@ class DescriptionSectionItemText extends DescriptionSectionItem
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

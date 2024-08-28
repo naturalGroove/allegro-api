@@ -244,8 +244,6 @@ class OwnTransportShipping extends Shipping
         return self::$openAPIModelName;
     }
 
-
-
     /**
      * Constructor
      *
@@ -302,7 +300,6 @@ class OwnTransportShipping extends Shipping
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets method
@@ -475,7 +472,7 @@ class OwnTransportShipping extends Shipping
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -501,5 +498,4 @@ class OwnTransportShipping extends Shipping
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

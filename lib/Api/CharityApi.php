@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * CharityApi Class Doc Comment
@@ -181,9 +181,9 @@ class CharityApi
      * @param  int $limit Maximum number of returned results. (required)
      * @param  string $phrase Fundraising campaign name or it&#39;s Organization name prefix to search for. (required)
      *
-     * @return \AllegroApi\Model\FundraisingCampaigns
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\FundraisingCampaigns
      */
     public function searchFundraisingCampaigns($limit, $phrase)
     {
@@ -199,9 +199,9 @@ class CharityApi
      * @param  int $limit Maximum number of returned results. (required)
      * @param  string $phrase Fundraising campaign name or it&#39;s Organization name prefix to search for. (required)
      *
-     * @return array of \AllegroApi\Model\FundraisingCampaigns, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\FundraisingCampaigns, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchFundraisingCampaignsWithHttpInfo($limit, $phrase)
     {
@@ -389,8 +389,7 @@ class CharityApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -400,14 +399,10 @@ class CharityApi
                 foreach($phrase as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['phrase'] = $phrase;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.beta.v1+json'],
@@ -462,7 +457,6 @@ class CharityApi
 
         return $this->createRequest('GET', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

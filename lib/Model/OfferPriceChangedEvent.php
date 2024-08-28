@@ -232,8 +232,6 @@ class OfferPriceChangedEvent extends SellerOfferBaseEvent
         return self::$openAPIModelName;
     }
 
-
-
     /**
      * Constructor
      *
@@ -291,7 +289,6 @@ class OfferPriceChangedEvent extends SellerOfferBaseEvent
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets type
@@ -410,7 +407,7 @@ class OfferPriceChangedEvent extends SellerOfferBaseEvent
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -436,5 +433,4 @@ class OfferPriceChangedEvent extends SellerOfferBaseEvent
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

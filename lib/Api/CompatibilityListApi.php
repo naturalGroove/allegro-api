@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * CompatibilityListApi Class Doc Comment
@@ -179,9 +179,9 @@ class CompatibilityListApi
      * Get list of categories where compatibility list is supported
      *
      *
-     * @return \AllegroApi\Model\CompatibilityListSupportedCategoriesDto
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CompatibilityListSupportedCategoriesDto
      */
     public function getCategoriesThatSupportCompatibilityList()
     {
@@ -195,9 +195,9 @@ class CompatibilityListApi
      * Get list of categories where compatibility list is supported
      *
      *
-     * @return array of \AllegroApi\Model\CompatibilityListSupportedCategoriesDto, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CompatibilityListSupportedCategoriesDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCategoriesThatSupportCompatibilityListWithHttpInfo()
     {
@@ -354,10 +354,6 @@ class CompatibilityListApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             '',
@@ -421,9 +417,9 @@ class CompatibilityListApi
      * @param  string $product_id Product id on the basis of which we will return the suggested compatibility list. (optional)
      * @param  string $language Locale on the basis of which we will return the suggested compatibility list. For product-based suggestions if missing pl-PL will be used. For offer-based suggestions if missing offer language will be used. (optional)
      *
-     * @return \AllegroApi\Model\CompatibilityList|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CompatibilityList|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      */
     public function getCompatibilityListSuggestion($offer_id = null, $product_id = null, $language = null)
     {
@@ -440,9 +436,9 @@ class CompatibilityListApi
      * @param  string $product_id Product id on the basis of which we will return the suggested compatibility list. (optional)
      * @param  string $language Locale on the basis of which we will return the suggested compatibility list. For product-based suggestions if missing pl-PL will be used. For offer-based suggestions if missing offer language will be used. (optional)
      *
-     * @return array of \AllegroApi\Model\CompatibilityList|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CompatibilityList|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCompatibilityListSuggestionWithHttpInfo($offer_id = null, $product_id = null, $language = null)
     {
@@ -674,8 +670,7 @@ class CompatibilityListApi
                 foreach($offer_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offer.id'] = $offer_id;
             }
         }
@@ -685,8 +680,7 @@ class CompatibilityListApi
                 foreach($product_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['product.id'] = $product_id;
             }
         }
@@ -696,14 +690,10 @@ class CompatibilityListApi
                 foreach($language as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['language'] = $language;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', 'application/json'],
@@ -1029,7 +1019,6 @@ class CompatibilityListApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling CompatibilityListApi.getCompatibleProducts, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/sale/compatible-products';
         $formParams = [];
         $queryParams = [];
@@ -1043,8 +1032,7 @@ class CompatibilityListApi
                 foreach($type as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['type'] = $type;
             }
         }
@@ -1054,8 +1042,7 @@ class CompatibilityListApi
                 foreach($group_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['group.id'] = $group_id;
             }
         }
@@ -1065,8 +1052,7 @@ class CompatibilityListApi
                 foreach($tecdoc_k_typ_nr as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['tecdoc.kTypNr'] = $tecdoc_k_typ_nr;
             }
         }
@@ -1076,8 +1062,7 @@ class CompatibilityListApi
                 foreach($tecdoc_n_typ_nr as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['tecdoc.nTypNr'] = $tecdoc_n_typ_nr;
             }
         }
@@ -1087,8 +1072,7 @@ class CompatibilityListApi
                 foreach($phrase as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['phrase'] = $phrase;
             }
         }
@@ -1098,8 +1082,7 @@ class CompatibilityListApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -1109,8 +1092,7 @@ class CompatibilityListApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
@@ -1119,8 +1101,6 @@ class CompatibilityListApi
         if ($if_modified_since !== null) {
             $headerParams['If-Modified-Since'] = ObjectSerializer::toHeaderValue($if_modified_since);
         }
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', 'application/json'],
@@ -1426,7 +1406,6 @@ class CompatibilityListApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling CompatibilityListApi.getCompatibleProductsGroups, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/sale/compatible-products/groups';
         $formParams = [];
         $queryParams = [];
@@ -1440,8 +1419,7 @@ class CompatibilityListApi
                 foreach($type as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['type'] = $type;
             }
         }
@@ -1451,8 +1429,7 @@ class CompatibilityListApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -1462,8 +1439,7 @@ class CompatibilityListApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
@@ -1472,8 +1448,6 @@ class CompatibilityListApi
         if ($if_modified_since !== null) {
             $headerParams['If-Modified-Since'] = ObjectSerializer::toHeaderValue($if_modified_since);
         }
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', 'application/json'],
@@ -1528,7 +1502,6 @@ class CompatibilityListApi
 
         return $this->createRequest('GET', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

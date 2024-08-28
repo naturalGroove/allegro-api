@@ -228,7 +228,6 @@ class CreateAfterSalesServiceConditionsAttachmentUsingPOSTRequest implements Mod
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -287,7 +286,6 @@ class CreateAfterSalesServiceConditionsAttachmentUsingPOSTRequest implements Mod
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets name
@@ -379,7 +377,7 @@ class CreateAfterSalesServiceConditionsAttachmentUsingPOSTRequest implements Mod
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -405,5 +403,4 @@ class CreateAfterSalesServiceConditionsAttachmentUsingPOSTRequest implements Mod
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

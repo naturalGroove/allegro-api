@@ -234,7 +234,6 @@ class ParcelItemDetailsWithWaybillWeight implements ModelInterface, ArrayAccess,
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -295,7 +294,6 @@ class ParcelItemDetailsWithWaybillWeight implements ModelInterface, ArrayAccess,
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets value
      *
@@ -346,8 +344,8 @@ class ParcelItemDetailsWithWaybillWeight implements ModelInterface, ArrayAccess,
             array_push($this->openAPINullablesSetToNull, 'unit');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('unit', $nullablesSetToNull);
-            if ($index !== FALSE) {
+            $index = array_search('unit', $nullablesSetToNull, true);
+            if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
@@ -420,7 +418,7 @@ class ParcelItemDetailsWithWaybillWeight implements ModelInterface, ArrayAccess,
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -446,5 +444,4 @@ class ParcelItemDetailsWithWaybillWeight implements ModelInterface, ArrayAccess,
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

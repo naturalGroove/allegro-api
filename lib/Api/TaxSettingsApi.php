@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * TaxSettingsApi Class Doc Comment
@@ -181,9 +181,9 @@ class TaxSettingsApi
      * @param  string $category_id An identifier of a category for which all available tax settings will be returned. (required)
      * @param  string[] $country_code Country code for which tax settings will be returned. If not provided settings for all countries will be returned. (optional)
      *
-     * @return \AllegroApi\Model\CategoryTaxSettings|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CategoryTaxSettings|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function getTaxSettingsForCategory($category_id, $country_code = null)
     {
@@ -199,9 +199,9 @@ class TaxSettingsApi
      * @param  string $category_id An identifier of a category for which all available tax settings will be returned. (required)
      * @param  string[] $country_code Country code for which tax settings will be returned. If not provided settings for all countries will be returned. (optional)
      *
-     * @return array of \AllegroApi\Model\CategoryTaxSettings|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CategoryTaxSettings|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTaxSettingsForCategoryWithHttpInfo($category_id, $country_code = null)
     {
@@ -476,8 +476,7 @@ class TaxSettingsApi
                 foreach($category_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['category.id'] = $category_id;
             }
         }
@@ -487,14 +486,10 @@ class TaxSettingsApi
                 foreach($country_code as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['countryCode'] = $country_code;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', 'application/vnd.allegro.beta.v1+json'],
@@ -549,7 +544,6 @@ class TaxSettingsApi
 
         return $this->createRequest('GET', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

@@ -234,7 +234,6 @@ class MessageRelatedObject implements ModelInterface, ArrayAccess, \JsonSerializ
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -295,7 +294,6 @@ class MessageRelatedObject implements ModelInterface, ArrayAccess, \JsonSerializ
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets offer
      *
@@ -319,8 +317,8 @@ class MessageRelatedObject implements ModelInterface, ArrayAccess, \JsonSerializ
             array_push($this->openAPINullablesSetToNull, 'offer');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('offer', $nullablesSetToNull);
-            if ($index !== FALSE) {
+            $index = array_search('offer', $nullablesSetToNull, true);
+            if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
@@ -353,8 +351,8 @@ class MessageRelatedObject implements ModelInterface, ArrayAccess, \JsonSerializ
             array_push($this->openAPINullablesSetToNull, 'order');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('order', $nullablesSetToNull);
-            if ($index !== FALSE) {
+            $index = array_search('order', $nullablesSetToNull, true);
+            if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
@@ -427,7 +425,7 @@ class MessageRelatedObject implements ModelInterface, ArrayAccess, \JsonSerializ
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -453,5 +451,4 @@ class MessageRelatedObject implements ModelInterface, ArrayAccess, \JsonSerializ
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

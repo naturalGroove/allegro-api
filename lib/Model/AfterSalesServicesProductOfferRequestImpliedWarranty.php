@@ -234,7 +234,6 @@ class AfterSalesServicesProductOfferRequestImpliedWarranty implements ModelInter
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -294,7 +293,6 @@ class AfterSalesServicesProductOfferRequestImpliedWarranty implements ModelInter
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets id
@@ -413,7 +411,7 @@ class AfterSalesServicesProductOfferRequestImpliedWarranty implements ModelInter
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -439,5 +437,4 @@ class AfterSalesServicesProductOfferRequestImpliedWarranty implements ModelInter
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

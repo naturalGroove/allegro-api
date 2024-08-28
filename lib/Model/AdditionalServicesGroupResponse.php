@@ -264,7 +264,6 @@ class AdditionalServicesGroupResponse implements ModelInterface, ArrayAccess, \J
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -337,7 +336,6 @@ class AdditionalServicesGroupResponse implements ModelInterface, ArrayAccess, \J
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets additional_services
@@ -524,8 +522,8 @@ class AdditionalServicesGroupResponse implements ModelInterface, ArrayAccess, \J
             array_push($this->openAPINullablesSetToNull, 'language');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('language', $nullablesSetToNull);
-            if ($index !== FALSE) {
+            $index = array_search('language', $nullablesSetToNull, true);
+            if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
@@ -605,7 +603,7 @@ class AdditionalServicesGroupResponse implements ModelInterface, ArrayAccess, \J
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -631,5 +629,4 @@ class AdditionalServicesGroupResponse implements ModelInterface, ArrayAccess, \J
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

@@ -8,7 +8,6 @@ use AllegroApi\Exception\AuthorizationTokenException;
 use DateTimeImmutable;
 use GuzzleHttp\Client;
 
-
 final readonly class Authenticator
 {
     public const TOKEN_TYPE_AUTHORIZATION_CODE = 'authorization_code';
@@ -20,8 +19,7 @@ final readonly class Authenticator
         private string $clientId,
         private string $clientSecret,
         private string $redirectUrl
-    )
-    {
+    ) {
     }
 
     public function getAuthorizeUrl(): string

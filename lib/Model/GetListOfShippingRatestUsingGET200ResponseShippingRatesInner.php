@@ -234,7 +234,6 @@ class GetListOfShippingRatestUsingGET200ResponseShippingRatesInner implements Mo
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -294,7 +293,6 @@ class GetListOfShippingRatestUsingGET200ResponseShippingRatesInner implements Mo
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets id
@@ -413,7 +411,7 @@ class GetListOfShippingRatestUsingGET200ResponseShippingRatesInner implements Mo
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -439,5 +437,4 @@ class GetListOfShippingRatestUsingGET200ResponseShippingRatesInner implements Mo
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

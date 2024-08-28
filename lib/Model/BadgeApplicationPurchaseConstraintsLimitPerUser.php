@@ -229,7 +229,6 @@ class BadgeApplicationPurchaseConstraintsLimitPerUser implements ModelInterface,
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -292,7 +291,6 @@ class BadgeApplicationPurchaseConstraintsLimitPerUser implements ModelInterface,
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets max_items
@@ -389,7 +387,7 @@ class BadgeApplicationPurchaseConstraintsLimitPerUser implements ModelInterface,
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -415,5 +413,4 @@ class BadgeApplicationPurchaseConstraintsLimitPerUser implements ModelInterface,
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

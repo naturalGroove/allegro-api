@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * OfferRatingApi Class Doc Comment
@@ -180,9 +180,9 @@ class OfferRatingApi
      *
      * @param  string $offer_id Offer identifier. (required)
      *
-     * @return \AllegroApi\Model\OfferRating|\AllegroApi\Model\AuthError
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\OfferRating|\AllegroApi\Model\AuthError
      */
     public function offerRatingGET($offer_id)
     {
@@ -197,9 +197,9 @@ class OfferRatingApi
      *
      * @param  string $offer_id Offer identifier. (required)
      *
-     * @return array of \AllegroApi\Model\OfferRating|\AllegroApi\Model\AuthError, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\OfferRating|\AllegroApi\Model\AuthError, HTTP status code, HTTP response headers (array of strings)
      */
     public function offerRatingGETWithHttpInfo($offer_id)
     {
@@ -385,8 +385,6 @@ class OfferRatingApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($offer_id !== null) {
             $resourcePath = str_replace(
@@ -395,7 +393,6 @@ class OfferRatingApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -450,7 +447,6 @@ class OfferRatingApi
 
         return $this->createRequest('GET', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

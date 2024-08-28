@@ -259,7 +259,6 @@ class CategoryParameterOptions implements ModelInterface, ArrayAccess, \JsonSeri
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -323,7 +322,6 @@ class CategoryParameterOptions implements ModelInterface, ArrayAccess, \JsonSeri
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets variants_allowed
@@ -402,8 +400,8 @@ class CategoryParameterOptions implements ModelInterface, ArrayAccess, \JsonSeri
             array_push($this->openAPINullablesSetToNull, 'ambiguous_value_id');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('ambiguous_value_id', $nullablesSetToNull);
-            if ($index !== FALSE) {
+            $index = array_search('ambiguous_value_id', $nullablesSetToNull, true);
+            if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
@@ -436,8 +434,8 @@ class CategoryParameterOptions implements ModelInterface, ArrayAccess, \JsonSeri
             array_push($this->openAPINullablesSetToNull, 'depends_on_parameter_id');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('depends_on_parameter_id', $nullablesSetToNull);
-            if ($index !== FALSE) {
+            $index = array_search('depends_on_parameter_id', $nullablesSetToNull, true);
+            if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
@@ -564,7 +562,7 @@ class CategoryParameterOptions implements ModelInterface, ArrayAccess, \JsonSeri
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -590,5 +588,4 @@ class CategoryParameterOptions implements ModelInterface, ArrayAccess, \JsonSeri
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

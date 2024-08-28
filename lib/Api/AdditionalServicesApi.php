@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * AdditionalServicesApi Class Doc Comment
@@ -180,9 +180,9 @@ class AdditionalServicesApi
      *
      * @param  \AllegroApi\Model\AdditionalServicesGroupRequest $additional_services_group_request Additional service group body (required)
      *
-     * @return \AllegroApi\Model\AdditionalServicesGroupResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AdditionalServicesGroupResponse
      */
     public function createAdditionalServicesGroupUsingPOST($additional_services_group_request)
     {
@@ -197,9 +197,9 @@ class AdditionalServicesApi
      *
      * @param  \AllegroApi\Model\AdditionalServicesGroupRequest $additional_services_group_request Additional service group body (required)
      *
-     * @return array of \AllegroApi\Model\AdditionalServicesGroupResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AdditionalServicesGroupResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createAdditionalServicesGroupUsingPOSTWithHttpInfo($additional_services_group_request)
     {
@@ -365,10 +365,6 @@ class AdditionalServicesApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -436,9 +432,9 @@ class AdditionalServicesApi
      *
      * @param  string $group_id Additional Service Group ID. (required)
      *
-     * @return \AllegroApi\Model\AdditionalServicesGroupResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AdditionalServicesGroupResponse
      */
     public function getAdditionalServicesGroupUsingGET($group_id)
     {
@@ -453,9 +449,9 @@ class AdditionalServicesApi
      *
      * @param  string $group_id Additional Service Group ID. (required)
      *
-     * @return array of \AllegroApi\Model\AdditionalServicesGroupResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AdditionalServicesGroupResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAdditionalServicesGroupUsingGETWithHttpInfo($group_id)
     {
@@ -621,8 +617,6 @@ class AdditionalServicesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($group_id !== null) {
             $resourcePath = str_replace(
@@ -631,7 +625,6 @@ class AdditionalServicesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -693,9 +686,9 @@ class AdditionalServicesApi
      * Get the additional services definitions by categories
      *
      *
-     * @return \AllegroApi\Model\CategoriesResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CategoriesResponse
      */
     public function getListOfAdditionalServicesDefinitionsCategoriesUsingGET()
     {
@@ -709,9 +702,9 @@ class AdditionalServicesApi
      * Get the additional services definitions by categories
      *
      *
-     * @return array of \AllegroApi\Model\CategoriesResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CategoriesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getListOfAdditionalServicesDefinitionsCategoriesUsingGETWithHttpInfo()
     {
@@ -868,10 +861,6 @@ class AdditionalServicesApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             '',
@@ -934,9 +923,9 @@ class AdditionalServicesApi
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      * @param  int $limit The limit of elements in the response. (optional, default to 100)
      *
-     * @return \AllegroApi\Model\AdditionalServicesGroups
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AdditionalServicesGroups
      */
     public function getListOfAdditionalServicesGroupsUsingGET($offset = 0, $limit = 100)
     {
@@ -952,9 +941,9 @@ class AdditionalServicesApi
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      * @param  int $limit The limit of elements in the response. (optional, default to 100)
      *
-     * @return array of \AllegroApi\Model\AdditionalServicesGroups, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AdditionalServicesGroups, HTTP status code, HTTP response headers (array of strings)
      */
     public function getListOfAdditionalServicesGroupsUsingGETWithHttpInfo($offset = 0, $limit = 100)
     {
@@ -1120,7 +1109,6 @@ class AdditionalServicesApi
             throw new \InvalidArgumentException('invalid value for "$limit" when calling AdditionalServicesApi.getListOfAdditionalServicesGroupsUsingGET, must be bigger than or equal to 1.');
         }
 
-
         $resourcePath = '/sale/offer-additional-services/groups';
         $formParams = [];
         $queryParams = [];
@@ -1134,8 +1122,7 @@ class AdditionalServicesApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
@@ -1145,14 +1132,10 @@ class AdditionalServicesApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1216,9 +1199,9 @@ class AdditionalServicesApi
      * @param  string $group_id Additional service group ID. (required)
      * @param  \AllegroApi\Model\AdditionalServicesGroupRequest $additional_services_group_request Additional service group body (required)
      *
-     * @return \AllegroApi\Model\AdditionalServicesGroupResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AdditionalServicesGroupResponse
      */
     public function modifyAdditionalServicesGroupUsingPUT($group_id, $additional_services_group_request)
     {
@@ -1234,9 +1217,9 @@ class AdditionalServicesApi
      * @param  string $group_id Additional service group ID. (required)
      * @param  \AllegroApi\Model\AdditionalServicesGroupRequest $additional_services_group_request Additional service group body (required)
      *
-     * @return array of \AllegroApi\Model\AdditionalServicesGroupResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AdditionalServicesGroupResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function modifyAdditionalServicesGroupUsingPUTWithHttpInfo($group_id, $additional_services_group_request)
     {
@@ -1411,8 +1394,6 @@ class AdditionalServicesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($group_id !== null) {
             $resourcePath = str_replace(
@@ -1421,7 +1402,6 @@ class AdditionalServicesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1482,7 +1462,6 @@ class AdditionalServicesApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

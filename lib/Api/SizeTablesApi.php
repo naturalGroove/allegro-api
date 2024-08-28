@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * SizeTablesApi Class Doc Comment
@@ -180,9 +180,9 @@ class SizeTablesApi
      *
      * @param  \AllegroApi\Model\SizeTablePostRequest $size_table_post_request Size table details (required)
      *
-     * @return \AllegroApi\Model\PublicTableDto
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\PublicTableDto
      */
     public function createTableUsingPOST($size_table_post_request)
     {
@@ -197,9 +197,9 @@ class SizeTablesApi
      *
      * @param  \AllegroApi\Model\SizeTablePostRequest $size_table_post_request Size table details (required)
      *
-     * @return array of \AllegroApi\Model\PublicTableDto, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\PublicTableDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function createTableUsingPOSTWithHttpInfo($size_table_post_request)
     {
@@ -365,10 +365,6 @@ class SizeTablesApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -436,9 +432,9 @@ class SizeTablesApi
      *
      * @param  string $table_id Table identifier. (required)
      *
-     * @return \AllegroApi\Model\PublicTableDto
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\PublicTableDto
      */
     public function getTableUsingGET($table_id)
     {
@@ -453,9 +449,9 @@ class SizeTablesApi
      *
      * @param  string $table_id Table identifier. (required)
      *
-     * @return array of \AllegroApi\Model\PublicTableDto, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\PublicTableDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTableUsingGETWithHttpInfo($table_id)
     {
@@ -621,8 +617,6 @@ class SizeTablesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($table_id !== null) {
             $resourcePath = str_replace(
@@ -631,7 +625,6 @@ class SizeTablesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -693,9 +686,9 @@ class SizeTablesApi
      * Get the size tables templates
      *
      *
-     * @return \AllegroApi\Model\SizeTableTemplatesResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\SizeTableTemplatesResponse
      */
     public function getTablesTemplatesUsingGET()
     {
@@ -709,9 +702,9 @@ class SizeTablesApi
      * Get the size tables templates
      *
      *
-     * @return array of \AllegroApi\Model\SizeTableTemplatesResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\SizeTableTemplatesResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTablesTemplatesUsingGETWithHttpInfo()
     {
@@ -868,10 +861,6 @@ class SizeTablesApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             '',
@@ -932,9 +921,9 @@ class SizeTablesApi
      * Get the user&#39;s size tables
      *
      *
-     * @return \AllegroApi\Model\PublicTablesDto
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\PublicTablesDto
      */
     public function getTablesUsingGET()
     {
@@ -948,9 +937,9 @@ class SizeTablesApi
      * Get the user&#39;s size tables
      *
      *
-     * @return array of \AllegroApi\Model\PublicTablesDto, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\PublicTablesDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTablesUsingGETWithHttpInfo()
     {
@@ -1107,10 +1096,6 @@ class SizeTablesApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             '',
@@ -1173,9 +1158,9 @@ class SizeTablesApi
      * @param  string $table_id Table identifier. (required)
      * @param  \AllegroApi\Model\SizeTablePutRequest $size_table_put_request Size table details (required)
      *
-     * @return \AllegroApi\Model\PublicTableDto
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\PublicTableDto
      */
     public function modifyTableUsingPUT($table_id, $size_table_put_request)
     {
@@ -1191,9 +1176,9 @@ class SizeTablesApi
      * @param  string $table_id Table identifier. (required)
      * @param  \AllegroApi\Model\SizeTablePutRequest $size_table_put_request Size table details (required)
      *
-     * @return array of \AllegroApi\Model\PublicTableDto, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\PublicTableDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function modifyTableUsingPUTWithHttpInfo($table_id, $size_table_put_request)
     {
@@ -1368,8 +1353,6 @@ class SizeTablesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($table_id !== null) {
             $resourcePath = str_replace(
@@ -1378,7 +1361,6 @@ class SizeTablesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1439,7 +1421,6 @@ class SizeTablesApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

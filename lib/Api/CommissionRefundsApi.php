@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * CommissionRefundsApi Class Doc Comment
@@ -180,9 +180,9 @@ class CommissionRefundsApi
      *
      * @param  string $claim_id Refund application ID. (required)
      *
-     * @return void
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return void
      */
     public function cancelRefundApplication($claim_id)
     {
@@ -196,9 +196,9 @@ class CommissionRefundsApi
      *
      * @param  string $claim_id Refund application ID. (required)
      *
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function cancelRefundApplicationWithHttpInfo($claim_id)
     {
@@ -320,8 +320,6 @@ class CommissionRefundsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($claim_id !== null) {
             $resourcePath = str_replace(
@@ -330,7 +328,6 @@ class CommissionRefundsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             [],
@@ -393,9 +390,9 @@ class CommissionRefundsApi
      *
      * @param  \AllegroApi\Model\RefundClaimRequest $refund_claim_request refund_claim_request (required)
      *
-     * @return \AllegroApi\Model\RefundClaimResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\RefundClaimResponse
      */
     public function createRefundApplication($refund_claim_request)
     {
@@ -410,9 +407,9 @@ class CommissionRefundsApi
      *
      * @param  \AllegroApi\Model\RefundClaimRequest $refund_claim_request (required)
      *
-     * @return array of \AllegroApi\Model\RefundClaimResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\RefundClaimResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createRefundApplicationWithHttpInfo($refund_claim_request)
     {
@@ -578,10 +575,6 @@ class CommissionRefundsApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -649,9 +642,9 @@ class CommissionRefundsApi
      *
      * @param  string $claim_id Refund application ID. (required)
      *
-     * @return \AllegroApi\Model\RefundClaim
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\RefundClaim
      */
     public function getRefundApplication($claim_id)
     {
@@ -666,9 +659,9 @@ class CommissionRefundsApi
      *
      * @param  string $claim_id Refund application ID. (required)
      *
-     * @return array of \AllegroApi\Model\RefundClaim, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\RefundClaim, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRefundApplicationWithHttpInfo($claim_id)
     {
@@ -834,8 +827,6 @@ class CommissionRefundsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($claim_id !== null) {
             $resourcePath = str_replace(
@@ -844,7 +835,6 @@ class CommissionRefundsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -911,9 +901,9 @@ class CommissionRefundsApi
      * @param  int $limit Maximum number of returned refund applications in response. (optional, default to 25)
      * @param  int $offset Index of the first returned refund application from all search results. (optional, default to 0)
      *
-     * @return \AllegroApi\Model\GetRefundApplications200Response
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\GetRefundApplications200Response
      */
     public function getRefundApplications($line_item_offer_id = null, $buyer_login = null, $status = null, $limit = 25, $offset = 0)
     {
@@ -932,9 +922,9 @@ class CommissionRefundsApi
      * @param  int $limit Maximum number of returned refund applications in response. (optional, default to 25)
      * @param  int $offset Index of the first returned refund application from all search results. (optional, default to 0)
      *
-     * @return array of \AllegroApi\Model\GetRefundApplications200Response, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\GetRefundApplications200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRefundApplicationsWithHttpInfo($line_item_offer_id = null, $buyer_login = null, $status = null, $limit = 25, $offset = 0)
     {
@@ -1109,7 +1099,6 @@ class CommissionRefundsApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling CommissionRefundsApi.getRefundApplications, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/order/refund-claims';
         $formParams = [];
         $queryParams = [];
@@ -1123,8 +1112,7 @@ class CommissionRefundsApi
                 foreach($line_item_offer_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['lineItem.offer.id'] = $line_item_offer_id;
             }
         }
@@ -1134,8 +1122,7 @@ class CommissionRefundsApi
                 foreach($buyer_login as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['buyer.login'] = $buyer_login;
             }
         }
@@ -1145,8 +1132,7 @@ class CommissionRefundsApi
                 foreach($status as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['status'] = $status;
             }
         }
@@ -1156,8 +1142,7 @@ class CommissionRefundsApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -1167,14 +1152,10 @@ class CommissionRefundsApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1229,7 +1210,6 @@ class CommissionRefundsApi
 
         return $this->createRequest('GET', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

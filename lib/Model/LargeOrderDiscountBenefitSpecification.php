@@ -232,8 +232,6 @@ class LargeOrderDiscountBenefitSpecification extends BenefitSpecification
         return self::$openAPIModelName;
     }
 
-
-
     /**
      * Constructor
      *
@@ -291,7 +289,6 @@ class LargeOrderDiscountBenefitSpecification extends BenefitSpecification
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets type
@@ -410,7 +407,7 @@ class LargeOrderDiscountBenefitSpecification extends BenefitSpecification
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -436,5 +433,4 @@ class LargeOrderDiscountBenefitSpecification extends BenefitSpecification
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

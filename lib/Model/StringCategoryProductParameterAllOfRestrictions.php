@@ -241,7 +241,6 @@ class StringCategoryProductParameterAllOfRestrictions implements ModelInterface,
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -314,7 +313,6 @@ class StringCategoryProductParameterAllOfRestrictions implements ModelInterface,
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets min_length
@@ -475,7 +473,7 @@ class StringCategoryProductParameterAllOfRestrictions implements ModelInterface,
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -501,5 +499,4 @@ class StringCategoryProductParameterAllOfRestrictions implements ModelInterface,
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

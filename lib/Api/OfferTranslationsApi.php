@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * OfferTranslationsApi Class Doc Comment
@@ -182,9 +182,9 @@ class OfferTranslationsApi
      * @param  string $offer_id Offer identifier. (required)
      * @param  string $element Offer element for which translation should be deleted. If not provided, translations for all elements will be deleted. (optional)
      *
-     * @return void
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return void
      */
     public function deleteManualTranslationUsingDELETE($language, $offer_id, $element = null)
     {
@@ -200,9 +200,9 @@ class OfferTranslationsApi
      * @param  string $offer_id Offer identifier. (required)
      * @param  string $element Offer element for which translation should be deleted. If not provided, translations for all elements will be deleted. (optional)
      *
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteManualTranslationUsingDELETEWithHttpInfo($language, $offer_id, $element = null)
     {
@@ -358,12 +358,10 @@ class OfferTranslationsApi
                 foreach($element as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['element'] = $element;
             }
         }
-
 
         // path params
         if ($language !== null) {
@@ -381,7 +379,6 @@ class OfferTranslationsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -445,9 +442,9 @@ class OfferTranslationsApi
      * @param  string $offer_id Offer identifier. (required)
      * @param  string $language Language for translation to retrieve. If not provided, all translations as well as base content for offer will be returned. (optional)
      *
-     * @return \AllegroApi\Model\OfferTranslations|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\OfferTranslations|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function getOfferTranslationUsingGET($offer_id, $language = null)
     {
@@ -463,9 +460,9 @@ class OfferTranslationsApi
      * @param  string $offer_id Offer identifier. (required)
      * @param  string $language Language for translation to retrieve. If not provided, all translations as well as base content for offer will be returned. (optional)
      *
-     * @return array of \AllegroApi\Model\OfferTranslations|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\OfferTranslations|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOfferTranslationUsingGETWithHttpInfo($offer_id, $language = null)
     {
@@ -700,12 +697,10 @@ class OfferTranslationsApi
                 foreach($language as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['language'] = $language;
             }
         }
-
 
         // path params
         if ($offer_id !== null) {
@@ -715,7 +710,6 @@ class OfferTranslationsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -780,9 +774,9 @@ class OfferTranslationsApi
      * @param  string $offer_id Offer identifier. (required)
      * @param  \AllegroApi\Model\ManualTranslationUpdateRequest $manual_translation_update_request Request with manual translation for offer, must contain at least one translated offer element (title or description). (required)
      *
-     * @return void
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return void
      */
     public function updateOfferTranslationUsingPATCH($language, $offer_id, $manual_translation_update_request)
     {
@@ -798,9 +792,9 @@ class OfferTranslationsApi
      * @param  string $offer_id Offer identifier. (required)
      * @param  \AllegroApi\Model\ManualTranslationUpdateRequest $manual_translation_update_request Request with manual translation for offer, must contain at least one translated offer element (title or description). (required)
      *
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateOfferTranslationUsingPATCHWithHttpInfo($language, $offer_id, $manual_translation_update_request)
     {
@@ -964,8 +958,6 @@ class OfferTranslationsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($language !== null) {
             $resourcePath = str_replace(
@@ -982,7 +974,6 @@ class OfferTranslationsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1043,7 +1034,6 @@ class OfferTranslationsApi
 
         return $this->createRequest('PATCH', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

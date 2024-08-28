@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * OrderManagementApi Class Doc Comment
@@ -181,9 +181,9 @@ class OrderManagementApi
      * @param  string $id Order identifier. (required)
      * @param  \AllegroApi\Model\CheckFormsNewOrderInvoice $check_forms_new_order_invoice request (required)
      *
-     * @return \AllegroApi\Model\CheckFormsNewOrderInvoiceId|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CheckFormsNewOrderInvoiceId|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function addOrderInvoicesMetadata($id, $check_forms_new_order_invoice)
     {
@@ -199,9 +199,9 @@ class OrderManagementApi
      * @param  string $id Order identifier. (required)
      * @param  \AllegroApi\Model\CheckFormsNewOrderInvoice $check_forms_new_order_invoice request (required)
      *
-     * @return array of \AllegroApi\Model\CheckFormsNewOrderInvoiceId|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CheckFormsNewOrderInvoiceId|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function addOrderInvoicesMetadataWithHttpInfo($id, $check_forms_new_order_invoice)
     {
@@ -476,8 +476,6 @@ class OrderManagementApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
@@ -486,7 +484,6 @@ class OrderManagementApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -556,9 +553,9 @@ class OrderManagementApi
      * @param  string $id Order identifier. (required)
      * @param  \AllegroApi\Model\CheckoutFormAddWaybillRequest $checkout_form_add_waybill_request request (required)
      *
-     * @return \AllegroApi\Model\CheckoutFormAddWaybillCreated|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CheckoutFormAddWaybillCreated|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function createOrderShipmentsUsingPOST($id, $checkout_form_add_waybill_request)
     {
@@ -574,9 +571,9 @@ class OrderManagementApi
      * @param  string $id Order identifier. (required)
      * @param  \AllegroApi\Model\CheckoutFormAddWaybillRequest $checkout_form_add_waybill_request request (required)
      *
-     * @return array of \AllegroApi\Model\CheckoutFormAddWaybillCreated|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CheckoutFormAddWaybillCreated|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function createOrderShipmentsUsingPOSTWithHttpInfo($id, $checkout_form_add_waybill_request)
     {
@@ -851,8 +848,6 @@ class OrderManagementApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
@@ -861,7 +856,6 @@ class OrderManagementApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -931,9 +925,9 @@ class OrderManagementApi
      * @param  \AllegroApi\Model\AllegroCarrier[] $carriers List of carrier ids to filter the drop off/pick up points to only the ones where any of the listed carriers operate. In case of an empty list, all points are returned. (optional)
      * @param  string $if_modified_since Date of last data modification. If data has been modified after specified date, full set of data is returned. If header is not specified, full set of data is returned. Date has to be provided in HTTP-date format. Information about date (the same HTTP-date format) of last modified data is available in response - &#x60;Last-Modified&#x60;. (optional)
      *
-     * @return \AllegroApi\Model\AllegroPickupDropOffPointsResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AllegroPickupDropOffPointsResponse
      */
     public function getAllegroPickupDropOffPointsGET($carriers = null, $if_modified_since = null)
     {
@@ -949,9 +943,9 @@ class OrderManagementApi
      * @param  \AllegroApi\Model\AllegroCarrier[] $carriers List of carrier ids to filter the drop off/pick up points to only the ones where any of the listed carriers operate. In case of an empty list, all points are returned. (optional)
      * @param  string $if_modified_since Date of last data modification. If data has been modified after specified date, full set of data is returned. If header is not specified, full set of data is returned. Date has to be provided in HTTP-date format. Information about date (the same HTTP-date format) of last modified data is available in response - &#x60;Last-Modified&#x60;. (optional)
      *
-     * @return array of \AllegroApi\Model\AllegroPickupDropOffPointsResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AllegroPickupDropOffPointsResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllegroPickupDropOffPointsGETWithHttpInfo($carriers = null, $if_modified_since = null)
     {
@@ -1120,8 +1114,7 @@ class OrderManagementApi
                 foreach($carriers as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['carriers'] = $carriers;
             }
         }
@@ -1130,8 +1123,6 @@ class OrderManagementApi
         if ($if_modified_since !== null) {
             $headerParams['If-Modified-Since'] = ObjectSerializer::toHeaderValue($if_modified_since);
         }
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1212,9 +1203,9 @@ class OrderManagementApi
      * @param  \DateTime $updated_at_gte Checkout form last modification date. The lower bound of date time range from which checkout forms will be taken. (optional)
      * @param  string $sort The results&#39; sorting order. No prefix in the value means ascending order. &#x60;-&#x60; prefix means descending order. If you don&#39;t provide the sort parameter, the list is sorted by line item boughtAt date, descending. (optional)
      *
-     * @return \AllegroApi\Model\CheckoutForms
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @return \AllegroApi\Model\CheckoutForms
      */
     public function getListOfOrdersUsingGET($offset = 0, $limit = 100, $status = null, $fulfillment_status = null, $fulfillment_shipment_summary_line_items_sent = null, $line_items_bought_at_lte = null, $line_items_bought_at_gte = null, $payment_id = null, $surcharges_id = null, $delivery_method_id = null, $buyer_login = null, $marketplace_id = null, $updated_at_lte = null, $updated_at_gte = null, $sort = null)
     {
@@ -1243,9 +1234,9 @@ class OrderManagementApi
      * @param  \DateTime $updated_at_gte Checkout form last modification date. The lower bound of date time range from which checkout forms will be taken. (optional)
      * @param  string $sort The results&#39; sorting order. No prefix in the value means ascending order. &#x60;-&#x60; prefix means descending order. If you don&#39;t provide the sort parameter, the list is sorted by line item boughtAt date, descending. (optional)
      *
-     * @return array of \AllegroApi\Model\CheckoutForms, HTTP status code, HTTP response headers (array of strings)
      *@throws \AllegroApi\Exception\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @return array of \AllegroApi\Model\CheckoutForms, HTTP status code, HTTP response headers (array of strings)
      */
     public function getListOfOrdersUsingGETWithHttpInfo($offset = 0, $limit = 100, $status = null, $fulfillment_status = null, $fulfillment_shipment_summary_line_items_sent = null, $line_items_bought_at_lte = null, $line_items_bought_at_gte = null, $payment_id = null, $surcharges_id = null, $delivery_method_id = null, $buyer_login = null, $marketplace_id = null, $updated_at_lte = null, $updated_at_gte = null, $sort = null)
     {
@@ -1450,7 +1441,6 @@ class OrderManagementApi
             throw new \InvalidArgumentException('invalid value for "$limit" when calling OrderManagementApi.getListOfOrdersUsingGET, must be bigger than or equal to 1.');
         }
 
-
         $resourcePath = '/order/checkout-forms';
         $formParams = [];
         $queryParams = [];
@@ -1464,8 +1454,7 @@ class OrderManagementApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
@@ -1475,8 +1464,7 @@ class OrderManagementApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -1486,8 +1474,7 @@ class OrderManagementApi
                 foreach($status as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['status'] = $status;
             }
         }
@@ -1497,8 +1484,7 @@ class OrderManagementApi
                 foreach($fulfillment_status as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['fulfillment.status'] = $fulfillment_status;
             }
         }
@@ -1508,8 +1494,7 @@ class OrderManagementApi
                 foreach($fulfillment_shipment_summary_line_items_sent as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['fulfillment.shipmentSummary.lineItemsSent'] = $fulfillment_shipment_summary_line_items_sent;
             }
         }
@@ -1519,8 +1504,7 @@ class OrderManagementApi
                 foreach($line_items_bought_at_lte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['lineItems.boughtAt.lte'] = $line_items_bought_at_lte;
             }
         }
@@ -1530,8 +1514,7 @@ class OrderManagementApi
                 foreach($line_items_bought_at_gte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['lineItems.boughtAt.gte'] = $line_items_bought_at_gte;
             }
         }
@@ -1541,8 +1524,7 @@ class OrderManagementApi
                 foreach($payment_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['payment.id'] = $payment_id;
             }
         }
@@ -1552,8 +1534,7 @@ class OrderManagementApi
                 foreach($surcharges_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['surcharges.id'] = $surcharges_id;
             }
         }
@@ -1563,8 +1544,7 @@ class OrderManagementApi
                 foreach($delivery_method_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['delivery.method.id'] = $delivery_method_id;
             }
         }
@@ -1574,8 +1554,7 @@ class OrderManagementApi
                 foreach($buyer_login as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['buyer.login'] = $buyer_login;
             }
         }
@@ -1585,8 +1564,7 @@ class OrderManagementApi
                 foreach($marketplace_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['marketplace.id'] = $marketplace_id;
             }
         }
@@ -1596,8 +1574,7 @@ class OrderManagementApi
                 foreach($updated_at_lte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['updatedAt.lte'] = $updated_at_lte;
             }
         }
@@ -1607,8 +1584,7 @@ class OrderManagementApi
                 foreach($updated_at_gte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['updatedAt.gte'] = $updated_at_gte;
             }
         }
@@ -1618,14 +1594,10 @@ class OrderManagementApi
                 foreach($sort as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['sort'] = $sort;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1687,9 +1659,9 @@ class OrderManagementApi
      * Get order events statistics
      *
      *
-     * @return \AllegroApi\Model\OrderEventStats
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\OrderEventStats
      */
     public function getOrderEventsStatisticsUsingGET()
     {
@@ -1703,9 +1675,9 @@ class OrderManagementApi
      * Get order events statistics
      *
      *
-     * @return array of \AllegroApi\Model\OrderEventStats, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\OrderEventStats, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrderEventsStatisticsUsingGETWithHttpInfo()
     {
@@ -1862,10 +1834,6 @@ class OrderManagementApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             '',
@@ -1929,9 +1897,9 @@ class OrderManagementApi
      * @param  string[] $type Specify array of event types for filtering. Allowed values are:   * &#x60;BOUGHT&#x60;: purchase without checkout form filled in   * &#x60;FILLED_IN&#x60;: checkout form filled in but payment is not completed yet so data could still change   * &#x60;READY_FOR_PROCESSING&#x60;: payment completed. Purchase is ready for processing   * &#x60;BUYER_CANCELLED&#x60;: purchase was cancelled by buyer   * &#x60;FULFILLMENT_STATUS_CHANGED&#x60;: fulfillment status changed   * &#x60;AUTO_CANCELLED&#x60;: purchase was cancelled automatically by Allegro. (optional)
      * @param  int $limit The maximum number of events returned in the response. (optional, default to 100)
      *
-     * @return \AllegroApi\Model\OrderEventsList
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\OrderEventsList
      */
     public function getOrderEventsUsingGET($from = null, $type = null, $limit = 100)
     {
@@ -1948,9 +1916,9 @@ class OrderManagementApi
      * @param  string[] $type Specify array of event types for filtering. Allowed values are:   * &#x60;BOUGHT&#x60;: purchase without checkout form filled in   * &#x60;FILLED_IN&#x60;: checkout form filled in but payment is not completed yet so data could still change   * &#x60;READY_FOR_PROCESSING&#x60;: payment completed. Purchase is ready for processing   * &#x60;BUYER_CANCELLED&#x60;: purchase was cancelled by buyer   * &#x60;FULFILLMENT_STATUS_CHANGED&#x60;: fulfillment status changed   * &#x60;AUTO_CANCELLED&#x60;: purchase was cancelled automatically by Allegro. (optional)
      * @param  int $limit The maximum number of events returned in the response. (optional, default to 100)
      *
-     * @return array of \AllegroApi\Model\OrderEventsList, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\OrderEventsList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrderEventsUsingGETWithHttpInfo($from = null, $type = null, $limit = 100)
     {
@@ -2115,7 +2083,6 @@ class OrderManagementApi
             throw new \InvalidArgumentException('invalid value for "$limit" when calling OrderManagementApi.getOrderEventsUsingGET, must be bigger than or equal to 1.');
         }
 
-
         $resourcePath = '/order/events';
         $formParams = [];
         $queryParams = [];
@@ -2129,8 +2096,7 @@ class OrderManagementApi
                 foreach($from as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['from'] = $from;
             }
         }
@@ -2140,8 +2106,7 @@ class OrderManagementApi
                 foreach($type as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['type'] = $type;
             }
         }
@@ -2151,14 +2116,10 @@ class OrderManagementApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -2221,9 +2182,9 @@ class OrderManagementApi
      *
      * @param  string $id Order identifier. (required)
      *
-     * @return \AllegroApi\Model\CheckoutFormsOrderInvoices|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CheckoutFormsOrderInvoices|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function getOrderInvoicesDetails($id)
     {
@@ -2238,9 +2199,9 @@ class OrderManagementApi
      *
      * @param  string $id Order identifier. (required)
      *
-     * @return array of \AllegroApi\Model\CheckoutFormsOrderInvoices|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CheckoutFormsOrderInvoices|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrderInvoicesDetailsWithHttpInfo($id)
     {
@@ -2446,8 +2407,6 @@ class OrderManagementApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
@@ -2456,7 +2415,6 @@ class OrderManagementApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -2519,9 +2477,9 @@ class OrderManagementApi
      *
      * @param  string $id Order identifier. (required)
      *
-     * @return \AllegroApi\Model\CheckoutFormOrderWaybillResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CheckoutFormOrderWaybillResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      */
     public function getOrderShipmentsUsingGET($id)
     {
@@ -2536,9 +2494,9 @@ class OrderManagementApi
      *
      * @param  string $id Order identifier. (required)
      *
-     * @return array of \AllegroApi\Model\CheckoutFormOrderWaybillResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CheckoutFormOrderWaybillResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrderShipmentsUsingGETWithHttpInfo($id)
     {
@@ -2744,8 +2702,6 @@ class OrderManagementApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
@@ -2754,7 +2710,6 @@ class OrderManagementApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -2816,9 +2771,9 @@ class OrderManagementApi
      * Get a list of available shipping carriers
      *
      *
-     * @return \AllegroApi\Model\OrdersShippingCarriersResponse
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\OrdersShippingCarriersResponse
      */
     public function getOrdersCarriersUsingGET()
     {
@@ -2832,9 +2787,9 @@ class OrderManagementApi
      * Get a list of available shipping carriers
      *
      *
-     * @return array of \AllegroApi\Model\OrdersShippingCarriersResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\OrdersShippingCarriersResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrdersCarriersUsingGETWithHttpInfo()
     {
@@ -2991,10 +2946,6 @@ class OrderManagementApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             '',
@@ -3060,9 +3011,9 @@ class OrderManagementApi
      *
      * @param  string $id Checkout form identifier. (required)
      *
-     * @return \AllegroApi\Model\CheckoutForm
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CheckoutForm
      */
     public function getOrdersDetailsUsingGET($id)
     {
@@ -3077,9 +3028,9 @@ class OrderManagementApi
      *
      * @param  string $id Checkout form identifier. (required)
      *
-     * @return array of \AllegroApi\Model\CheckoutForm, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CheckoutForm, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrdersDetailsUsingGETWithHttpInfo($id)
     {
@@ -3245,8 +3196,6 @@ class OrderManagementApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
@@ -3255,7 +3204,6 @@ class OrderManagementApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -3319,9 +3267,9 @@ class OrderManagementApi
      * @param  string $carrier_id Carrier identifier. (required)
      * @param  string[] $waybill Waybill number (parcel tracking number). Example: &#x60;waybill&#x3D;AAA0000E5D201&amp;waybill&#x3D;BBB00000E5D202&#x60; - returns parcel tracking history for &#x60;AAA0000E5D201&#x60; as well as for &#x60;BBB00000E5D202&#x60;. (required)
      *
-     * @return \AllegroApi\Model\CarrierParcelTrackingResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CarrierParcelTrackingResponse
      */
     public function getParcelTrackingUsingGET($carrier_id, $waybill)
     {
@@ -3337,9 +3285,9 @@ class OrderManagementApi
      * @param  string $carrier_id Carrier identifier. (required)
      * @param  string[] $waybill Waybill number (parcel tracking number). Example: &#x60;waybill&#x3D;AAA0000E5D201&amp;waybill&#x3D;BBB00000E5D202&#x60; - returns parcel tracking history for &#x60;AAA0000E5D201&#x60; as well as for &#x60;BBB00000E5D202&#x60;. (required)
      *
-     * @return array of \AllegroApi\Model\CarrierParcelTrackingResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CarrierParcelTrackingResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getParcelTrackingUsingGETWithHttpInfo($carrier_id, $waybill)
     {
@@ -3510,7 +3458,6 @@ class OrderManagementApi
             throw new \InvalidArgumentException('invalid value for "$waybill" when calling OrderManagementApi.getParcelTrackingUsingGET, number of items must be less than or equal to 20.');
         }
 
-
         $resourcePath = '/order/carriers/{carrierId}/tracking';
         $formParams = [];
         $queryParams = [];
@@ -3524,12 +3471,10 @@ class OrderManagementApi
                 foreach($waybill as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['waybill'] = $waybill;
             }
         }
-
 
         // path params
         if ($carrier_id !== null) {
@@ -3539,7 +3484,6 @@ class OrderManagementApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -3608,9 +3552,9 @@ class OrderManagementApi
      * @param  \AllegroApi\Model\CheckoutFormFulfillment $checkout_form_fulfillment request (required)
      * @param  string $checkout_form_revision Checkout form revision. (optional)
      *
-     * @return void
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return void
      */
     public function setOrderFulfillmentUsingPUT($id, $checkout_form_fulfillment, $checkout_form_revision = null)
     {
@@ -3626,9 +3570,9 @@ class OrderManagementApi
      * @param  \AllegroApi\Model\CheckoutFormFulfillment $checkout_form_fulfillment request (required)
      * @param  string $checkout_form_revision Checkout form revision. (optional)
      *
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function setOrderFulfillmentUsingPUTWithHttpInfo($id, $checkout_form_fulfillment, $checkout_form_revision = null)
     {
@@ -3784,12 +3728,10 @@ class OrderManagementApi
                 foreach($checkout_form_revision as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['checkoutForm.revision'] = $checkout_form_revision;
             }
         }
-
 
         // path params
         if ($id !== null) {
@@ -3799,7 +3741,6 @@ class OrderManagementApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -3870,9 +3811,9 @@ class OrderManagementApi
      * @param  string $invoice_id Invoice identifier. (required)
      * @param  \SplFileObject $body body (optional)
      *
-     * @return void
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return void
      */
     public function uploadOrderInvoiceFile($id, $invoice_id, $body = null)
     {
@@ -3888,9 +3829,9 @@ class OrderManagementApi
      * @param  string $invoice_id Invoice identifier. (required)
      * @param  \SplFileObject $body (optional)
      *
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadOrderInvoiceFileWithHttpInfo($id, $invoice_id, $body = null)
     {
@@ -4064,8 +4005,6 @@ class OrderManagementApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
@@ -4082,7 +4021,6 @@ class OrderManagementApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -4143,7 +4081,6 @@ class OrderManagementApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

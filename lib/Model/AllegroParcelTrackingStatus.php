@@ -351,7 +351,6 @@ class AllegroParcelTrackingStatus implements ModelInterface, ArrayAccess, \JsonS
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets occurred_at
      *
@@ -533,7 +532,7 @@ class AllegroParcelTrackingStatus implements ModelInterface, ArrayAccess, \JsonS
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -559,5 +558,4 @@ class AllegroParcelTrackingStatus implements ModelInterface, ArrayAccess, \JsonS
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

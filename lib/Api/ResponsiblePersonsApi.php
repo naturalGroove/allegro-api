@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * ResponsiblePersonsApi Class Doc Comment
@@ -179,9 +179,9 @@ class ResponsiblePersonsApi
      * Get the list of responsible persons
      *
      *
-     * @return \AllegroApi\Model\ResponsiblePersonsGET200Response
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ResponsiblePersonsGET200Response
      */
     public function responsiblePersonsGET()
     {
@@ -195,9 +195,9 @@ class ResponsiblePersonsApi
      * Get the list of responsible persons
      *
      *
-     * @return array of \AllegroApi\Model\ResponsiblePersonsGET200Response, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ResponsiblePersonsGET200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function responsiblePersonsGETWithHttpInfo()
     {
@@ -354,10 +354,6 @@ class ResponsiblePersonsApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             '',
@@ -419,9 +415,9 @@ class ResponsiblePersonsApi
      *
      * @param  \AllegroApi\Model\CreateResponsiblePersonRequest $create_responsible_person_request create_responsible_person_request (required)
      *
-     * @return \AllegroApi\Model\ResponsiblePersonResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ResponsiblePersonResponse
      */
     public function responsiblePersonsPOST($create_responsible_person_request)
     {
@@ -436,9 +432,9 @@ class ResponsiblePersonsApi
      *
      * @param  \AllegroApi\Model\CreateResponsiblePersonRequest $create_responsible_person_request (required)
      *
-     * @return array of \AllegroApi\Model\ResponsiblePersonResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ResponsiblePersonResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function responsiblePersonsPOSTWithHttpInfo($create_responsible_person_request)
     {
@@ -604,10 +600,6 @@ class ResponsiblePersonsApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -676,9 +668,9 @@ class ResponsiblePersonsApi
      * @param  string $id Responsible person ID. (required)
      * @param  \AllegroApi\Model\UpdateResponsiblePersonRequest $update_responsible_person_request update_responsible_person_request (required)
      *
-     * @return \AllegroApi\Model\ResponsiblePersonResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ResponsiblePersonResponse
      */
     public function responsiblePersonsPUT($id, $update_responsible_person_request)
     {
@@ -694,9 +686,9 @@ class ResponsiblePersonsApi
      * @param  string $id Responsible person ID. (required)
      * @param  \AllegroApi\Model\UpdateResponsiblePersonRequest $update_responsible_person_request (required)
      *
-     * @return array of \AllegroApi\Model\ResponsiblePersonResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ResponsiblePersonResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function responsiblePersonsPUTWithHttpInfo($id, $update_responsible_person_request)
     {
@@ -871,8 +863,6 @@ class ResponsiblePersonsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
@@ -881,7 +871,6 @@ class ResponsiblePersonsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -942,7 +931,6 @@ class ResponsiblePersonsApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

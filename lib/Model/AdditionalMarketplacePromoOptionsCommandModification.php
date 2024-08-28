@@ -234,7 +234,6 @@ class AdditionalMarketplacePromoOptionsCommandModification implements ModelInter
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -294,7 +293,6 @@ class AdditionalMarketplacePromoOptionsCommandModification implements ModelInter
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets marketplace_id
@@ -413,7 +411,7 @@ class AdditionalMarketplacePromoOptionsCommandModification implements ModelInter
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -439,5 +437,4 @@ class AdditionalMarketplacePromoOptionsCommandModification implements ModelInter
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

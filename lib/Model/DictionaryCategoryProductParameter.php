@@ -238,8 +238,6 @@ class DictionaryCategoryProductParameter extends CategoryProductParameter
         return self::$openAPIModelName;
     }
 
-
-
     /**
      * Constructor
      *
@@ -295,7 +293,6 @@ class DictionaryCategoryProductParameter extends CategoryProductParameter
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets type
@@ -441,7 +438,7 @@ class DictionaryCategoryProductParameter extends CategoryProductParameter
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -467,5 +464,4 @@ class DictionaryCategoryProductParameter extends CategoryProductParameter
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

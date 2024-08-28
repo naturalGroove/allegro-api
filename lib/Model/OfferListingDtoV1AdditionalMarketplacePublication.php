@@ -229,7 +229,6 @@ class OfferListingDtoV1AdditionalMarketplacePublication implements ModelInterfac
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -288,7 +287,6 @@ class OfferListingDtoV1AdditionalMarketplacePublication implements ModelInterfac
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets state
@@ -380,7 +378,7 @@ class OfferListingDtoV1AdditionalMarketplacePublication implements ModelInterfac
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -406,5 +404,4 @@ class OfferListingDtoV1AdditionalMarketplacePublication implements ModelInterfac
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

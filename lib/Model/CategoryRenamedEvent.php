@@ -232,8 +232,6 @@ class CategoryRenamedEvent extends CategoryBaseEvent
         return self::$openAPIModelName;
     }
 
-
-
     /**
      * Constructor
      *
@@ -291,7 +289,6 @@ class CategoryRenamedEvent extends CategoryBaseEvent
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets type
@@ -410,7 +407,7 @@ class CategoryRenamedEvent extends CategoryBaseEvent
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -436,5 +433,4 @@ class CategoryRenamedEvent extends CategoryBaseEvent
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

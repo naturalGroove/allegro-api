@@ -232,8 +232,6 @@ class BundleBenefitSpecification extends BenefitSpecification
         return self::$openAPIModelName;
     }
 
-
-
     /**
      * Constructor
      *
@@ -288,7 +286,6 @@ class BundleBenefitSpecification extends BenefitSpecification
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets type
@@ -407,7 +404,7 @@ class BundleBenefitSpecification extends BenefitSpecification
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -433,5 +430,4 @@ class BundleBenefitSpecification extends BenefitSpecification
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

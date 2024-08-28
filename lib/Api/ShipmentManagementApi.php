@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ShipmentManagementApi
  * PHP version 7.2
@@ -231,7 +232,7 @@ class ShipmentManagementApi
 
             $statusCode = $response->getStatusCode();
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 200:
                     if ('\AllegroApi\Model\ShipmentCancelCommandDto' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -294,7 +295,6 @@ class ShipmentManagementApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -456,10 +456,8 @@ class ShipmentManagementApi
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -547,7 +545,7 @@ class ShipmentManagementApi
 
             $statusCode = $response->getStatusCode();
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 200:
                     if ('\AllegroApi\Model\ShipmentCreateCommandDto' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -622,7 +620,6 @@ class ShipmentManagementApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -761,10 +758,6 @@ class ShipmentManagementApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -776,7 +769,8 @@ class ShipmentManagementApi
             if ($headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($shipment_create_command_dto));
             } else {
-                $httpBody = $shipment_create_command_dto;
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($shipment_create_command_dto));
+                //$httpBody = $shipment_create_command_dto;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -792,10 +786,8 @@ class ShipmentManagementApi
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -883,7 +875,7 @@ class ShipmentManagementApi
 
             $statusCode = $response->getStatusCode();
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 200:
                     if ('\AllegroApi\Model\PickupCreateCommandDto' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -946,7 +938,6 @@ class ShipmentManagementApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -1108,10 +1099,8 @@ class ShipmentManagementApi
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -1199,7 +1188,7 @@ class ShipmentManagementApi
 
             $statusCode = $response->getStatusCode();
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 200:
                     if ('\AllegroApi\Model\CreatePickupCommandStatusDto' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1274,7 +1263,6 @@ class ShipmentManagementApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -1446,10 +1434,8 @@ class ShipmentManagementApi
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -1535,7 +1521,7 @@ class ShipmentManagementApi
 
             $statusCode = $response->getStatusCode();
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 200:
                     if ('\AllegroApi\Model\DeliveryServicesDto' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1598,7 +1584,6 @@ class ShipmentManagementApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -1745,10 +1730,8 @@ class ShipmentManagementApi
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -1836,7 +1819,7 @@ class ShipmentManagementApi
 
             $statusCode = $response->getStatusCode();
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 200:
                     if ('\AllegroApi\Model\PickupProposalsResponseDto[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -1911,7 +1894,6 @@ class ShipmentManagementApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -2081,10 +2063,8 @@ class ShipmentManagementApi
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -2172,7 +2152,7 @@ class ShipmentManagementApi
 
             $statusCode = $response->getStatusCode();
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 200:
                     if ('\AllegroApi\Model\CancelShipmentCommandStatusDto' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -2247,7 +2227,6 @@ class ShipmentManagementApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -2419,10 +2398,8 @@ class ShipmentManagementApi
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -2510,7 +2487,7 @@ class ShipmentManagementApi
 
             $statusCode = $response->getStatusCode();
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 200:
                     if ('\AllegroApi\Model\CreateShipmentCommandStatusDto' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -2585,7 +2562,6 @@ class ShipmentManagementApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -2757,10 +2733,8 @@ class ShipmentManagementApi
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -2848,7 +2822,7 @@ class ShipmentManagementApi
 
             $statusCode = $response->getStatusCode();
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 200:
                     if ('\AllegroApi\Model\ShipmentDto' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -2935,7 +2909,6 @@ class ShipmentManagementApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -3115,10 +3088,8 @@ class ShipmentManagementApi
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -3206,7 +3177,7 @@ class ShipmentManagementApi
 
             $statusCode = $response->getStatusCode();
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 200:
                     if ('\SplFileObject' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -3293,7 +3264,6 @@ class ShipmentManagementApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -3455,7 +3425,8 @@ class ShipmentManagementApi
             if ($headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($label_request_dto));
             } else {
-                $httpBody = $label_request_dto;
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($label_request_dto));
+                //$httpBody = $label_request_dto;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -3471,10 +3442,8 @@ class ShipmentManagementApi
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);
@@ -3562,7 +3531,7 @@ class ShipmentManagementApi
 
             $statusCode = $response->getStatusCode();
 
-            switch($statusCode) {
+            switch ($statusCode) {
                 case 200:
                     if ('\SplFileObject' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
@@ -3649,7 +3618,6 @@ class ShipmentManagementApi
                 $response->getStatusCode(),
                 $response->getHeaders()
             ];
-
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
@@ -3827,10 +3795,8 @@ class ShipmentManagementApi
                 }
                 // for HTTP post (form)
                 $httpBody = new MultipartStream($multipartContents);
-
             } elseif ($headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode($formParams);
-
             } else {
                 // for HTTP post (form)
                 $httpBody = ObjectSerializer::buildQuery($formParams);

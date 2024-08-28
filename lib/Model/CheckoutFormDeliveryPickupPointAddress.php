@@ -246,7 +246,6 @@ class CheckoutFormDeliveryPickupPointAddress implements ModelInterface, ArrayAcc
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -308,7 +307,6 @@ class CheckoutFormDeliveryPickupPointAddress implements ModelInterface, ArrayAcc
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets street
@@ -481,7 +479,7 @@ class CheckoutFormDeliveryPickupPointAddress implements ModelInterface, ArrayAcc
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -507,5 +505,4 @@ class CheckoutFormDeliveryPickupPointAddress implements ModelInterface, ArrayAcc
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

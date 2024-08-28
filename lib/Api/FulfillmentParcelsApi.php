@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * FulfillmentParcelsApi Class Doc Comment
@@ -365,8 +365,6 @@ class FulfillmentParcelsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($order_id !== null) {
             $resourcePath = str_replace(
@@ -375,7 +373,6 @@ class FulfillmentParcelsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -430,7 +427,6 @@ class FulfillmentParcelsApi
 
         return $this->createRequest('GET', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

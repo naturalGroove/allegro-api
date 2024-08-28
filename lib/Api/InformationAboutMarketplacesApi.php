@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * InformationAboutMarketplacesApi Class Doc Comment
@@ -179,9 +179,9 @@ class InformationAboutMarketplacesApi
      * Get details for all marketplaces in allegro
      *
      *
-     * @return \AllegroApi\Model\AllegroMarketplaces
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AllegroMarketplaces
      */
     public function marketplacesGET()
     {
@@ -195,9 +195,9 @@ class InformationAboutMarketplacesApi
      * Get details for all marketplaces in allegro
      *
      *
-     * @return array of \AllegroApi\Model\AllegroMarketplaces, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AllegroMarketplaces, HTTP status code, HTTP response headers (array of strings)
      */
     public function marketplacesGETWithHttpInfo()
     {
@@ -354,10 +354,6 @@ class InformationAboutMarketplacesApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             '',
@@ -411,7 +407,6 @@ class InformationAboutMarketplacesApi
 
         return $this->createRequest('GET', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

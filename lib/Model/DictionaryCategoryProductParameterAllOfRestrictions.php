@@ -229,7 +229,6 @@ class DictionaryCategoryProductParameterAllOfRestrictions implements ModelInterf
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -288,7 +287,6 @@ class DictionaryCategoryProductParameterAllOfRestrictions implements ModelInterf
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets multiple_choices
@@ -380,7 +378,7 @@ class DictionaryCategoryProductParameterAllOfRestrictions implements ModelInterf
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -406,5 +404,4 @@ class DictionaryCategoryProductParameterAllOfRestrictions implements ModelInterf
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

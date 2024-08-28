@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * UsersOfferInformationApi Class Doc Comment
@@ -182,9 +182,9 @@ class UsersOfferInformationApi
      * @param  int $limit The number of events that will be returned in the response. (optional, default to 100)
      * @param  string[] $type The types of events that will be returned in the response. All types of events are returned by default. (optional)
      *
-     * @return \AllegroApi\Model\SellerOfferEventsResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\SellerOfferEventsResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError
      */
     public function getOfferEvents($from = null, $limit = 100, $type = null)
     {
@@ -201,9 +201,9 @@ class UsersOfferInformationApi
      * @param  int $limit The number of events that will be returned in the response. (optional, default to 100)
      * @param  string[] $type The types of events that will be returned in the response. All types of events are returned by default. (optional)
      *
-     * @return array of \AllegroApi\Model\SellerOfferEventsResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\SellerOfferEventsResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOfferEventsWithHttpInfo($from = null, $limit = 100, $type = null)
     {
@@ -412,7 +412,6 @@ class UsersOfferInformationApi
             throw new \InvalidArgumentException('invalid value for "$limit" when calling UsersOfferInformationApi.getOfferEvents, must be bigger than or equal to 1.');
         }
 
-
         $resourcePath = '/sale/offer-events';
         $formParams = [];
         $queryParams = [];
@@ -426,8 +425,7 @@ class UsersOfferInformationApi
                 foreach($from as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['from'] = $from;
             }
         }
@@ -437,8 +435,7 @@ class UsersOfferInformationApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -448,14 +445,10 @@ class UsersOfferInformationApi
                 foreach($type as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['type'] = $type;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', 'application/json'],
@@ -519,9 +512,9 @@ class UsersOfferInformationApi
      * @param  string $offer_id Offer identifier. (required)
      * @param  string $marketplace_id Marketplace for which offer classification report will be returned. If not specified, the result of the offer&#39;s base marketplace will be returned. (optional)
      *
-     * @return \AllegroApi\Model\SmartOfferClassificationReport|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\SmartOfferClassificationReport|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function getOfferSmartClassificationGET($offer_id, $marketplace_id = null)
     {
@@ -537,9 +530,9 @@ class UsersOfferInformationApi
      * @param  string $offer_id Offer identifier. (required)
      * @param  string $marketplace_id Marketplace for which offer classification report will be returned. If not specified, the result of the offer&#39;s base marketplace will be returned. (optional)
      *
-     * @return array of \AllegroApi\Model\SmartOfferClassificationReport|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\SmartOfferClassificationReport|\AllegroApi\Model\GetOfferSmartClassificationGET400Response|\AllegroApi\Model\AuthError|\AllegroApi\Model\GetOfferSmartClassificationGET403Response|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOfferSmartClassificationGETWithHttpInfo($offer_id, $marketplace_id = null)
     {
@@ -814,12 +807,10 @@ class UsersOfferInformationApi
                 foreach($marketplace_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['marketplaceId'] = $marketplace_id;
             }
         }
-
 
         // path params
         if ($offer_id !== null) {
@@ -829,7 +820,6 @@ class UsersOfferInformationApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -892,9 +882,9 @@ class UsersOfferInformationApi
      *
      * @param  string $offer_id Offer identifier. (required)
      *
-     * @return \AllegroApi\Model\SaleProductOfferResponseV1|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\SaleProductOfferResponseV1|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function getProductOffer($offer_id)
     {
@@ -909,9 +899,9 @@ class UsersOfferInformationApi
      *
      * @param  string $offer_id Offer identifier. (required)
      *
-     * @return array of \AllegroApi\Model\SaleProductOfferResponseV1|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\SaleProductOfferResponseV1|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProductOfferWithHttpInfo($offer_id)
     {
@@ -1157,8 +1147,6 @@ class UsersOfferInformationApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($offer_id !== null) {
             $resourcePath = str_replace(
@@ -1167,7 +1155,6 @@ class UsersOfferInformationApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1248,9 +1235,9 @@ class UsersOfferInformationApi
      * @param  string $fundraising_campaign_id ID of the charity fundraising campaign that benefits from this offer. (optional)
      * @param  bool $fundraising_campaign_id_empty Allows to search for charity or commercial offers. (optional)
      *
-     * @return \AllegroApi\Model\OffersSearchResultDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \AllegroApi\Exception\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @return \AllegroApi\Model\OffersSearchResultDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function searchOffersUsingGET($offer_id = null, $name = null, $selling_mode_price_amount_gte = null, $selling_mode_price_amount_lte = null, $publication_status = null, $publication_marketplace = null, $selling_mode_format = null, $external_id = null, $delivery_shipping_rates_id = null, $delivery_shipping_rates_id_empty = null, $sort = null, $limit = 20, $offset = null, $category_id = null, $product_id_empty = null, $productization_required = null, $b2b_buyable_only_by_business = null, $fundraising_campaign_id = null, $fundraising_campaign_id_empty = null)
     {
@@ -1283,9 +1270,9 @@ class UsersOfferInformationApi
      * @param  string $fundraising_campaign_id ID of the charity fundraising campaign that benefits from this offer. (optional)
      * @param  bool $fundraising_campaign_id_empty Allows to search for charity or commercial offers. (optional)
      *
-     * @return array of \AllegroApi\Model\OffersSearchResultDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \AllegroApi\Exception\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @return array of \AllegroApi\Model\OffersSearchResultDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchOffersUsingGETWithHttpInfo($offer_id = null, $name = null, $selling_mode_price_amount_gte = null, $selling_mode_price_amount_lte = null, $publication_status = null, $publication_marketplace = null, $selling_mode_format = null, $external_id = null, $delivery_shipping_rates_id = null, $delivery_shipping_rates_id_empty = null, $sort = null, $limit = 20, $offset = null, $category_id = null, $product_id_empty = null, $productization_required = null, $b2b_buyable_only_by_business = null, $fundraising_campaign_id = null, $fundraising_campaign_id_empty = null)
     {
@@ -1557,7 +1544,6 @@ class UsersOfferInformationApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling UsersOfferInformationApi.searchOffersUsingGET, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/sale/offers';
         $formParams = [];
         $queryParams = [];
@@ -1571,8 +1557,7 @@ class UsersOfferInformationApi
                 foreach($offer_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offer.id'] = $offer_id;
             }
         }
@@ -1582,8 +1567,7 @@ class UsersOfferInformationApi
                 foreach($name as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['name'] = $name;
             }
         }
@@ -1593,8 +1577,7 @@ class UsersOfferInformationApi
                 foreach($selling_mode_price_amount_gte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['sellingMode.price.amount.gte'] = $selling_mode_price_amount_gte;
             }
         }
@@ -1604,8 +1587,7 @@ class UsersOfferInformationApi
                 foreach($selling_mode_price_amount_lte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['sellingMode.price.amount.lte'] = $selling_mode_price_amount_lte;
             }
         }
@@ -1615,8 +1597,7 @@ class UsersOfferInformationApi
                 foreach($publication_status as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['publication.status'] = $publication_status;
             }
         }
@@ -1626,8 +1607,7 @@ class UsersOfferInformationApi
                 foreach($publication_marketplace as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['publication.marketplace'] = $publication_marketplace;
             }
         }
@@ -1637,8 +1617,7 @@ class UsersOfferInformationApi
                 foreach($selling_mode_format as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['sellingMode.format'] = $selling_mode_format;
             }
         }
@@ -1648,8 +1627,7 @@ class UsersOfferInformationApi
                 foreach($external_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['external.id'] = $external_id;
             }
         }
@@ -1659,8 +1637,7 @@ class UsersOfferInformationApi
                 foreach($delivery_shipping_rates_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['delivery.shippingRates.id'] = $delivery_shipping_rates_id;
             }
         }
@@ -1670,8 +1647,7 @@ class UsersOfferInformationApi
                 foreach($delivery_shipping_rates_id_empty as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['delivery.shippingRates.id.empty'] = $delivery_shipping_rates_id_empty;
             }
         }
@@ -1681,8 +1657,7 @@ class UsersOfferInformationApi
                 foreach($sort as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['sort'] = $sort;
             }
         }
@@ -1692,8 +1667,7 @@ class UsersOfferInformationApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -1703,8 +1677,7 @@ class UsersOfferInformationApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
@@ -1714,8 +1687,7 @@ class UsersOfferInformationApi
                 foreach($category_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['category.id'] = $category_id;
             }
         }
@@ -1725,8 +1697,7 @@ class UsersOfferInformationApi
                 foreach($product_id_empty as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['product.id.empty'] = $product_id_empty;
             }
         }
@@ -1736,8 +1707,7 @@ class UsersOfferInformationApi
                 foreach($productization_required as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['productizationRequired'] = $productization_required;
             }
         }
@@ -1747,8 +1717,7 @@ class UsersOfferInformationApi
                 foreach($b2b_buyable_only_by_business as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['b2b.buyableOnlyByBusiness'] = $b2b_buyable_only_by_business;
             }
         }
@@ -1758,8 +1727,7 @@ class UsersOfferInformationApi
                 foreach($fundraising_campaign_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['fundraisingCampaign.id'] = $fundraising_campaign_id;
             }
         }
@@ -1769,14 +1737,10 @@ class UsersOfferInformationApi
                 foreach($fundraising_campaign_id_empty as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['fundraisingCampaign.id.empty'] = $fundraising_campaign_id_empty;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1831,7 +1795,6 @@ class UsersOfferInformationApi
 
         return $this->createRequest('GET', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

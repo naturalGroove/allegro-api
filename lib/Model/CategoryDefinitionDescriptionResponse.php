@@ -240,7 +240,6 @@ class CategoryDefinitionDescriptionResponse implements ModelInterface, ArrayAcce
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -302,7 +301,6 @@ class CategoryDefinitionDescriptionResponse implements ModelInterface, ArrayAcce
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets hint
      *
@@ -326,8 +324,8 @@ class CategoryDefinitionDescriptionResponse implements ModelInterface, ArrayAcce
             array_push($this->openAPINullablesSetToNull, 'hint');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('hint', $nullablesSetToNull);
-            if ($index !== FALSE) {
+            $index = array_search('hint', $nullablesSetToNull, true);
+            if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
@@ -387,8 +385,8 @@ class CategoryDefinitionDescriptionResponse implements ModelInterface, ArrayAcce
             array_push($this->openAPINullablesSetToNull, 'default');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('default', $nullablesSetToNull);
-            if ($index !== FALSE) {
+            $index = array_search('default', $nullablesSetToNull, true);
+            if ($index !== false) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
@@ -461,7 +459,7 @@ class CategoryDefinitionDescriptionResponse implements ModelInterface, ArrayAcce
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -487,5 +485,4 @@ class CategoryDefinitionDescriptionResponse implements ModelInterface, ArrayAcce
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

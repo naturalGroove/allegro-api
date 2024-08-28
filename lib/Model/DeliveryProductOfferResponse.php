@@ -246,7 +246,6 @@ class DeliveryProductOfferResponse implements ModelInterface, ArrayAccess, \Json
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -312,7 +311,6 @@ class DeliveryProductOfferResponse implements ModelInterface, ArrayAccess, \Json
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets handling_time
@@ -491,7 +489,7 @@ class DeliveryProductOfferResponse implements ModelInterface, ArrayAccess, \Json
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -517,5 +515,4 @@ class DeliveryProductOfferResponse implements ModelInterface, ArrayAccess, \Json
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

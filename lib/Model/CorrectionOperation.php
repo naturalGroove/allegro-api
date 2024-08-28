@@ -226,8 +226,6 @@ class CorrectionOperation extends BaseOperation
         return self::$openAPIModelName;
     }
 
-
-
     /**
      * Constructor
      *
@@ -281,7 +279,6 @@ class CorrectionOperation extends BaseOperation
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets type
@@ -373,7 +370,7 @@ class CorrectionOperation extends BaseOperation
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -399,5 +396,4 @@ class CorrectionOperation extends BaseOperation
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * ContactsApi Class Doc Comment
@@ -180,9 +180,9 @@ class ContactsApi
      *
      * @param  \AllegroApi\Model\ContactRequest $contact_request New contact (required)
      *
-     * @return \AllegroApi\Model\ContactResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ContactResponse
      */
     public function createContactUsingPOST($contact_request)
     {
@@ -197,9 +197,9 @@ class ContactsApi
      *
      * @param  \AllegroApi\Model\ContactRequest $contact_request New contact (required)
      *
-     * @return array of \AllegroApi\Model\ContactResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ContactResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function createContactUsingPOSTWithHttpInfo($contact_request)
     {
@@ -365,10 +365,6 @@ class ContactsApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -436,9 +432,9 @@ class ContactsApi
      *
      * @param  string $id Contact identifier. (required)
      *
-     * @return \AllegroApi\Model\ContactResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ContactResponse
      */
     public function getContactUsingGET($id)
     {
@@ -453,9 +449,9 @@ class ContactsApi
      *
      * @param  string $id Contact identifier. (required)
      *
-     * @return array of \AllegroApi\Model\ContactResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ContactResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getContactUsingGETWithHttpInfo($id)
     {
@@ -621,8 +617,6 @@ class ContactsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
@@ -631,7 +625,6 @@ class ContactsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -693,9 +686,9 @@ class ContactsApi
      * Get the user&#39;s contacts
      *
      *
-     * @return \AllegroApi\Model\ContactResponseList
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ContactResponseList
      */
     public function getListOfContactsUsingGET()
     {
@@ -709,9 +702,9 @@ class ContactsApi
      * Get the user&#39;s contacts
      *
      *
-     * @return array of \AllegroApi\Model\ContactResponseList, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ContactResponseList, HTTP status code, HTTP response headers (array of strings)
      */
     public function getListOfContactsUsingGETWithHttpInfo()
     {
@@ -868,10 +861,6 @@ class ContactsApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             '',
@@ -934,9 +923,9 @@ class ContactsApi
      * @param  string $id Contact identifier. (required)
      * @param  \AllegroApi\Model\ContactRequest $contact_request Contact (required)
      *
-     * @return \AllegroApi\Model\ContactResponse
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ContactResponse
      */
     public function modifyContactUsingPUT($id, $contact_request)
     {
@@ -952,9 +941,9 @@ class ContactsApi
      * @param  string $id Contact identifier. (required)
      * @param  \AllegroApi\Model\ContactRequest $contact_request Contact (required)
      *
-     * @return array of \AllegroApi\Model\ContactResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ContactResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function modifyContactUsingPUTWithHttpInfo($id, $contact_request)
     {
@@ -1129,8 +1118,6 @@ class ContactsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($id !== null) {
             $resourcePath = str_replace(
@@ -1139,7 +1126,6 @@ class ContactsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1200,7 +1186,6 @@ class ContactsApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

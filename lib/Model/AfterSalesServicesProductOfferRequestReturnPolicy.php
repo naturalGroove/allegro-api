@@ -234,7 +234,6 @@ class AfterSalesServicesProductOfferRequestReturnPolicy implements ModelInterfac
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -294,7 +293,6 @@ class AfterSalesServicesProductOfferRequestReturnPolicy implements ModelInterfac
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets id
@@ -413,7 +411,7 @@ class AfterSalesServicesProductOfferRequestReturnPolicy implements ModelInterfac
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -439,5 +437,4 @@ class AfterSalesServicesProductOfferRequestReturnPolicy implements ModelInterfac
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

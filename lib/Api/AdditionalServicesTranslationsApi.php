@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * AdditionalServicesTranslationsApi Class Doc Comment
@@ -181,9 +181,9 @@ class AdditionalServicesTranslationsApi
      * @param  string $group_id Additional service group ID. (required)
      * @param  string $language IETF Language tag. (required)
      *
-     * @return void
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return void
      */
     public function deleteAdditionalServiceGroupTranslation($group_id, $language)
     {
@@ -198,9 +198,9 @@ class AdditionalServicesTranslationsApi
      * @param  string $group_id Additional service group ID. (required)
      * @param  string $language IETF Language tag. (required)
      *
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteAdditionalServiceGroupTranslationWithHttpInfo($group_id, $language)
     {
@@ -330,15 +330,12 @@ class AdditionalServicesTranslationsApi
             throw new \InvalidArgumentException('invalid length for "$language" when calling AdditionalServicesTranslationsApi.deleteAdditionalServiceGroupTranslation, must be bigger than or equal to 5.');
         }
 
-
         $resourcePath = '/sale/offer-additional-services/groups/{groupId}/translations/{language}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = null;
         $multipart = false;
-
-
 
         // path params
         if ($group_id !== null) {
@@ -356,7 +353,6 @@ class AdditionalServicesTranslationsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             [],
@@ -420,9 +416,9 @@ class AdditionalServicesTranslationsApi
      * @param  string $group_id Additional Service Group ID. (required)
      * @param  string $language IETF language tag. When provided, the response will contain translations in only that language (if exists). (optional)
      *
-     * @return \AllegroApi\Model\AdditionalServiceGroupTranslationResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AdditionalServiceGroupTranslationResponse
      */
     public function getAdditionalServiceGroupTranslations($group_id, $language = null)
     {
@@ -438,9 +434,9 @@ class AdditionalServicesTranslationsApi
      * @param  string $group_id Additional Service Group ID. (required)
      * @param  string $language IETF language tag. When provided, the response will contain translations in only that language (if exists). (optional)
      *
-     * @return array of \AllegroApi\Model\AdditionalServiceGroupTranslationResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AdditionalServiceGroupTranslationResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAdditionalServiceGroupTranslationsWithHttpInfo($group_id, $language = null)
     {
@@ -608,7 +604,6 @@ class AdditionalServicesTranslationsApi
             throw new \InvalidArgumentException('invalid length for "$language" when calling AdditionalServicesTranslationsApi.getAdditionalServiceGroupTranslations, must be bigger than or equal to 5.');
         }
 
-
         $resourcePath = '/sale/offer-additional-services/groups/{groupId}/translations';
         $formParams = [];
         $queryParams = [];
@@ -622,12 +617,10 @@ class AdditionalServicesTranslationsApi
                 foreach($language as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['language'] = $language;
             }
         }
-
 
         // path params
         if ($group_id !== null) {
@@ -637,7 +630,6 @@ class AdditionalServicesTranslationsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -702,9 +694,9 @@ class AdditionalServicesTranslationsApi
      * @param  string $language IETF Language tag. (required)
      * @param  \AllegroApi\Model\AdditionalServicesGroupTranslationRequest $additional_services_group_translation_request Additonal service group translation. (required)
      *
-     * @return \AllegroApi\Model\AdditionalServiceGroupTranslationPatchResponse
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AdditionalServiceGroupTranslationPatchResponse
      */
     public function updateAdditionalServiceGroupTranslation($group_id, $language, $additional_services_group_translation_request)
     {
@@ -721,9 +713,9 @@ class AdditionalServicesTranslationsApi
      * @param  string $language IETF Language tag. (required)
      * @param  \AllegroApi\Model\AdditionalServicesGroupTranslationRequest $additional_services_group_translation_request Additonal service group translation. (required)
      *
-     * @return array of \AllegroApi\Model\AdditionalServiceGroupTranslationPatchResponse, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AdditionalServiceGroupTranslationPatchResponse, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAdditionalServiceGroupTranslationWithHttpInfo($group_id, $language, $additional_services_group_translation_request)
     {
@@ -914,8 +906,6 @@ class AdditionalServicesTranslationsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($group_id !== null) {
             $resourcePath = str_replace(
@@ -932,7 +922,6 @@ class AdditionalServicesTranslationsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -993,7 +982,6 @@ class AdditionalServicesTranslationsApi
 
         return $this->createRequest('PATCH', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

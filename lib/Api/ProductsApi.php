@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * ProductsApi Class Doc Comment
@@ -180,9 +180,9 @@ class ProductsApi
      *
      * @param  string $category_id The category ID. (required)
      *
-     * @return \AllegroApi\Model\CategoryProductParameterList|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\CategoryProductParameterList|\AllegroApi\Model\ErrorsHolder
      */
     public function getFlatProductParametersUsingGET($category_id)
     {
@@ -197,9 +197,9 @@ class ProductsApi
      *
      * @param  string $category_id The category ID. (required)
      *
-     * @return array of \AllegroApi\Model\CategoryProductParameterList|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\CategoryProductParameterList|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getFlatProductParametersUsingGETWithHttpInfo($category_id)
     {
@@ -385,8 +385,6 @@ class ProductsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($category_id !== null) {
             $resourcePath = str_replace(
@@ -395,7 +393,6 @@ class ProductsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -463,9 +460,9 @@ class ProductsApi
      * @param  string $change_proposal_id The product changes proposal identifier. (required)
      * @param  string $accept_language Expected language of messages. (optional, default to 'en-US')
      *
-     * @return \AllegroApi\Model\ProductChangeProposalDto|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ProductChangeProposalDto|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function getProductChangeProposal($change_proposal_id, $accept_language = 'en-US')
     {
@@ -481,9 +478,9 @@ class ProductsApi
      * @param  string $change_proposal_id The product changes proposal identifier. (required)
      * @param  string $accept_language Expected language of messages. (optional, default to 'en-US')
      *
-     * @return array of \AllegroApi\Model\ProductChangeProposalDto|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ProductChangeProposalDto|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProductChangeProposalWithHttpInfo($change_proposal_id, $accept_language = 'en-US')
     {
@@ -712,7 +709,6 @@ class ProductsApi
         $httpBody = null;
         $multipart = false;
 
-
         // header params
         if ($accept_language !== null) {
             $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
@@ -726,7 +722,6 @@ class ProductsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -792,9 +787,9 @@ class ProductsApi
      * @param  bool $include_drafts Return also if product is in draft state. (optional)
      * @param  string $language The language version of product. You can indicate the language for the returned product data. At present we support: \&quot;pl-PL\&quot;, \&quot;cs-CZ\&quot;, \&quot;en-US\&quot; and \&quot;uk-UA\&quot;. (optional)
      *
-     * @return \AllegroApi\Model\SaleProductDto|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\SaleProductDto|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function getSaleProduct($product_id, $category_id = null, $include_drafts = null, $language = null)
     {
@@ -812,9 +807,9 @@ class ProductsApi
      * @param  bool $include_drafts Return also if product is in draft state. (optional)
      * @param  string $language The language version of product. You can indicate the language for the returned product data. At present we support: \&quot;pl-PL\&quot;, \&quot;cs-CZ\&quot;, \&quot;en-US\&quot; and \&quot;uk-UA\&quot;. (optional)
      *
-     * @return array of \AllegroApi\Model\SaleProductDto|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\SaleProductDto|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSaleProductWithHttpInfo($product_id, $category_id = null, $include_drafts = null, $language = null)
     {
@@ -1055,8 +1050,7 @@ class ProductsApi
                 foreach($category_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['category.id'] = $category_id;
             }
         }
@@ -1066,8 +1060,7 @@ class ProductsApi
                 foreach($include_drafts as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['includeDrafts'] = $include_drafts;
             }
         }
@@ -1077,12 +1070,10 @@ class ProductsApi
                 foreach($language as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['language'] = $language;
             }
         }
-
 
         // path params
         if ($product_id !== null) {
@@ -1092,7 +1083,6 @@ class ProductsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1414,7 +1404,6 @@ class ProductsApi
             throw new \InvalidArgumentException('invalid length for "$phrase" when calling ProductsApi.getSaleProducts, must be smaller than or equal to 1024.');
         }
 
-
         $resourcePath = '/sale/products';
         $formParams = [];
         $queryParams = [];
@@ -1428,8 +1417,7 @@ class ProductsApi
                 foreach($ean as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['ean'] = $ean;
             }
         }
@@ -1439,8 +1427,7 @@ class ProductsApi
                 foreach($phrase as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['phrase'] = $phrase;
             }
         }
@@ -1450,8 +1437,7 @@ class ProductsApi
                 foreach($mode as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['mode'] = $mode;
             }
         }
@@ -1461,8 +1447,7 @@ class ProductsApi
                 foreach($language as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['language'] = $language;
             }
         }
@@ -1472,8 +1457,7 @@ class ProductsApi
                 foreach($category_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['category.id'] = $category_id;
             }
         }
@@ -1483,8 +1467,7 @@ class ProductsApi
                 foreach($dynamic_filters as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['Dynamic filters'] = $dynamic_filters;
             }
         }
@@ -1494,8 +1477,7 @@ class ProductsApi
                 foreach($page_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['page.id'] = $page_id;
             }
         }
@@ -1505,8 +1487,7 @@ class ProductsApi
                 foreach($search_features as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['searchFeatures'] = $search_features;
             }
         }
@@ -1516,14 +1497,10 @@ class ProductsApi
                 foreach($include_drafts as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['includeDrafts'] = $include_drafts;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1588,9 +1565,9 @@ class ProductsApi
      * @param  \AllegroApi\Model\ProductChangeProposalRequest $product_change_proposal_request product_change_proposal_request (required)
      * @param  string $accept_language Expected language of messages. (optional, default to 'en-US')
      *
-     * @return \AllegroApi\Model\ProductChangeProposalDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ProductChangeProposalDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function productChangeProposal($product_id, $product_change_proposal_request, $accept_language = 'en-US')
     {
@@ -1607,9 +1584,9 @@ class ProductsApi
      * @param  \AllegroApi\Model\ProductChangeProposalRequest $product_change_proposal_request (required)
      * @param  string $accept_language Expected language of messages. (optional, default to 'en-US')
      *
-     * @return array of \AllegroApi\Model\ProductChangeProposalDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ProductChangeProposalDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function productChangeProposalWithHttpInfo($product_id, $product_change_proposal_request, $accept_language = 'en-US')
     {
@@ -1867,7 +1844,6 @@ class ProductsApi
         $httpBody = null;
         $multipart = false;
 
-
         // header params
         if ($accept_language !== null) {
             $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
@@ -1881,7 +1857,6 @@ class ProductsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1950,9 +1925,9 @@ class ProductsApi
      *
      * @param  \AllegroApi\Model\ProductProposalsRequest $product_proposals_request product_proposals_request (required)
      *
-     * @return \AllegroApi\Model\ProductProposalsResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ProductProposalsResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function proposeSaleProduct($product_proposals_request)
     {
@@ -1967,9 +1942,9 @@ class ProductsApi
      *
      * @param  \AllegroApi\Model\ProductProposalsRequest $product_proposals_request (required)
      *
-     * @return array of \AllegroApi\Model\ProductProposalsResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ProductProposalsResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function proposeSaleProductWithHttpInfo($product_proposals_request)
     {
@@ -2235,10 +2210,6 @@ class ProductsApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -2298,7 +2269,6 @@ class ProductsApi
 
         return $this->createRequest('POST', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

@@ -235,7 +235,6 @@ class ParcelAdditionalServicesCashOnDeliveryValue implements ModelInterface, Arr
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -301,7 +300,6 @@ class ParcelAdditionalServicesCashOnDeliveryValue implements ModelInterface, Arr
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets amount
@@ -420,7 +418,7 @@ class ParcelAdditionalServicesCashOnDeliveryValue implements ModelInterface, Arr
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -446,5 +444,4 @@ class ParcelAdditionalServicesCashOnDeliveryValue implements ModelInterface, Arr
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

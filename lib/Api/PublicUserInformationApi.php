@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * PublicUserInformationApi Class Doc Comment
@@ -180,9 +180,9 @@ class PublicUserInformationApi
      *
      * @param  string $user_id The ID of the user. (required)
      *
-     * @return \AllegroApi\Model\UserRatingSummaryResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\UserRatingSummaryResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function getUserSummaryUsingGET($user_id)
     {
@@ -197,9 +197,9 @@ class PublicUserInformationApi
      *
      * @param  string $user_id The ID of the user. (required)
      *
-     * @return array of \AllegroApi\Model\UserRatingSummaryResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\UserRatingSummaryResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserSummaryUsingGETWithHttpInfo($user_id)
     {
@@ -405,8 +405,6 @@ class PublicUserInformationApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($user_id !== null) {
             $resourcePath = str_replace(
@@ -415,7 +413,6 @@ class PublicUserInformationApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -470,7 +467,6 @@ class PublicUserInformationApi
 
         return $this->createRequest('GET', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

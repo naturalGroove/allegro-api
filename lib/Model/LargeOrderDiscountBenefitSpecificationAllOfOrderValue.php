@@ -228,7 +228,6 @@ class LargeOrderDiscountBenefitSpecificationAllOfOrderValue implements ModelInte
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -290,7 +289,6 @@ class LargeOrderDiscountBenefitSpecificationAllOfOrderValue implements ModelInte
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets lower_bound
@@ -382,7 +380,7 @@ class LargeOrderDiscountBenefitSpecificationAllOfOrderValue implements ModelInte
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -408,5 +406,4 @@ class LargeOrderDiscountBenefitSpecificationAllOfOrderValue implements ModelInte
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

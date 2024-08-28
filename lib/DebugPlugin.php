@@ -32,6 +32,7 @@ use Http\Promise\Promise;
 use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
+
 use function is_resource;
 
 /**
@@ -45,7 +46,6 @@ use function is_resource;
  */
 class DebugPlugin implements Plugin
 {
-
     /**
      * @var resource
      */

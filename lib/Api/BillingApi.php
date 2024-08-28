@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * BillingApi Class Doc Comment
@@ -187,9 +187,9 @@ class BillingApi
      * @param  int $limit Number of returned operations. (optional, default to 100)
      * @param  int $offset Index of the first returned payment operation from all search results. (optional, default to 0)
      *
-     * @return \AllegroApi\Model\BillingEntries|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \AllegroApi\Exception\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @return \AllegroApi\Model\BillingEntries|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function getBillingEntries($marketplace_id = null, $occurred_at_gte = null, $occurred_at_lte = null, $type_id = null, $offer_id = null, $order_id = null, $limit = 100, $offset = 0)
     {
@@ -211,9 +211,9 @@ class BillingApi
      * @param  int $limit Number of returned operations. (optional, default to 100)
      * @param  int $offset Index of the first returned payment operation from all search results. (optional, default to 0)
      *
-     * @return array of \AllegroApi\Model\BillingEntries|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \AllegroApi\Exception\ApiException on non-2xx response
      * @throws \InvalidArgumentException
+     * @return array of \AllegroApi\Model\BillingEntries|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBillingEntriesWithHttpInfo($marketplace_id = null, $occurred_at_gte = null, $occurred_at_lte = null, $type_id = null, $offer_id = null, $order_id = null, $limit = 100, $offset = 0)
     {
@@ -460,7 +460,6 @@ class BillingApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling BillingApi.getBillingEntries, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/billing/billing-entries';
         $formParams = [];
         $queryParams = [];
@@ -474,8 +473,7 @@ class BillingApi
                 foreach($marketplace_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['marketplaceId'] = $marketplace_id;
             }
         }
@@ -485,8 +483,7 @@ class BillingApi
                 foreach($occurred_at_gte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['occurredAt.gte'] = $occurred_at_gte;
             }
         }
@@ -496,8 +493,7 @@ class BillingApi
                 foreach($occurred_at_lte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['occurredAt.lte'] = $occurred_at_lte;
             }
         }
@@ -507,8 +503,7 @@ class BillingApi
                 foreach($type_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['type.id'] = $type_id;
             }
         }
@@ -518,8 +513,7 @@ class BillingApi
                 foreach($offer_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offer.id'] = $offer_id;
             }
         }
@@ -529,8 +523,7 @@ class BillingApi
                 foreach($order_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['order.id'] = $order_id;
             }
         }
@@ -540,8 +533,7 @@ class BillingApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -551,14 +543,10 @@ class BillingApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -621,9 +609,9 @@ class BillingApi
      *
      * @param  string $accept_language Expected language of name translations. (optional)
      *
-     * @return \AllegroApi\Model\BillingType[]|\AllegroApi\Model\AuthError
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\BillingType[]|\AllegroApi\Model\AuthError
      */
     public function getBillingTypes($accept_language = null)
     {
@@ -638,9 +626,9 @@ class BillingApi
      *
      * @param  string $accept_language Expected language of name translations. (optional)
      *
-     * @return array of \AllegroApi\Model\BillingType[]|\AllegroApi\Model\AuthError, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\BillingType[]|\AllegroApi\Model\AuthError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBillingTypesWithHttpInfo($accept_language = null)
     {
@@ -820,13 +808,10 @@ class BillingApi
         $httpBody = null;
         $multipart = false;
 
-
         // header params
         if ($accept_language !== null) {
             $headerParams['Accept-Language'] = ObjectSerializer::toHeaderValue($accept_language);
         }
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -885,7 +870,6 @@ class BillingApi
 
         return $this->createRequest('GET', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

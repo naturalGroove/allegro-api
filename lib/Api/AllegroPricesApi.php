@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * AllegroPricesApi Class Doc Comment
@@ -180,9 +180,9 @@ class AllegroPricesApi
      *
      * @param  string $offer_id The offer ID. (required)
      *
-     * @return \AllegroApi\Model\AllegroPricesOfferConsentChangeResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AllegroPricesOfferConsentChangeResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function getAllegroPricesConsentForOffer($offer_id)
     {
@@ -197,9 +197,9 @@ class AllegroPricesApi
      *
      * @param  string $offer_id The offer ID. (required)
      *
-     * @return array of \AllegroApi\Model\AllegroPricesOfferConsentChangeResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AllegroPricesOfferConsentChangeResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllegroPricesConsentForOfferWithHttpInfo($offer_id)
     {
@@ -425,8 +425,6 @@ class AllegroPricesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($offer_id !== null) {
             $resourcePath = str_replace(
@@ -435,7 +433,6 @@ class AllegroPricesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -497,9 +494,9 @@ class AllegroPricesApi
      * Get the current eligibility information for the account
      *
      *
-     * @return \AllegroApi\Model\AllegroPricesEligibilityResponse|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AllegroPricesEligibilityResponse|\AllegroApi\Model\ErrorsHolder
      */
     public function getAllegroPricesEligibilityForAccount()
     {
@@ -513,9 +510,9 @@ class AllegroPricesApi
      * Get the current eligibility information for the account
      *
      *
-     * @return array of \AllegroApi\Model\AllegroPricesEligibilityResponse|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AllegroPricesEligibilityResponse|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAllegroPricesEligibilityForAccountWithHttpInfo()
     {
@@ -692,10 +689,6 @@ class AllegroPricesApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             '',
@@ -757,9 +750,9 @@ class AllegroPricesApi
      *
      * @param  \AllegroApi\Model\AllegroPricesAccountChangeRequest $allegro_prices_account_change_request allegro_prices_account_change_request (required)
      *
-     * @return \AllegroApi\Model\AllegroPricesAccountConsentChangeResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AllegroPricesAccountConsentChangeResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function updateAllegroPricesConsentForAccount($allegro_prices_account_change_request)
     {
@@ -774,9 +767,9 @@ class AllegroPricesApi
      *
      * @param  \AllegroApi\Model\AllegroPricesAccountChangeRequest $allegro_prices_account_change_request (required)
      *
-     * @return array of \AllegroApi\Model\AllegroPricesAccountConsentChangeResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AllegroPricesAccountConsentChangeResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAllegroPricesConsentForAccountWithHttpInfo($allegro_prices_account_change_request)
     {
@@ -1002,10 +995,6 @@ class AllegroPricesApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/json',
@@ -1074,9 +1063,9 @@ class AllegroPricesApi
      * @param  string $offer_id The offer ID. (required)
      * @param  \AllegroApi\Model\AllegroPricesOfferChangeRequest $allegro_prices_offer_change_request allegro_prices_offer_change_request (required)
      *
-     * @return \AllegroApi\Model\AllegroPricesOfferConsentChangeResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\AllegroPricesOfferConsentChangeResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function updateAllegroPricesConsentForOffer($offer_id, $allegro_prices_offer_change_request)
     {
@@ -1092,9 +1081,9 @@ class AllegroPricesApi
      * @param  string $offer_id The offer ID. (required)
      * @param  \AllegroApi\Model\AllegroPricesOfferChangeRequest $allegro_prices_offer_change_request (required)
      *
-     * @return array of \AllegroApi\Model\AllegroPricesOfferConsentChangeResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\AllegroPricesOfferConsentChangeResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateAllegroPricesConsentForOfferWithHttpInfo($offer_id, $allegro_prices_offer_change_request)
     {
@@ -1369,8 +1358,6 @@ class AllegroPricesApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($offer_id !== null) {
             $resourcePath = str_replace(
@@ -1379,7 +1366,6 @@ class AllegroPricesApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1440,7 +1426,6 @@ class AllegroPricesApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

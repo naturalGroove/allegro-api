@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * OfferTagsApi Class Doc Comment
@@ -181,9 +181,9 @@ class OfferTagsApi
      * @param  string $offer_id Offer identifier. (required)
      * @param  \AllegroApi\Model\TagIdsRequest $tag_ids_request request (required)
      *
-     * @return void
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return void
      */
     public function assignTagToOfferPOST($offer_id, $tag_ids_request)
     {
@@ -198,9 +198,9 @@ class OfferTagsApi
      * @param  string $offer_id Offer identifier. (required)
      * @param  \AllegroApi\Model\TagIdsRequest $tag_ids_request request (required)
      *
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function assignTagToOfferPOSTWithHttpInfo($offer_id, $tag_ids_request)
     {
@@ -371,8 +371,6 @@ class OfferTagsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($offer_id !== null) {
             $resourcePath = str_replace(
@@ -381,7 +379,6 @@ class OfferTagsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -450,9 +447,9 @@ class OfferTagsApi
      *
      * @param  \AllegroApi\Model\TagRequest $tag_request request (required)
      *
-     * @return \AllegroApi\Model\TagId|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\TagId|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      */
     public function createTagPOST1($tag_request)
     {
@@ -467,9 +464,9 @@ class OfferTagsApi
      *
      * @param  \AllegroApi\Model\TagRequest $tag_request request (required)
      *
-     * @return array of \AllegroApi\Model\TagId|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\TagId|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function createTagPOST1WithHttpInfo($tag_request)
     {
@@ -715,10 +712,6 @@ class OfferTagsApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -786,9 +779,9 @@ class OfferTagsApi
      *
      * @param  string $tag_id Tag identifier. (required)
      *
-     * @return void
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return void
      */
     public function deleteTagUsingDELETE($tag_id)
     {
@@ -802,9 +795,9 @@ class OfferTagsApi
      *
      * @param  string $tag_id Tag identifier. (required)
      *
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteTagUsingDELETEWithHttpInfo($tag_id)
     {
@@ -950,8 +943,6 @@ class OfferTagsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($tag_id !== null) {
             $resourcePath = str_replace(
@@ -960,7 +951,6 @@ class OfferTagsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['*/*', 'application/vnd.allegro.public.v1+json'],
@@ -1023,9 +1013,9 @@ class OfferTagsApi
      *
      * @param  string $offer_id Offer identifier. (required)
      *
-     * @return \AllegroApi\Model\TagListResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\TagListResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function listAssignedOfferTagsGET($offer_id)
     {
@@ -1040,9 +1030,9 @@ class OfferTagsApi
      *
      * @param  string $offer_id Offer identifier. (required)
      *
-     * @return array of \AllegroApi\Model\TagListResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\TagListResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function listAssignedOfferTagsGETWithHttpInfo($offer_id)
     {
@@ -1268,8 +1258,6 @@ class OfferTagsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($offer_id !== null) {
             $resourcePath = str_replace(
@@ -1278,7 +1266,6 @@ class OfferTagsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1342,9 +1329,9 @@ class OfferTagsApi
      * @param  int $limit The limit of elements in the response. (optional, default to 1000)
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      *
-     * @return \AllegroApi\Model\TagListResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\TagListResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      */
     public function listSellerTagsGET1($limit = 1000, $offset = 0)
     {
@@ -1360,9 +1347,9 @@ class OfferTagsApi
      * @param  int $limit The limit of elements in the response. (optional, default to 1000)
      * @param  int $offset The offset of elements in the response. (optional, default to 0)
      *
-     * @return array of \AllegroApi\Model\TagListResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\TagListResponse|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSellerTagsGET1WithHttpInfo($limit = 1000, $offset = 0)
     {
@@ -1568,7 +1555,6 @@ class OfferTagsApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling OfferTagsApi.listSellerTagsGET1, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/sale/offer-tags';
         $formParams = [];
         $queryParams = [];
@@ -1582,8 +1568,7 @@ class OfferTagsApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -1593,14 +1578,10 @@ class OfferTagsApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1664,9 +1645,9 @@ class OfferTagsApi
      * @param  string $tag_id Tag identifier. (required)
      * @param  \AllegroApi\Model\TagRequest $tag_request request (required)
      *
-     * @return void
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return void
      */
     public function updateTagPUT($tag_id, $tag_request)
     {
@@ -1681,9 +1662,9 @@ class OfferTagsApi
      * @param  string $tag_id Tag identifier. (required)
      * @param  \AllegroApi\Model\TagRequest $tag_request request (required)
      *
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateTagPUTWithHttpInfo($tag_id, $tag_request)
     {
@@ -1846,8 +1827,6 @@ class OfferTagsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($tag_id !== null) {
             $resourcePath = str_replace(
@@ -1856,7 +1835,6 @@ class OfferTagsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1917,7 +1895,6 @@ class OfferTagsApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

@@ -240,7 +240,6 @@ class SaleProductOfferResponseV1AllOfProductSet implements ModelInterface, Array
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -301,7 +300,6 @@ class SaleProductOfferResponseV1AllOfProductSet implements ModelInterface, Array
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets quantity
@@ -447,7 +445,7 @@ class SaleProductOfferResponseV1AllOfProductSet implements ModelInterface, Array
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -473,5 +471,4 @@ class SaleProductOfferResponseV1AllOfProductSet implements ModelInterface, Array
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

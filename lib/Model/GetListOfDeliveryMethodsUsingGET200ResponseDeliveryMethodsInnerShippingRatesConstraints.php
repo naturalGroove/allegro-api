@@ -259,7 +259,6 @@ class GetListOfDeliveryMethodsUsingGET200ResponseDeliveryMethodsInnerShippingRat
         return self::$openAPIModelName;
     }
 
-
     /**
      * Associative array for storing property values
      *
@@ -323,7 +322,6 @@ class GetListOfDeliveryMethodsUsingGET200ResponseDeliveryMethodsInnerShippingRat
     {
         return count($this->listInvalidProperties()) === 0;
     }
-
 
     /**
      * Gets allowed
@@ -550,7 +548,7 @@ class GetListOfDeliveryMethodsUsingGET200ResponseDeliveryMethodsInnerShippingRat
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -576,5 +574,4 @@ class GetListOfDeliveryMethodsUsingGET200ResponseDeliveryMethodsInnerShippingRat
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

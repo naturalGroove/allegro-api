@@ -326,7 +326,6 @@ class OfferEventEndedOfferAllOfPublication implements ModelInterface, ArrayAcces
         return count($this->listInvalidProperties()) === 0;
     }
 
-
     /**
      * Gets ended_by
      *
@@ -427,7 +426,7 @@ class OfferEventEndedOfferAllOfPublication implements ModelInterface, ArrayAcces
     #[\ReturnTypeWillChange]
     public function jsonSerialize()
     {
-       return ObjectSerializer::sanitizeForSerialization($this);
+        return ObjectSerializer::sanitizeForSerialization($this);
     }
 
     /**
@@ -453,5 +452,4 @@ class OfferEventEndedOfferAllOfPublication implements ModelInterface, ArrayAcces
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
 }
-
 

@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * ClassifiedsApi Class Doc Comment
@@ -181,9 +181,9 @@ class ClassifiedsApi
      * @param  string $offer_id The offer ID. (required)
      * @param  \AllegroApi\Model\ClassifiedPackages $classified_packages Packages that should be assigned to the classified. (required)
      *
-     * @return void
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return void
      */
     public function assignClassifiedPackagesUsingPUT($offer_id, $classified_packages)
     {
@@ -198,9 +198,9 @@ class ClassifiedsApi
      * @param  string $offer_id The offer ID. (required)
      * @param  \AllegroApi\Model\ClassifiedPackages $classified_packages Packages that should be assigned to the classified. (required)
      *
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function assignClassifiedPackagesUsingPUTWithHttpInfo($offer_id, $classified_packages)
     {
@@ -371,8 +371,6 @@ class ClassifiedsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($offer_id !== null) {
             $resourcePath = str_replace(
@@ -381,7 +379,6 @@ class ClassifiedsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -452,9 +449,9 @@ class ClassifiedsApi
      * @param  \DateTime $date_gte The minimum date and time from which the events will be fetched in ISO 8601 format. The value should be less than the current date time and greater than date.lte. The difference between date.gte and date.lte should be less than 3 months. (optional)
      * @param  \DateTime $date_lte The maximum date and time from which the events will be fetched in ISO 8601 format. The value should be less than the current date time. The difference between date.gte and date.lte should be less than 3 months. (optional)
      *
-     * @return \AllegroApi\Model\OfferStatsResponseDto
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\OfferStatsResponseDto
      */
     public function classifiedOffersStatsGET($offer_id, $date_gte = null, $date_lte = null)
     {
@@ -471,9 +468,9 @@ class ClassifiedsApi
      * @param  \DateTime $date_gte The minimum date and time from which the events will be fetched in ISO 8601 format. The value should be less than the current date time and greater than date.lte. The difference between date.gte and date.lte should be less than 3 months. (optional)
      * @param  \DateTime $date_lte The maximum date and time from which the events will be fetched in ISO 8601 format. The value should be less than the current date time. The difference between date.gte and date.lte should be less than 3 months. (optional)
      *
-     * @return array of \AllegroApi\Model\OfferStatsResponseDto, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\OfferStatsResponseDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function classifiedOffersStatsGETWithHttpInfo($offer_id, $date_gte = null, $date_lte = null)
     {
@@ -651,8 +648,7 @@ class ClassifiedsApi
                 foreach($offer_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offer.id'] = $offer_id;
             }
         }
@@ -662,8 +658,7 @@ class ClassifiedsApi
                 foreach($date_gte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['date.gte'] = $date_gte;
             }
         }
@@ -673,14 +668,10 @@ class ClassifiedsApi
                 foreach($date_lte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['date.lte'] = $date_lte;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -744,9 +735,9 @@ class ClassifiedsApi
      * @param  \DateTime $date_gte The minimum date and time from which the events will be fetched in ISO 8601 format. The value should be less than the current date time and greater than date.lte. The difference between date.gte and date.lte should be less than 3 months. (optional)
      * @param  \DateTime $date_lte The maximum date and time from which the events will be fetched in ISO 8601 format. The value should be less than the current date time. The difference between date.gte and date.lte should be less than 3 months. (optional)
      *
-     * @return \AllegroApi\Model\SellerOfferStatsResponseDto
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\SellerOfferStatsResponseDto
      */
     public function classifiedSellerOfferStatsGET($date_gte = null, $date_lte = null)
     {
@@ -762,9 +753,9 @@ class ClassifiedsApi
      * @param  \DateTime $date_gte The minimum date and time from which the events will be fetched in ISO 8601 format. The value should be less than the current date time and greater than date.lte. The difference between date.gte and date.lte should be less than 3 months. (optional)
      * @param  \DateTime $date_lte The maximum date and time from which the events will be fetched in ISO 8601 format. The value should be less than the current date time. The difference between date.gte and date.lte should be less than 3 months. (optional)
      *
-     * @return array of \AllegroApi\Model\SellerOfferStatsResponseDto, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\SellerOfferStatsResponseDto, HTTP status code, HTTP response headers (array of strings)
      */
     public function classifiedSellerOfferStatsGETWithHttpInfo($date_gte = null, $date_lte = null)
     {
@@ -933,8 +924,7 @@ class ClassifiedsApi
                 foreach($date_gte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['date.gte'] = $date_gte;
             }
         }
@@ -944,14 +934,10 @@ class ClassifiedsApi
                 foreach($date_lte as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['date.lte'] = $date_lte;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1014,9 +1000,9 @@ class ClassifiedsApi
      *
      * @param  string $package_id The classifieds package ID. (required)
      *
-     * @return \AllegroApi\Model\ClassifiedPackageConfig|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ClassifiedPackageConfig|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      */
     public function getClassifiedPackageConfigurationUsingGET($package_id)
     {
@@ -1031,9 +1017,9 @@ class ClassifiedsApi
      *
      * @param  string $package_id The classifieds package ID. (required)
      *
-     * @return array of \AllegroApi\Model\ClassifiedPackageConfig|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ClassifiedPackageConfig|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getClassifiedPackageConfigurationUsingGETWithHttpInfo($package_id)
     {
@@ -1259,8 +1245,6 @@ class ClassifiedsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($package_id !== null) {
             $resourcePath = str_replace(
@@ -1269,7 +1253,6 @@ class ClassifiedsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1332,9 +1315,9 @@ class ClassifiedsApi
      *
      * @param  string $category_id The category ID. (required)
      *
-     * @return \AllegroApi\Model\ClassifiedPackageConfigs|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ClassifiedPackageConfigs|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError
      */
     public function getClassifiedPackageConfigurationsForCategoryUsingGET($category_id)
     {
@@ -1349,9 +1332,9 @@ class ClassifiedsApi
      *
      * @param  string $category_id The category ID. (required)
      *
-     * @return array of \AllegroApi\Model\ClassifiedPackageConfigs|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ClassifiedPackageConfigs|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getClassifiedPackageConfigurationsForCategoryUsingGETWithHttpInfo($category_id)
     {
@@ -1563,14 +1546,10 @@ class ClassifiedsApi
                 foreach($category_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['category.id'] = $category_id;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1633,9 +1612,9 @@ class ClassifiedsApi
      *
      * @param  string $offer_id Offer ID. (required)
      *
-     * @return \AllegroApi\Model\ClassifiedResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\ClassifiedResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function getClassifiedPackagesUsingGET($offer_id)
     {
@@ -1650,9 +1629,9 @@ class ClassifiedsApi
      *
      * @param  string $offer_id Offer ID. (required)
      *
-     * @return array of \AllegroApi\Model\ClassifiedResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\ClassifiedResponse|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getClassifiedPackagesUsingGETWithHttpInfo($offer_id)
     {
@@ -1898,8 +1877,6 @@ class ClassifiedsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($offer_id !== null) {
             $resourcePath = str_replace(
@@ -1908,7 +1885,6 @@ class ClassifiedsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1963,7 +1939,6 @@ class ClassifiedsApi
 
         return $this->createRequest('GET', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method

@@ -32,7 +32,6 @@ use Http\Client\Exception\RequestException;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
-
 /**
  * ApiException Class Doc Comment
  *
@@ -43,7 +42,6 @@ use Psr\Http\Message\ResponseInterface;
  */
 class ApiException extends RequestException
 {
-
     /**
      * The HTTP body of the server response either as Json or string.
      *

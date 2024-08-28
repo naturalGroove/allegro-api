@@ -51,8 +51,8 @@ use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use Psr\Http\Message\UriFactoryInterface;
 use Psr\Http\Message\UriInterface;
-use function sprintf;
 
+use function sprintf;
 
 /**
  * RebatesAndPromotionsApi Class Doc Comment
@@ -180,9 +180,9 @@ class RebatesAndPromotionsApi
      *
      * @param  \AllegroApi\Model\SellerCreateRebateRequestDto $seller_create_rebate_request_dto seller_create_rebate_request_dto (required)
      *
-     * @return \AllegroApi\Model\SellerRebateDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\SellerRebateDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function createPromotionUsingPOST1($seller_create_rebate_request_dto)
     {
@@ -197,9 +197,9 @@ class RebatesAndPromotionsApi
      *
      * @param  \AllegroApi\Model\SellerCreateRebateRequestDto $seller_create_rebate_request_dto (required)
      *
-     * @return array of \AllegroApi\Model\SellerRebateDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\SellerRebateDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPromotionUsingPOST1WithHttpInfo($seller_create_rebate_request_dto)
     {
@@ -485,10 +485,6 @@ class RebatesAndPromotionsApi
         $httpBody = null;
         $multipart = false;
 
-
-
-
-
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
             'application/vnd.allegro.public.v1+json',
@@ -556,9 +552,9 @@ class RebatesAndPromotionsApi
      *
      * @param  string $promotion_id Promotion identifier. (required)
      *
-     * @return void
      * @throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return void
      */
     public function deactivatePromotionUsingDELETE($promotion_id)
     {
@@ -572,9 +568,9 @@ class RebatesAndPromotionsApi
      *
      * @param  string $promotion_id Promotion identifier. (required)
      *
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
     public function deactivatePromotionUsingDELETEWithHttpInfo($promotion_id)
     {
@@ -712,8 +708,6 @@ class RebatesAndPromotionsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($promotion_id !== null) {
             $resourcePath = str_replace(
@@ -722,7 +716,6 @@ class RebatesAndPromotionsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json', '*/*'],
@@ -785,9 +778,9 @@ class RebatesAndPromotionsApi
      *
      * @param  string $promotion_id Promotion identifier. (required)
      *
-     * @return \AllegroApi\Model\SellerRebateDto|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\SellerRebateDto|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      */
     public function getPromotionUsingGET($promotion_id)
     {
@@ -802,9 +795,9 @@ class RebatesAndPromotionsApi
      *
      * @param  string $promotion_id Promotion identifier. (required)
      *
-     * @return array of \AllegroApi\Model\SellerRebateDto|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\SellerRebateDto|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPromotionUsingGETWithHttpInfo($promotion_id)
     {
@@ -1010,8 +1003,6 @@ class RebatesAndPromotionsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($promotion_id !== null) {
             $resourcePath = str_replace(
@@ -1020,7 +1011,6 @@ class RebatesAndPromotionsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1086,9 +1076,9 @@ class RebatesAndPromotionsApi
      * @param  string $offer_id Filter by offer id. No promotions with &#x60;OFFERS_ASSIGNED_EXTERNALLY&#x60; or &#x60;ALL_OFFERS&#x60; criteria will be returned if this parameter is present. (optional)
      * @param  string $promotion_type Filter by promotion type. (optional)
      *
-     * @return \AllegroApi\Model\SellerRebatesDto|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\SellerRebatesDto|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder
      */
     public function listSellerPromotionsUsingGET1($limit = 50, $offset = 0, $offer_id = null, $promotion_type = null)
     {
@@ -1106,9 +1096,9 @@ class RebatesAndPromotionsApi
      * @param  string $offer_id Filter by offer id. No promotions with &#x60;OFFERS_ASSIGNED_EXTERNALLY&#x60; or &#x60;ALL_OFFERS&#x60; criteria will be returned if this parameter is present. (optional)
      * @param  string $promotion_type Filter by promotion type. (optional)
      *
-     * @return array of \AllegroApi\Model\SellerRebatesDto|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\SellerRebatesDto|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSellerPromotionsUsingGET1WithHttpInfo($limit = 50, $offset = 0, $offer_id = null, $promotion_type = null)
     {
@@ -1323,7 +1313,6 @@ class RebatesAndPromotionsApi
             throw new \InvalidArgumentException('invalid value for "$offset" when calling RebatesAndPromotionsApi.listSellerPromotionsUsingGET1, must be bigger than or equal to 0.');
         }
 
-
         $resourcePath = '/sale/loyalty/promotions';
         $formParams = [];
         $queryParams = [];
@@ -1337,8 +1326,7 @@ class RebatesAndPromotionsApi
                 foreach($limit as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['limit'] = $limit;
             }
         }
@@ -1348,8 +1336,7 @@ class RebatesAndPromotionsApi
                 foreach($offset as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offset'] = $offset;
             }
         }
@@ -1359,8 +1346,7 @@ class RebatesAndPromotionsApi
                 foreach($offer_id as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['offer.id'] = $offer_id;
             }
         }
@@ -1370,14 +1356,10 @@ class RebatesAndPromotionsApi
                 foreach($promotion_type as $key => $value) {
                     $queryParams[$key] = $value;
                 }
-            }
-            else {
+            } else {
                 $queryParams['promotionType'] = $promotion_type;
             }
         }
-
-
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1441,9 +1423,9 @@ class RebatesAndPromotionsApi
      * @param  string $promotion_id Promotion identifier. (required)
      * @param  \AllegroApi\Model\SellerCreateRebateRequestDto $seller_create_rebate_request_dto seller_create_rebate_request_dto (required)
      *
-     * @return \AllegroApi\Model\SellerRebateDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return \AllegroApi\Model\SellerRebateDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder
      */
     public function updatePromotionUsingPUT($promotion_id, $seller_create_rebate_request_dto)
     {
@@ -1459,9 +1441,9 @@ class RebatesAndPromotionsApi
      * @param  string $promotion_id Promotion identifier. (required)
      * @param  \AllegroApi\Model\SellerCreateRebateRequestDto $seller_create_rebate_request_dto (required)
      *
-     * @return array of \AllegroApi\Model\SellerRebateDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      *@throws \InvalidArgumentException
      * @throws \AllegroApi\Exception\ApiException on non-2xx response
+     * @return array of \AllegroApi\Model\SellerRebateDto|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\AuthError|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder|\AllegroApi\Model\ErrorsHolder, HTTP status code, HTTP response headers (array of strings)
      */
     public function updatePromotionUsingPUTWithHttpInfo($promotion_id, $seller_create_rebate_request_dto)
     {
@@ -1736,8 +1718,6 @@ class RebatesAndPromotionsApi
         $httpBody = null;
         $multipart = false;
 
-
-
         // path params
         if ($promotion_id !== null) {
             $resourcePath = str_replace(
@@ -1746,7 +1726,6 @@ class RebatesAndPromotionsApi
                 $resourcePath
             );
         }
-
 
         $headers = $this->headerSelector->selectHeaders(
             ['application/vnd.allegro.public.v1+json'],
@@ -1807,7 +1786,6 @@ class RebatesAndPromotionsApi
 
         return $this->createRequest('PUT', $uri, $headers, $httpBody);
     }
-
 
     /**
      * @param string $method
