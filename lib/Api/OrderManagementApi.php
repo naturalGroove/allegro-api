@@ -868,7 +868,8 @@ class OrderManagementApi
             if ($headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($checkout_form_add_waybill_request));
             } else {
-                $httpBody = $checkout_form_add_waybill_request;
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($checkout_form_add_waybill_request));
+                //$httpBody = $checkout_form_add_waybill_request;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
