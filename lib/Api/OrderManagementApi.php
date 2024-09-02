@@ -3754,7 +3754,8 @@ class OrderManagementApi
             if ($headers['Content-Type'] === 'application/json') {
                 $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($checkout_form_fulfillment));
             } else {
-                $httpBody = $checkout_form_fulfillment;
+                //$httpBody = $checkout_form_fulfillment;
+                $httpBody = json_encode(ObjectSerializer::sanitizeForSerialization($checkout_form_fulfillment));
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
